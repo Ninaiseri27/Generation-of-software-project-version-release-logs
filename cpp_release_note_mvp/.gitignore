@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+workspaces/
+src/*.egg-info/
+outputs/*
+!outputs/.gitkeep

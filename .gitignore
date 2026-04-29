@@ -1,0 +1,16 @@
+﻿.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.DS_Store
+
+# Local source checkouts and generated outputs
+cpp_release_note_mvp/workspaces/
+cpp_release_note_mvp/outputs/*
+!cpp_release_note_mvp/outputs/.gitkeep
+
+# Local ENRE binaries should be downloaded separately
+tools/*
+!tools/.gitkeep

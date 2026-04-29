@@ -1,0 +1,142 @@
+{
+  "benchmark": "openharmony-cpp-release-note-benchmark-v1",
+  "created_at": "2026-04-30",
+  "goal": "Expand the graduation-project benchmark beyond one repository while keeping version-pair selection reproducible.",
+  "selection_criteria": [
+    "OpenHarmony ecosystem repository",
+    "C/C++ dominant third-party or native component",
+    "public release tags are available",
+    "adjacent version pairs can be compared without building the project",
+    "static analysis can run on source snapshots"
+  ],
+  "repositories": [
+    {
+      "name": "third_party_sqlite",
+      "url": "https://github.com/openharmony/third_party_sqlite.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_sqlite",
+      "category": "database",
+      "priority": "primary",
+      "version_pairs": [
+        {
+          "id": "sqlite_v6_0_to_v6_0_0_1",
+          "ref": "OpenHarmony-v6.0-Release",
+          "tgt": "OpenHarmony-v6.0.0.1-Release",
+          "status": "verified_full_pipeline"
+        },
+        {
+          "id": "sqlite_v5_0_1_to_v5_0_2",
+          "ref": "OpenHarmony-v5.0.1-Release",
+          "tgt": "OpenHarmony-v5.0.2-Release",
+          "status": "verified_stage1"
+        }
+      ]
+    },
+    {
+      "name": "third_party_libpng",
+      "url": "https://github.com/openharmony/third_party_libpng.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_libpng",
+      "category": "image_codec",
+      "priority": "primary",
+      "version_pairs": [
+        {
+          "id": "libpng_v6_0_to_v6_0_0_1",
+          "ref": "OpenHarmony-v6.0-Release",
+          "tgt": "OpenHarmony-v6.0.0.1-Release",
+          "status": "stage1_patch_only",
+          "stage1_changed_files": 0,
+          "stage1_changed_functions": 0,
+          "note": "Diff changes patch/install files rather than direct C/C++ sources."
+        }
+      ]
+    },
+    {
+      "name": "third_party_curl",
+      "url": "https://github.com/openharmony/third_party_curl.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_curl",
+      "category": "network",
+      "priority": "primary",
+      "version_pairs": [
+        {
+          "id": "curl_v6_0_to_v6_0_0_1",
+          "ref": "OpenHarmony-v6.0-Release",
+          "tgt": "OpenHarmony-v6.0.0.1-Release",
+          "status": "verified_stage1",
+          "stage1_changed_files": 17,
+          "stage1_changed_functions": 47
+        }
+      ]
+    },
+    {
+      "name": "third_party_zlib",
+      "url": "https://github.com/openharmony/third_party_zlib.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_zlib",
+      "category": "compression",
+      "priority": "secondary",
+      "version_pairs": [
+        {
+          "id": "zlib_v6_0_0_1_to_v6_0_0_2",
+          "ref": "OpenHarmony-v6.0.0.1-Release",
+          "tgt": "OpenHarmony-v6.0.0.2-Release",
+          "status": "verified_stage1",
+          "stage1_changed_files": 2,
+          "stage1_changed_functions": 2
+        }
+      ]
+    },
+    {
+      "name": "third_party_mbedtls",
+      "url": "https://github.com/openharmony/third_party_mbedtls.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_mbedtls",
+      "category": "security_crypto",
+      "priority": "primary",
+      "version_pairs": [
+        {
+          "id": "mbedtls_v6_0_0_1_to_v6_0_0_2",
+          "ref": "OpenHarmony-v6.0.0.1-Release",
+          "tgt": "OpenHarmony-v6.0.0.2-Release",
+          "status": "verified_stage1",
+          "stage1_changed_files": 1,
+          "stage1_changed_functions": 2
+        }
+      ]
+    },
+    {
+      "name": "third_party_libxml2",
+      "url": "https://github.com/openharmony/third_party_libxml2.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_libxml2",
+      "category": "xml_parser",
+      "priority": "secondary_patch_only",
+      "version_pairs": [
+        {
+          "id": "libxml2_v6_0_0_1_to_v6_0_0_2",
+          "ref": "OpenHarmony-v6.0.0.1-Release",
+          "tgt": "OpenHarmony-v6.0.0.2-Release",
+          "status": "stage1_patch_only",
+          "stage1_changed_files": 0,
+          "stage1_changed_functions": 0,
+          "note": "Diff changes patch/install/build files rather than direct C/C++ sources."
+        }
+      ]
+    },
+    {
+      "name": "third_party_openssl",
+      "url": "https://github.com/openharmony/third_party_openssl.git",
+      "local_path": "cpp_release_note_mvp/workspaces/third_party_openssl",
+      "category": "security_crypto",
+      "priority": "secondary_large_repo",
+      "version_pairs": [
+        {
+          "id": "openssl_v6_0_to_v6_0_0_1",
+          "ref": "OpenHarmony-v6.0-Release",
+          "tgt": "OpenHarmony-v6.0.0.1-Release",
+          "status": "candidate_not_cloned"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "The first target is at least 5 adjacent version pairs across 5-10 repositories.",
+    "Stage 1 should be used to rank candidates by changed-function count before expensive ENRE runs.",
+    "Large repositories such as third_party_openssl should be cloned only after smaller candidates are validated."
+  ]
+}

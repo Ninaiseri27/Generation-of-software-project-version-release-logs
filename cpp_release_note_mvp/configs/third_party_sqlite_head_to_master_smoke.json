@@ -1,0 +1,45 @@
+{
+  "git_executable": "git",
+  "version_pair": {
+    "repo_path": "cpp_release_note_mvp/workspaces/third_party_sqlite",
+    "ref_version": "HEAD",
+    "tgt_version": "master"
+  },
+  "include_extensions": [
+    ".c",
+    ".cc",
+    ".cpp",
+    ".cxx",
+    ".h",
+    ".hh",
+    ".hpp",
+    ".hxx"
+  ],
+  "diff_context_lines": 0,
+  "output_dir": "cpp_release_note_mvp/outputs/smoke",
+  "project": {
+    "name": "third_party_sqlite_test",
+    "description": "Local smoke-test config for the OpenHarmony third-party SQLite component."
+  },
+  "generation": {
+    "backend": "mock",
+    "model_name": "mock-rule-based-v1",
+    "base_url": "https://api.openai.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0.2,
+    "max_tokens": 256,
+    "timeout_sec": 60,
+    "max_retries": 2,
+    "retry_backoff_sec": 1.5
+  },
+  "enre": {
+    "java_executable": "java",
+    "enre_jar_path": "tools/ENRE-CPP.jar",
+    "max_heap": "8g",
+    "snapshot_root": "cpp_release_note_mvp/workspaces/version_snapshots",
+    "project_name": "third_party_sqlite_test",
+    "extra_dirs": [],
+    "program_environments": [],
+    "raw_output_root": "cpp_release_note_mvp/outputs/enre_raw"
+  }
+}
