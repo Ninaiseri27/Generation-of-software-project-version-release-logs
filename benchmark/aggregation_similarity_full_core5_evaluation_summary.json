@@ -1,0 +1,143 @@
+{
+  "source": {
+    "builder": "evaluation-summary-builder-v3",
+    "variants": [
+      "full"
+    ]
+  },
+  "metadata_paths": [
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_curl\\curl_v6_0_beta1_to_v6_0\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_mbedtls\\mbedtls_v6_0_beta1_to_v6_0\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_sqlite\\sqlite_v6_0_0_2_to_v6_1\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_zlib\\zlib_v6_0_0_1_to_v6_0_0_2\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_cjson\\cjson_v6_0_beta1_to_v6_0\\metadata.json"
+  ],
+  "rows": [
+    {
+      "case_id": "curl_v6_0_beta1_to_v6_0",
+      "variant": "full",
+      "status": "evaluated",
+      "ground_truth_count": 4,
+      "generated_count": 5,
+      "valid_match_count": 5,
+      "matched_generated_count": 5,
+      "matched_ground_truth_count": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "redundancy_count": 1,
+      "redundancy_per_gt": 0.25,
+      "avg_matches_per_gt": 1.25,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_similarity\\full\\evaluation_strict.json"
+    },
+    {
+      "case_id": "mbedtls_v6_0_beta1_to_v6_0",
+      "variant": "full",
+      "status": "evaluated",
+      "ground_truth_count": 6,
+      "generated_count": 14,
+      "valid_match_count": 9,
+      "matched_generated_count": 8,
+      "matched_ground_truth_count": 6,
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "unsupported_claim_rate": 0.4286,
+      "redundancy_count": 3,
+      "redundancy_per_gt": 0.5,
+      "avg_matches_per_gt": 1.5,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_mbedtls\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_similarity\\full\\evaluation_strict.json"
+    },
+    {
+      "case_id": "sqlite_v6_0_0_2_to_v6_1",
+      "variant": "full",
+      "status": "evaluated",
+      "ground_truth_count": 4,
+      "generated_count": 25,
+      "valid_match_count": 16,
+      "matched_generated_count": 16,
+      "matched_ground_truth_count": 4,
+      "precision": 0.64,
+      "recall": 1.0,
+      "f1": 0.7805,
+      "unsupported_claim_rate": 0.36,
+      "redundancy_count": 12,
+      "redundancy_per_gt": 3.0,
+      "avg_matches_per_gt": 4.0,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_sqlite\\OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release\\baselines_deepseek_v4_flash_similarity\\full\\evaluation_strict.json"
+    },
+    {
+      "case_id": "zlib_v6_0_0_1_to_v6_0_0_2",
+      "variant": "full",
+      "status": "evaluated",
+      "ground_truth_count": 1,
+      "generated_count": 1,
+      "valid_match_count": 1,
+      "matched_generated_count": 1,
+      "matched_ground_truth_count": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "redundancy_count": 0,
+      "redundancy_per_gt": 0.0,
+      "avg_matches_per_gt": 1.0,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_zlib\\OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release\\baselines_deepseek_v4_flash_similarity\\full\\evaluation_strict.json"
+    },
+    {
+      "case_id": "cjson_v6_0_beta1_to_v6_0",
+      "variant": "full",
+      "status": "evaluated",
+      "ground_truth_count": 2,
+      "generated_count": 7,
+      "valid_match_count": 4,
+      "matched_generated_count": 4,
+      "matched_ground_truth_count": 2,
+      "precision": 0.5714,
+      "recall": 1.0,
+      "f1": 0.7273,
+      "unsupported_claim_rate": 0.4286,
+      "redundancy_count": 2,
+      "redundancy_per_gt": 1.0,
+      "avg_matches_per_gt": 2.0,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_cJSON\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_similarity\\full\\evaluation_strict.json"
+    }
+  ],
+  "macro_averages": [
+    {
+      "variant": "full",
+      "evaluated_cases": 5,
+      "precision": 0.7566,
+      "recall": 1.0,
+      "f1": 0.847,
+      "unsupported_claim_rate": 0.2434,
+      "avg_redundancy_count": 3.6,
+      "avg_redundancy_per_gt": 0.95,
+      "avg_matches_per_gt": 1.95,
+      "structural_valid_rate": 1.0
+    }
+  ],
+  "micro_averages": [
+    {
+      "variant": "full",
+      "evaluated_cases": 5,
+      "generated_count": 52.0,
+      "ground_truth_count": 17.0,
+      "matched_generated_count": 34.0,
+      "matched_ground_truth_count": 17.0,
+      "valid_match_count": 35.0,
+      "redundancy_count": 18.0,
+      "precision": 0.6538,
+      "recall": 1.0,
+      "f1": 0.7907,
+      "matches_per_gt": 2.0588,
+      "redundancy_per_gt": 1.0588
+    }
+  ]
+}

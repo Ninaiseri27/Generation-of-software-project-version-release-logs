@@ -1,0 +1,38 @@
+{
+  "source": {
+    "reviewer": "codex-semantic-review",
+    "match_mode": "strict_sampled_pcre2_v1"
+  },
+  "matches": [
+    {
+      "generated_id": "GEN-006",
+      "gt_id": "GT-S04",
+      "decision": "match",
+      "notes": "Strong API match: pcre2_set_optimize optimization control."
+    },
+    {
+      "generated_id": "GEN-008",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Strong syntax match: extended classes and scan_substring syntax."
+    },
+    {
+      "generated_id": "GEN-009",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Extended class and scan-substring operations."
+    },
+    {
+      "generated_id": "GEN-011",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Script run and scan substring assertions."
+    },
+    {
+      "generated_id": "GEN-024",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Escape parsing and UTF encoding covers Unicode/escape behavior."
+    }
+  ]
+}

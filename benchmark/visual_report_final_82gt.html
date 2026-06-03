@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final 82-GT C/C++ Release Note Experiment Report</title>
+<style>
+:root {
+  --bg: #f7f1e6;
+  --ink: #211b15;
+  --muted: #6f6559;
+  --card: #fffaf0;
+  --line: #d9cdbb;
+  --accent: #0f6b5f;
+  --accent-2: #b65f2a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 0%, #fff6dc 0, transparent 36rem), var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+main { max-width: 1180px; margin: 0 auto; padding: 36px 28px 64px; }
+h1 { font-size: 34px; margin: 0 0 24px; letter-spacing: -0.02em; }
+h2 { font-size: 22px; margin: 32px 0 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.card, section {
+  background: rgba(255, 250, 240, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(63, 48, 31, 0.08);
+}
+.card { padding: 16px; }
+.label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
+.value { margin-top: 8px; font-size: 22px; font-weight: 700; }
+section { padding: 18px; margin-top: 18px; }
+.pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.step { border: 1px dashed var(--line); border-radius: 14px; padding: 12px; background: #fffdf7; }
+.bar-row { display: grid; grid-template-columns: minmax(180px, 260px) 1fr 90px; gap: 12px; align-items: center; margin: 10px 0; }
+.bar { height: 22px; border-radius: 999px; background: #eadfcd; overflow: hidden; }
+.fill { height: 100%; background: linear-gradient(90deg, var(--accent), #55a994); }
+.fill.warn { background: linear-gradient(90deg, var(--accent-2), #d79763); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+ul { margin: 0; padding-left: 20px; }
+li { margin: 7px 0; }
+.cmg-node { display: inline-block; margin: 4px; padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); background: #fffdf7; }
+.cmg-edge { color: var(--muted); font-family: Consolas, monospace; margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>Final 82-GT C/C++ Release Note Experiment Report</h1>
+<div class="grid"><div class="card"><div class="label">Best Macro F1</div><div class="value">full_similarity_family</div></div><div class="card"><div class="label">Best Micro F1</div><div class="value">full_similarity_family</div></div><div class="card"><div class="label">Strongest Compression</div><div class="value">full_similarity_family</div></div><div class="card"><div class="label">CMG Matched Entries</div><div class="value">10/12</div></div></div>
+<section><h2>Pipeline Overview</h2><div class="pipeline"><div class="step">1. Version-pair diff</div><div class="step">2. Function-level change localization</div><div class="step">3. ENRE graph normalization</div><div class="step">4. CMG and fallback context</div><div class="step">5. Structured prompt</div><div class="step">6. LLM generation</div><div class="step">7. Aggregation and evaluation</div></div></section>
+<section><h2>Macro F1</h2><div class="bar-row"><div>text_only</div><div class="bar"><div class="fill" style="width:29.09%"></div></div><div>0.2909</div></div><div class="bar-row"><div>diff_only</div><div class="bar"><div class="fill" style="width:65.43%"></div></div><div>0.6543</div></div><div class="bar-row"><div>no_graph</div><div class="bar"><div class="fill" style="width:63.97%"></div></div><div>0.6397</div></div><div class="bar-row"><div>full_adaptive_rule_family</div><div class="bar"><div class="fill" style="width:64.19%"></div></div><div>0.6419</div></div><div class="bar-row"><div>full_no_fallback</div><div class="bar"><div class="fill" style="width:62.28%"></div></div><div>0.6228</div></div><div class="bar-row"><div>full_strict_1hop</div><div class="bar"><div class="fill" style="width:66.16%"></div></div><div>0.6616</div></div><div class="bar-row"><div>full_similarity_family</div><div class="bar"><div class="fill" style="width:70.20%"></div></div><div>0.7020</div></div><div class="bar-row"><div>full_evidence_similarity_family</div><div class="bar"><div class="fill" style="width:65.32%"></div></div><div>0.6532</div></div></section>
+<section><h2>Extra Matches Per GT</h2><div class="bar-row"><div>text_only</div><div class="bar"><div class="fill warn" style="width:0.00%"></div></div><div>0.0000</div></div><div class="bar-row"><div>diff_only</div><div class="bar"><div class="fill warn" style="width:100.00%"></div></div><div>2.1341</div></div><div class="bar-row"><div>no_graph</div><div class="bar"><div class="fill warn" style="width:94.86%"></div></div><div>2.0244</div></div><div class="bar-row"><div>full_adaptive_rule_family</div><div class="bar"><div class="fill warn" style="width:93.14%"></div></div><div>1.9878</div></div><div class="bar-row"><div>full_no_fallback</div><div class="bar"><div class="fill warn" style="width:89.14%"></div></div><div>1.9024</div></div><div class="bar-row"><div>full_strict_1hop</div><div class="bar"><div class="fill warn" style="width:97.15%"></div></div><div>2.0732</div></div><div class="bar-row"><div>full_similarity_family</div><div class="bar"><div class="fill warn" style="width:62.29%"></div></div><div>1.3293</div></div><div class="bar-row"><div>full_evidence_similarity_family</div><div class="bar"><div class="fill warn" style="width:77.71%"></div></div><div>1.6585</div></div></section>
+
+<section><h2>Main Result Matrix</h2><table><thead><tr><th>Method</th><th>P</th><th>R</th><th>Macro F1</th><th>Micro F1</th><th>Unsupported</th><th>Extra/GT</th></tr></thead><tbody><tr><td>text_only</td><td>0.6364</td><td>0.0854</td><td>0.2909</td><td>0.1505</td><td>0.3636</td><td>0.0000</td></tr><tr><td>diff_only</td><td>0.4069</td><td>0.9390</td><td>0.6543</td><td>0.5677</td><td>0.5931</td><td>2.1341</td></tr><tr><td>no_graph</td><td>0.3950</td><td>0.9024</td><td>0.6397</td><td>0.5495</td><td>0.6050</td><td>2.0244</td></tr><tr><td>full_adaptive_rule_family</td><td>0.3892</td><td>0.9390</td><td>0.6419</td><td>0.5503</td><td>0.6108</td><td>1.9878</td></tr><tr><td>full_no_fallback</td><td>0.3691</td><td>0.9024</td><td>0.6228</td><td>0.5239</td><td>0.6309</td><td>1.9024</td></tr><tr><td>full_strict_1hop</td><td>0.4020</td><td>0.9146</td><td>0.6616</td><td>0.5585</td><td>0.5980</td><td>2.0732</td></tr><tr><td>full_similarity_family</td><td>0.4458</td><td>0.9390</td><td>0.7020</td><td>0.6046</td><td>0.5542</td><td>1.3293</td></tr><tr><td>full_evidence_similarity_family</td><td>0.3966</td><td>0.9268</td><td>0.6532</td><td>0.5555</td><td>0.6034</td><td>1.6585</td></tr></tbody></table></section>
+
+
+<section><h2>CMG Coverage Optimization</h2><p>Stage 2 coverage is reported separately from final LLM quality. The rich graph is used only for matching and projection, while prompt-side CMG remains compact.</p><div class="coverage-bars"><div class="bar-row"><div>Compact prompt matches</div><div class="bar"><div class="fill" style="width:52.22%"></div></div><div>47/90</div></div><div class="bar-row"><div>Rich prompt matches</div><div class="bar"><div class="fill" style="width:54.44%"></div></div><div>49/90</div></div><div class="bar-row"><div>Conservative projection matches</div><div class="bar"><div class="fill" style="width:58.89%"></div></div><div>53/90</div></div><div class="bar-row"><div>Rich graph hits</div><div class="bar"><div class="fill" style="width:71.11%"></div></div><div>64/90</div></div></div><table><thead><tr><th>Case</th><th>Entries</th><th>Compact</th><th>Rich</th><th>Projected</th><th>Graph Hits</th><th>Matching-Only</th></tr></thead><tbody><tr><td>curl_v6_0_beta1_to_v6_0</td><td>12</td><td>10</td><td>10</td><td>10</td><td>10</td><td>0</td></tr><tr><td>sqlite_v6_0_0_2_to_v6_1</td><td>42</td><td>18</td><td>20</td><td>24</td><td>34</td><td>10</td></tr><tr><td>mbedtls_v6_0_beta1_to_v6_0</td><td>23</td><td>6</td><td>6</td><td>6</td><td>7</td><td>1</td></tr><tr><td>zlib_v6_0_0_1_to_v6_0_0_2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>0</td></tr><tr><td>cjson_v6_0_beta1_to_v6_0</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>0</td></tr></tbody></table><ul><li>Compact prompt-side CMG matches 47/90 entries.</li><li>Rich matching improves prompt-node matches to 49/90 and exposes 64/90 rich-graph hits.</li><li>Conservative projection improves prompt-node matches to 53/90 without adding non-function entities to the prompt graph.</li><li>The gain is narrow and should be treated as a Stage 2 coverage optimization rather than a proven release-note quality improvement.</li></ul></section>
+<section><h2>CMG Sample</h2><p>Sample entry: bindohosnetid</p><p>Matched entries: 10 / 12</p><div><span class="cmg-node">bindohosnetid</span><span class="cmg-node">BindSocket</span></div><div class="cmg-edge">synthetic:lib/asyn-ares.c:bindohosnetid:169 -&gt; unresolved-call:BindSocket (call)</div></section>
+<section><h2>Thesis Interpretation</h2><ul><li>The final selected benchmark contains 82 reviewed semantic GT entries across 11 case-version pairs.</li><li>All selected cases have the same eight method variants, strict semantic matches, and evaluation files.</li><li>Similarity-family aggregation has the best Macro/Micro F1 in the final matrix, while strict 1-hop is the strongest graph-context ablation.</li><li>The main remaining quality issue is redundancy and unsupported generated statements under evidence-rich variants.</li></ul></section>
+<section><h2>Validity Threats</h2><ul><li>The GT is semantic release-note-level evidence, not one-to-one commit or function evidence.</li><li>PCRE2 and Git 2.53 are sampled stress scopes and must be described as fixed-scope sampled cases.</li><li>High recall partly depends on the current semantic GT granularity; finer GT splitting may reduce recall.</li><li>Strict matching remains judgment-sensitive and should be reported as manually audited semantic matching.</li></ul></section>
+</main>
+</body>
+</html>

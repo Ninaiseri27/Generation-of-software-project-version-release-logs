@@ -1,0 +1,791 @@
+{
+  "source": {
+    "tool": "version-pair-screener-v1",
+    "repository": "workspaces\\third_party_mbedtls",
+    "tag_pattern": "OpenHarmony-v*",
+    "recent_pairs": 6
+  },
+  "summary": {
+    "screened_pair_count": 6,
+    "passed_pair_count": 6,
+    "failed_pair_count": 0,
+    "size_bucket_counts": {
+      "medium": 2,
+      "patch_only": 1,
+      "empty_or_metadata": 1,
+      "tiny": 1,
+      "large": 1
+    }
+  },
+  "items": [
+    {
+      "ref": "OpenHarmony-v5.0.3-Release",
+      "tgt": "OpenHarmony-v5.1.0-Release",
+      "status": "passed",
+      "commit_count": 18,
+      "changed_file_count": 22,
+      "changed_cpp_file_count": 11,
+      "changed_function_count": 14,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "include/mbedtls/mbedtls_config.h",
+        "library/pkwrite.c",
+        "library/psa_crypto_random_impl.h",
+        "library/psa_crypto_rsa.c",
+        "library/psa_util.c",
+        "library/ssl_misc.h",
+        "library/ssl_tls.c",
+        "library/ssl_tls12_server.c",
+        "library/ssl_tls13_generic.c",
+        "programs/ssl/ssl_client2.c",
+        "programs/ssl/ssl_server2.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "pk_write_rsa_der",
+          "file_path": "library/pkwrite.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_psa_rsa_export_public_key",
+          "file_path": "library/psa_crypto_rsa.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_psa_rsa_generate_key",
+          "file_path": "library/psa_crypto_rsa.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_psa_rsa_sign_hash",
+          "file_path": "library/psa_crypto_rsa.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ecdsa_raw_to_der",
+          "file_path": "library/psa_util.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ecdsa_der_to_raw",
+          "file_path": "library/psa_util.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "ssl_conf_check",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ssl_check_cert_usage",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "ssl_parse_certificate_verify",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_ssl_check_cert_usage",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_ssl_verify_certificate",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "ssl_pick_cert",
+          "file_path": "library/ssl_tls12_server.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ssl_tls13_parse_certificate",
+          "file_path": "library/ssl_tls13_generic.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "ssl_tls13_validate_certificate",
+          "file_path": "library/ssl_tls13_generic.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!142 update OAT.xml. Merge pull request !142 from HuangHaitao/master",
+        "update OAT.xml.",
+        "!139 Fix CVE-2024-45159 Merge pull request !139 from HuangHaitao/fixcvebig",
+        "!138 Fix CVE-2024-49195 Merge pull request !138 from HuangHaitao/fixcve49195",
+        "Fix CVE-2024-45159, CVE-2024-45158",
+        "fix CVE-2024-49195",
+        "!135 【轻量级 PR】：update bundle.json. Merge pull request !135 from 李泽凡/N/A",
+        "update bundle.json.",
+        "!131 FIX rom size Merge pull request !131 from xcy/master-fix-rom",
+        "fix rom size"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.1.0-Release",
+      "tgt": "OpenHarmony-v6.0-Beta1",
+      "status": "passed",
+      "commit_count": 8,
+      "changed_file_count": 3,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!149 新增特性宏 Merge pull request !149 from 涂阔/master",
+        "新增特性宏",
+        "!146 清除编译告警 0327 Merge pull request !146 from 林楠木/master-0327",
+        "!145 清除编译告警 Merge pull request !145 from 林楠木/master",
+        "Description:init Feature or Bugfix: Feature Binary Source:No",
+        "Description:init Feature or Bugfix: Feature Binary Source:No",
+        "!144 新增feature特性 Merge pull request !144 from 涂阔/master",
+        "新增feature特性"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Beta1",
+      "tgt": "OpenHarmony-v6.0-Release",
+      "status": "passed",
+      "commit_count": 10,
+      "changed_file_count": 29,
+      "changed_cpp_file_count": 17,
+      "changed_function_count": 23,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "include/mbedtls/error.h",
+        "include/mbedtls/mbedtls_config.h",
+        "include/mbedtls/ssl.h",
+        "include/mbedtls/x509.h",
+        "library/aesni.c",
+        "library/asn1write.c",
+        "library/lmots.c",
+        "library/lms.c",
+        "library/pem.c",
+        "library/ssl_client.c",
+        "library/ssl_misc.h",
+        "library/ssl_tls.c",
+        "library/x509_create.c",
+        "library/x509write_crt.c",
+        "library/x509write_csr.c",
+        "programs/x509/cert_req.c",
+        "programs/x509/cert_write.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "mbedtls_aesni_has_support",
+          "file_path": "library/aesni.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_asn1_write_raw_buffer",
+          "file_path": "library/asn1write.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_asn1_store_named_data",
+          "file_path": "library/asn1write.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_lmots_import_public_key",
+          "file_path": "library/lmots.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "create_merkle_leaf_value",
+          "file_path": "library/lms.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_lms_import_public_key",
+          "file_path": "library/lms.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_lms_verify",
+          "file_path": "library/lms.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "pem_check_pkcs_padding",
+          "file_path": "library/pem.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "ssl_write_hostname_ext",
+          "file_path": "library/ssl_client.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "ssl_prepare_client_hello",
+          "file_path": "library/ssl_client.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ssl_has_set_hostname_been_called",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_ssl_get_hostname_pointer",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_ssl_free_hostname",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_ssl_set_hostname",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ssl_free",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "get_hostname_for_verification",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_ssl_verify_certificate",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_x509_string_to_names",
+          "file_path": "library/x509_create.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_x509write_crt_set_subject_name",
+          "file_path": "library/x509write_crt.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_x509write_crt_set_issuer_name",
+          "file_path": "library/x509write_crt.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_x509write_csr_set_subject_name",
+          "file_path": "library/x509write_csr.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "main",
+          "file_path": "programs/x509/cert_req.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "main",
+          "file_path": "programs/x509/cert_write.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!157 fix bug CVE-2025-47917 CVE-2025-48965 Merge pull request !157 from 李江海/master",
+        "fix bug CVE-2025-47917 CVE-2025-48965",
+        "!155 Fix CVE-2025-27809 Merge pull request !155 from HuangHaitao/master",
+        "Fix CVE-2025-27809",
+        "!154 【轻量级 PR】：add chipsetsdk Merge pull request !154 from Yiming Lv/N/A",
+        "add chipsetsdk",
+        "!151 [PATCH] Fix bug in mbedtls_asn1_store_named_data() Merge pull request !151 from HuangHaitao/master",
+        "[PATCH] Fix bug in mbedtls_asn1_store_named_data()",
+        "!150 fix CVE-2025-52496,CVE-2025-52497,CVE-2025-49600,CVE-2025-49601 Merge pull request !150 from HuangHaitao/master",
+        "fix CVE-2025-52496,CVE-2025-52497,CVE-2025-49600,CVE-2025-49601"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Release",
+      "tgt": "OpenHarmony-v6.0.0.1-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.1-Release",
+      "tgt": "OpenHarmony-v6.0.0.2-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 1,
+      "changed_function_count": 2,
+      "patch_only": false,
+      "size_bucket": "tiny",
+      "changed_cpp_files": [
+        "library/ssl_tls.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "mbedtls_ssl_write_finished",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_ssl_parse_finished",
+          "file_path": "library/ssl_tls.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!171 merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "fix CVE-2025-27810"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.2-Release",
+      "tgt": "OpenHarmony-v6.1-Release",
+      "status": "passed",
+      "commit_count": 51,
+      "changed_file_count": 513,
+      "changed_cpp_file_count": 277,
+      "changed_function_count": 558,
+      "patch_only": false,
+      "size_bucket": "large",
+      "changed_cpp_files": [
+        "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+        "3rdparty/everest/include/everest/kremlin/internal/builtin.h",
+        "3rdparty/everest/include/everest/kremlin/internal/callconv.h",
+        "3rdparty/everest/include/everest/kremlin/internal/compat.h",
+        "3rdparty/everest/include/everest/kremlin/internal/debug.h",
+        "3rdparty/everest/include/everest/kremlin/internal/target.h",
+        "3rdparty/everest/include/everest/kremlin/internal/types.h",
+        "3rdparty/everest/include/everest/kremlin/internal/wasmsupport.h",
+        "3rdparty/everest/include/everest/x25519.h",
+        "3rdparty/everest/library/Hacl_Curve25519_joined.c",
+        "3rdparty/everest/library/x25519.c",
+        "configs/config-ccm-psk-dtls1_2.h",
+        "configs/config-ccm-psk-tls1_2.h",
+        "configs/config-no-entropy.h",
+        "configs/config-suite-b.h",
+        "configs/config-symmetric-only.h",
+        "configs/config-thread.h",
+        "configs/crypto-config-ccm-aes-sha256.h",
+        "doxygen/input/doc_encdec.h",
+        "doxygen/input/doc_hashing.h",
+        "doxygen/input/doc_mainpage.h",
+        "doxygen/input/doc_rng.h",
+        "doxygen/input/doc_ssltls.h",
+        "doxygen/input/doc_tcpip.h",
+        "doxygen/input/doc_x509.h",
+        "include/mbedtls/asn1.h",
+        "include/mbedtls/base64.h",
+        "include/mbedtls/bignum.h",
+        "include/mbedtls/build_info.h",
+        "include/mbedtls/chacha20.h",
+        "include/mbedtls/chachapoly.h",
+        "include/mbedtls/check_config.h",
+        "include/mbedtls/cipher.h",
+        "include/mbedtls/compat-2.x.h",
+        "include/mbedtls/config_adjust_legacy_crypto.h",
+        "include/mbedtls/config_adjust_legacy_from_psa.h",
+        "include/mbedtls/config_adjust_psa_from_legacy.h",
+        "include/mbedtls/config_adjust_psa_superset_legacy.h",
+        "include/mbedtls/config_adjust_ssl.h",
+        "include/mbedtls/config_adjust_x509.h",
+        "include/mbedtls/config_psa.h",
+        "include/mbedtls/constant_time.h",
+        "include/mbedtls/ctr_drbg.h",
+        "include/mbedtls/debug.h",
+        "include/mbedtls/des.h",
+        "include/mbedtls/dhm.h",
+        "include/mbedtls/ecdh.h",
+        "include/mbedtls/ecdsa.h",
+        "include/mbedtls/ecjpake.h",
+        "include/mbedtls/ecp.h",
+        "include/mbedtls/entropy.h",
+        "include/mbedtls/error.h",
+        "include/mbedtls/gcm.h",
+        "include/mbedtls/hkdf.h",
+        "include/mbedtls/hmac_drbg.h",
+        "include/mbedtls/lms.h",
+        "include/mbedtls/mbedtls_config.h",
+        "include/mbedtls/md.h",
+        "include/mbedtls/md5.h",
+        "include/mbedtls/memory_buffer_alloc.h",
+        "include/mbedtls/net_sockets.h",
+        "include/mbedtls/nist_kw.h",
+        "include/mbedtls/pem.h",
+        "include/mbedtls/pk.h",
+        "include/mbedtls/pkcs12.h",
+        "include/mbedtls/pkcs5.h",
+        "include/mbedtls/platform_util.h",
+        "include/mbedtls/poly1305.h",
+        "include/mbedtls/private_access.h",
+        "include/mbedtls/psa_util.h",
+        "include/mbedtls/ripemd160.h",
+        "include/mbedtls/rsa.h",
+        "include/mbedtls/sha1.h",
+        "include/mbedtls/sha512.h",
+        "include/mbedtls/ssl.h",
+        "include/mbedtls/ssl_cookie.h",
+        "include/mbedtls/ssl_ticket.h",
+        "include/mbedtls/threading.h",
+        "include/mbedtls/version.h",
+        "include/mbedtls/x509.h",
+        "include/mbedtls/x509_crl.h",
+        "include/mbedtls/x509_crt.h",
+        "include/mbedtls/x509_csr.h",
+        "include/psa/crypto.h",
+        "include/psa/crypto_adjust_auto_enabled.h",
+        "include/psa/crypto_adjust_config_dependencies.h",
+        "include/psa/crypto_adjust_config_key_pair_types.h",
+        "include/psa/crypto_adjust_config_synonyms.h",
+        "include/psa/crypto_config.h",
+        "include/psa/crypto_driver_common.h",
+        "include/psa/crypto_driver_contexts_composites.h",
+        "include/psa/crypto_driver_contexts_primitives.h",
+        "include/psa/crypto_extra.h",
+        "include/psa/crypto_se_driver.h",
+        "include/psa/crypto_sizes.h",
+        "include/psa/crypto_struct.h",
+        "include/psa/crypto_types.h",
+        "library/aesni.c",
+        "library/alignment.c",
+        "library/alignment.h",
+        "library/base64.c",
+        "library/bignum.c",
+        "library/bignum_core.c",
+        "library/bignum_core.h",
+        "library/bignum_core_invasive.h",
+        "library/bignum_internal.h",
+        "library/bignum_mod_raw.h",
+        "library/bignum_mod_raw_invasive.h",
+        "library/block_cipher.c",
+        "library/ccm.c",
+        "library/chacha20.c",
+        "library/cipher.c",
+        "library/cipher_invasive.h",
+        "library/cipher_wrap.c",
+        "library/cipher_wrap.h",
+        "library/common.c",
+        "library/common.h",
+        "library/constant_time_impl.h",
+        "library/ctr_drbg.c",
+        "library/des.c",
+        "library/dhm.c",
+        "library/ecdsa.c",
+        "library/ecp.c",
+        "library/ecp_internal_alt.h",
+        "library/entropy.c",
+        "library/entropy_poll.c",
+        "library/entropy_poll.h",
+        "library/error.c",
+        "library/hkdf.c",
+        "library/lmots.c",
+        "library/lms.c",
+        "library/md.c",
+        "library/memory_buffer_alloc.c",
+        "library/mps_error.h",
+        "library/mps_reader.c",
+        "library/mps_reader.h",
+        "library/mps_trace.c",
+        "library/mps_trace.h",
+        "library/net_sockets.c",
+        "library/nist_kw.c",
+        "library/pem.c",
+        "library/pk.c",
+        "library/pk_wrap.c",
+        "library/platform.c",
+        "library/platform_util.c",
+        "library/poly1305.c",
+        "library/psa_crypto.c",
+        "library/psa_crypto_aead.h",
+        "library/psa_crypto_cipher.c",
+        "library/psa_crypto_core.h",
+        "library/psa_crypto_driver_wrappers.c",
+        "library/psa_crypto_driver_wrappers.h",
+        "library/psa_crypto_ecp.c",
+        "library/psa_crypto_ecp.h",
+        "library/psa_crypto_its.h",
+        "library/psa_crypto_mac.c",
+        "library/psa_crypto_mac.h",
+        "library/psa_crypto_pake.h",
+        "library/psa_crypto_rsa.c",
+        "library/psa_crypto_rsa.h",
+        "library/psa_crypto_se.c",
+        "library/psa_crypto_slot_management.c",
+        "library/psa_crypto_slot_management.h",
+        "library/psa_crypto_storage.h",
+        "library/psa_util.c",
+        "library/rsa.c",
+        "library/rsa_alt_helpers.c",
+        "library/rsa_alt_helpers.h",
+        "library/sha256.c",
+        "library/ssl_client.h",
+        "library/ssl_cookie.c",
+        "library/ssl_debug_helpers_generated.c",
+        "library/ssl_misc.h",
+        "library/ssl_msg.c",
+        "library/ssl_ticket.c",
+        "library/ssl_tls.c",
+        "library/ssl_tls12_client.c",
+        "library/ssl_tls12_server.c",
+        "library/ssl_tls13_client.c",
+        "library/ssl_tls13_generic.c",
+        "library/ssl_tls13_invasive.h",
+        "library/ssl_tls13_keys.c",
+        "library/ssl_tls13_keys.h",
+        "library/ssl_tls13_server.c",
+        "library/threading.c",
+        "library/threading_internal.h",
+        "library/timing.c",
+        "library/version.c",
+        "library/version_features.c",
+        "library/x509.c",
+        "library/x509_crt.c",
+        "library/x509write_crt.c",
+        "library/x509write_csr.c",
+        "programs/cipher/cipher_aead_demo.c",
+        "programs/fuzz/common.h",
+        "programs/fuzz/fuzz_pkcs7.c",
+        "programs/fuzz/fuzz_pubkey.c",
+        "programs/fuzz/fuzz_x509crl.c",
+        "programs/fuzz/fuzz_x509crt.c",
+        "programs/fuzz/fuzz_x509csr.c",
+        "programs/fuzz/onefile.c",
+        "programs/hash/generic_sum.c",
+        "programs/hash/hello.c",
+        "programs/hash/md_hmac_demo.c",
+        "programs/pkey/dh_genprime.c",
+        "programs/pkey/ecdh_curve25519.c",
+        "programs/pkey/gen_key.c",
+        "programs/pkey/mpi_demo.c",
+        "programs/pkey/rsa_genkey.c",
+        "programs/psa/aead_demo.c",
+        "programs/psa/crypto_examples.c",
+        "programs/psa/hmac_demo.c",
+        "programs/psa/psa_constant_names.c",
+        "programs/random/gen_entropy.c",
+        "programs/random/gen_random_ctr_drbg.c",
+        "programs/ssl/dtls_client.c",
+        "programs/ssl/dtls_server.c",
+        "programs/ssl/mini_client.c",
+        "programs/ssl/ssl_client1.c",
+        "programs/ssl/ssl_client2.c",
+        "programs/ssl/ssl_context_info.c",
+        "programs/ssl/ssl_fork_server.c",
+        "programs/ssl/ssl_mail_client.c",
+        "programs/ssl/ssl_pthread_server.c",
+        "programs/ssl/ssl_server.c",
+        "programs/ssl/ssl_server2.c",
+        "programs/ssl/ssl_test_common_source.c",
+        "programs/ssl/ssl_test_lib.h",
+        "programs/test/benchmark.c",
+        "programs/test/cmake_package/cmake_package.c",
+        "programs/test/cmake_package_install/cmake_package_install.c",
+        "programs/test/cmake_subproject/cmake_subproject.c",
+        "programs/test/dlopen.c",
+        "programs/test/query_config.c",
+        "programs/test/selftest.c",
+        "programs/test/udp_proxy.c",
+        "programs/util/pem2der.c",
+        "programs/util/strerror.c",
+        "programs/wince_main.c",
+        "programs/x509/cert_req.c",
+        "programs/x509/cert_write.c",
+        "programs/x509/load_roots.c",
+        "tests/configs/config_test_driver.h",
+        "tests/configs/crypto_config_test_driver_extension.h",
+        "tests/configs/tls13-only.h",
+        "tests/configs/user-config-for-test.h",
+        "tests/include/alt-dummy/aes_alt.h",
+        "tests/include/alt-dummy/aria_alt.h",
+        "tests/include/alt-dummy/camellia_alt.h",
+        "tests/include/alt-dummy/ccm_alt.h",
+        "tests/include/alt-dummy/chacha20_alt.h",
+        "tests/include/alt-dummy/chachapoly_alt.h",
+        "tests/include/alt-dummy/cmac_alt.h",
+        "tests/include/alt-dummy/des_alt.h",
+        "tests/include/alt-dummy/dhm_alt.h",
+        "tests/include/alt-dummy/ecjpake_alt.h",
+        "tests/include/alt-dummy/ecp_alt.h",
+        "tests/include/alt-dummy/gcm_alt.h",
+        "tests/include/alt-dummy/md5_alt.h",
+        "tests/include/alt-dummy/nist_kw_alt.h",
+        "tests/include/alt-dummy/platform_alt.h",
+        "tests/include/alt-dummy/poly1305_alt.h",
+        "tests/include/alt-dummy/ripemd160_alt.h",
+        "tests/include/alt-dummy/rsa_alt.h",
+        "tests/include/alt-dummy/sha1_alt.h",
+        "tests/include/alt-dummy/sha256_alt.h",
+        "tests/include/alt-dummy/sha512_alt.h",
+        "tests/include/alt-dummy/threading_alt.h",
+        "tests/include/alt-dummy/timing_alt.h",
+        "tests/include/test/certs.h",
+        "tests/include/test/psa_test_wrappers.h",
+        "tests/include/test/ssl_helpers.h",
+        "tests/include/test/test_certs.h",
+        "tests/include/test/test_keys.h",
+        "tests/src/certs.c",
+        "tests/src/psa_test_wrappers.c",
+        "tests/src/test_helpers/ssl_helpers.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "load16",
+          "file_path": "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "load32",
+          "file_path": "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "load64",
+          "file_path": "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "store16",
+          "file_path": "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "store32",
+          "file_path": "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "store64",
+          "file_path": "3rdparty/everest/include/everest/kremlin/c_endianness.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "krml_time",
+          "file_path": "3rdparty/everest/include/everest/kremlin/internal/target.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "aesni_setkey_enc_128",
+          "file_path": "library/aesni.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "aesni_setkey_enc_256",
+          "file_path": "library/aesni.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_get_unaligned_uint16",
+          "file_path": "library/alignment.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_put_unaligned_uint16",
+          "file_path": "library/alignment.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_get_unaligned_uint32",
+          "file_path": "library/alignment.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_put_unaligned_uint32",
+          "file_path": "library/alignment.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_get_unaligned_uint64",
+          "file_path": "library/alignment.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_put_unaligned_uint64",
+          "file_path": "library/alignment.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "mbedtls_get_unaligned_uint16",
+          "file_path": "library/alignment.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_put_unaligned_uint16",
+          "file_path": "library/alignment.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_get_unaligned_uint32",
+          "file_path": "library/alignment.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_put_unaligned_uint32",
+          "file_path": "library/alignment.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_get_unaligned_uint64",
+          "file_path": "library/alignment.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_put_unaligned_uint64",
+          "file_path": "library/alignment.h",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_base64_decode",
+          "file_path": "library/base64.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_mpi_uint_ctz",
+          "file_path": "library/bignum.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "mbedtls_mpi_lsb",
+          "file_path": "library/bignum.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "mbedtls_mpi_exp_mod_optionally_safe",
+          "file_path": "library/bignum.c",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!178 merge cherry-pick-mr-177-1770565229250-auto into OpenHarmony-6.1-Release",
+        "bule and yellow sync",
+        "blue and yellow sync",
+        "blue and yellow sync",
+        "update: 更新文件 OAT.xml blue and yellow sync",
+        "blue and yellow sync",
+        "blue and yellow sync",
+        "blue and yellow sync",
+        "blue and yellow sync",
+        "blue and yellow sync"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "case_id": "cjson_v6_0_beta1_to_v6_0",
+  "repository": {
+    "name": "third_party_cJSON",
+    "url": "https://github.com/openharmony/third_party_cJSON.git",
+    "category": "json_parser"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0-Beta1",
+    "tgt": "OpenHarmony-v6.0-Release"
+  },
+  "benchmark_role": "core_eval",
+  "intended_role": "core_eval",
+  "pipeline_status": "verified_full_pipeline_deepseek",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 14,
+    "changed_cpp_files": 5,
+    "changed_functions": 11,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/third_party_cJSON/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {
+    "cmg_output": "outputs/benchmark/third_party_cJSON/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/cmg.json",
+    "mock_baselines": "outputs/benchmark/third_party_cJSON/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/baselines",
+    "deepseek_v4_flash_baselines": "outputs/benchmark/third_party_cJSON/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/baselines_deepseek_v4_flash"
+  },
+  "stage2": {
+    "status": "passed",
+    "matched_entries": 11,
+    "unmatched_entries": 0,
+    "fallback_context_entries": 11,
+    "synthetic_entries": 0,
+    "diff_call_edges": 17
+  },
+  "stage3": {
+    "status": "passed_deepseek_v4_flash",
+    "prompt_entries": 11,
+    "mock_generated_entries": 11,
+    "mock_failed_entries": 0,
+    "deepseek_generated_entries": 34,
+    "deepseek_failed_entries": 0,
+    "aggregation_strategies_tested": [
+      "rule_family"
+    ]
+  },
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/third_party_cjson/cjson_v6_0_beta1_to_v6_0/ground_truth.md",
+    "evidence_path": "benchmark/cases/third_party_cjson/cjson_v6_0_beta1_to_v6_0/evidence.md",
+    "evidence_sources": [
+      "commit_messages",
+      "function_level_diff",
+      "test changes",
+      "component changelog or upstream issue references if available"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": true,
+    "strict_deepseek_summary": {
+      "text_only": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      "diff_only": {
+        "precision": 0.6364,
+        "recall": 1.0,
+        "f1": 0.7778
+      },
+      "no_graph": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75
+      },
+      "full": {
+        "precision": 0.7273,
+        "recall": 1.0,
+        "f1": 0.8421
+      }
+    },
+    "admission_note": "Admitted after reviewed ground truth, real DeepSeek baseline generation, and strict semantic matching."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "aggregation_none_exact_rule_family",
+    "strict_1hop_vs_adaptive"
+  ],
+  "notes": [
+    "Admitted fifth repository: medium-sized direct-source JSON parser update.",
+    "Stage 2 matching is strong on this pair: 11/11 changed functions matched.",
+    "Likely semantic themes include cJSON duplicate recursion-depth protection, big-number parsing tests, and heap-buffer-overflow regression tests."
+  ]
+}

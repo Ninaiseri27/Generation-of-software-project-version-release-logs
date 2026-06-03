@@ -1,0 +1,60 @@
+{
+  "git_executable": "git",
+  "version_pair": {
+    "repo_path": "workspaces/upstream_git",
+    "ref_version": "v2.51.0",
+    "tgt_version": "v2.51.1"
+  },
+  "include_extensions": [
+    ".c",
+    ".cc",
+    ".cpp",
+    ".cxx",
+    ".h",
+    ".hh",
+    ".hpp",
+    ".hxx"
+  ],
+  "diff_context_lines": 0,
+  "output_dir": "outputs/upstream_git/v2.51.0__v2.51.1",
+  "project": {
+    "name": "upstream_git",
+    "description": "Official upstream Git C repository used as a rich-release-note benchmark extension candidate."
+  },
+  "cmg": {
+    "strategy": "adaptive",
+    "matching_view": "strict",
+    "context_hops": 1,
+    "matched_hops": 1,
+    "sparse_matched_hops": 2,
+    "unmatched_expand_hops": 1,
+    "unmatched_source_window_lines": 80,
+    "unmatched_expand_from_diff_calls": true,
+    "min_edges_for_sparse": 1,
+    "include_parent_context": true,
+    "include_diff_calls": true,
+    "max_nodes": 30,
+    "max_edges": 60
+  },
+  "generation": {
+    "backend": "mock",
+    "model_name": "mock-rule-based-v1",
+    "base_url": "https://api.deepseek.com",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.2,
+    "max_tokens": 1024,
+    "timeout_sec": 60,
+    "max_retries": 2,
+    "retry_backoff_sec": 1.5
+  },
+  "enre": {
+    "java_executable": "java",
+    "enre_jar_path": "tools/ENRE-CPP.jar",
+    "max_heap": "8g",
+    "snapshot_root": "workspaces/version_snapshots",
+    "project_name": "upstream_git",
+    "extra_dirs": [],
+    "program_environments": [],
+    "raw_output_root": "outputs/enre_raw"
+  }
+}

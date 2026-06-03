@@ -1,0 +1,729 @@
+{
+  "source": {
+    "tool": "version-pair-screener-v1",
+    "repository": "workspaces\\third_party_sqlite",
+    "tag_pattern": "OpenHarmony-v*",
+    "recent_pairs": 6
+  },
+  "summary": {
+    "screened_pair_count": 6,
+    "passed_pair_count": 6,
+    "failed_pair_count": 0,
+    "size_bucket_counts": {
+      "large": 3,
+      "small": 1,
+      "empty_or_metadata": 1,
+      "medium": 1
+    }
+  },
+  "items": [
+    {
+      "ref": "OpenHarmony-v5.0.3-Release",
+      "tgt": "OpenHarmony-v5.1.0-Release",
+      "status": "passed",
+      "commit_count": 108,
+      "changed_file_count": 8,
+      "changed_cpp_file_count": 5,
+      "changed_function_count": 141,
+      "patch_only": false,
+      "size_bucket": "large",
+      "changed_cpp_files": [
+        "include/sqlite3.h",
+        "include/sqlite3icu.h",
+        "include/sqlite3tokenizer.h",
+        "src/sqlite3.c",
+        "src/sqlite3icu.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "sqlite3base16Encode",
+          "file_path": "src/sqlite3.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "unixLock",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "unixLockSharedMemory",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "unixShmLock",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "readDbPage",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "syncJournal",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "hasHotJournal",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3PagerSharedLock",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "getPageNormal",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "getPageMMap",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3PagerBegin",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3PagerMovepage",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3PagerSetJournalMode",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "pagerOpenWal",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3PagerCloseWal",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "walIndexAppend",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "walIndexRecover",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "walCheckpoint",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3WalClose",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "walIndexReadHdr",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "walTryBeginRead",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3WalBeginReadTransaction",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3WalFindFrame",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3WalCheckpoint",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "corruptPageError",
+          "file_path": "src/sqlite3.c",
+          "change_type": "deleted"
+        }
+      ],
+      "commit_messages": [
+        "!199 Sync and revert 5.1 features Merge pull request !199 from MartinChoo/release-5-1-oat",
+        "Sync and revert 5.1 features",
+        "Revert \"suport meta recovery\"",
+        "Revert \"meta recovery fix open race\"",
+        "Revert \" meta recovery fix page buffer override access\"",
+        "Revert \"Add extention:cksumvfs, and check page\"",
+        "Revert \"Backup step support restore meta pages\"",
+        "Revert \"IssueNo:#IBNXAW\"",
+        "Revert \"IssueNo:#IBNXAW\"",
+        "Revert \"fix patch missing some line\""
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.1.0-Release",
+      "tgt": "OpenHarmony-v6.0-Beta1",
+      "status": "passed",
+      "commit_count": 42,
+      "changed_file_count": 22,
+      "changed_cpp_file_count": 8,
+      "changed_function_count": 1387,
+      "patch_only": false,
+      "size_bucket": "large",
+      "changed_cpp_files": [
+        "include/sqlite3.h",
+        "include/sqlite3ext.h",
+        "include/sqlite3sym.h",
+        "include/sqlite3tokenizer.h",
+        "src/shell.c",
+        "src/sqlite3.c",
+        "src/sqlite3icu.c",
+        "unittest/sqlite_test.cpp"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "setBinaryMode",
+          "file_path": "src/shell.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "setTextMode",
+          "file_path": "src/shell.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "utf8_printf",
+          "file_path": "src/shell.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "shell_check_oom",
+          "file_path": "src/shell.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "utf8_width_print",
+          "file_path": "src/shell.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "handleOfFile",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "pstReachesConsole",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "restoreConsoleArb",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "streamOfConsole",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "isValidStreamInfo",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "maybeSetupAsConsole",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "consoleRenewSetup",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "consoleClassifySetup",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "consoleRestore",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "isKnownReadable",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "isKnownWritable",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "designateEmitStream",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "setOutputStream",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "setErrorStream",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "setModeFlushQ",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "setBinaryMode",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "setTextMode",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "conZstrEmit",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "conioVmPrintf",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "getDesignatedEmitStream",
+          "file_path": "src/shell.c",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!215 Apply PGO optimization on SQLite Merge pull request !215 from zihao/dev-0506",
+        "!238 binlog bugfix Merge pull request !238 from hongyangliu/0515v2",
+        "binlog bugfix",
+        "!233 版本升级3.44.4 Merge pull request !233 from ryne3366/upgrade_344",
+        "upgrade to 3.44.4",
+        "Bugfix on current version",
+        "Enhance dfx ability, report corruption and check pages",
+        "Support meta recovery",
+        "Busy debug and log dump",
+        "Enable and optimize ICU"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Beta1",
+      "tgt": "OpenHarmony-v6.0-Release",
+      "status": "passed",
+      "commit_count": 59,
+      "changed_file_count": 29,
+      "changed_cpp_file_count": 10,
+      "changed_function_count": 66,
+      "patch_only": false,
+      "size_bucket": "large",
+      "changed_cpp_files": [
+        "include/sqlite3.h",
+        "include/sqlite3sym.h",
+        "src/sqlite3.c",
+        "unittest/common.cpp",
+        "unittest/common.h",
+        "unittest/sqlite_binlog_test.cpp",
+        "unittest/sqlite_cksum_test.cpp",
+        "unittest/sqlite_compress_test.cpp",
+        "unittest/sqlite_metadwr_test.cpp",
+        "unittest/sqlite_test.cpp"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "fts3tokFilterMethod",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "fts3MatchinfoSize",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "Common::RemoveDir",
+          "file_path": "unittest/common.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "Common::MakeDir",
+          "file_path": "unittest/common.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "Common::IsFileExist",
+          "file_path": "unittest/common.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "UtSqliteLogPrint",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "UtPresetDb",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "UtEnableBinlog",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "UtQueryResult",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "UtGetRecordCount",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SqliteBinlogTest::SetUpTestCase",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SqliteBinlogTest::TearDownTestCase",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SqliteBinlogTest::SetUp",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SqliteBinlogTest::TearDown",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "BinlogReplayTest001",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::SetUpTestCase",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::TearDownTestCase",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::SetUp",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::TearDown",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::UtSqliteLogPrint",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::UtSqliteExecCallback",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::UtBackupDatabase",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::UtPresetDb",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "SQLiteCksumTest::IsSupportPageCheck",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "CksumTest001",
+          "file_path": "unittest/sqlite_cksum_test.cpp",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!295 Sync master to 6.0 release branch Merge pull request !295 from MartinChoo/SyncCode60Release",
+        "Check file before open compress db",
+        "fix binlog replay failed with single quotes",
+        "!286 Fix testcase issues Merge pull request !286 from MartinChoo/FixCompressIssue",
+        "Fix testcase issues",
+        "!284 Fix compress db issue while concurrent Merge pull request !284 from MartinChoo/FixCompressIssue",
+        "Fix compress db issue while concurrent",
+        "!283 Fix meta dwr overwrite Merge pull request !283 from ryne3366/meta_dwr_overwrite",
+        "Fix meta dwr overwrite",
+        "!262 Issue:correct critical typo of early commit Merge pull request !262 from zihao/dev-0506"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Release",
+      "tgt": "OpenHarmony-v6.0.0.1-Release",
+      "status": "passed",
+      "commit_count": 10,
+      "changed_file_count": 5,
+      "changed_cpp_file_count": 4,
+      "changed_function_count": 4,
+      "patch_only": false,
+      "size_bucket": "small",
+      "changed_cpp_files": [
+        "src/sqlite3.c",
+        "unittest/common.cpp",
+        "unittest/common.h",
+        "unittest/sqlite_compress_test.cpp"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "fts5SegIterAllocTombstone",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "Common::DestroyDbFile",
+          "file_path": "unittest/common.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "CompressTest013",
+          "file_path": "unittest/sqlite_compress_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "CompressTest014",
+          "file_path": "unittest/sqlite_compress_test.cpp",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!309 merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "!319 merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "Fix compress func param mismatch issue",
+        "!311 merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "Fix unexpected journal file generate while operate compress db",
+        "merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "fix CVE-2025-7709",
+        "Fix error code missing",
+        "merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "Fix issue while open db"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.1-Release",
+      "tgt": "OpenHarmony-v6.0.0.2-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.2-Release",
+      "tgt": "OpenHarmony-v6.1-Release",
+      "status": "passed",
+      "commit_count": 60,
+      "changed_file_count": 14,
+      "changed_cpp_file_count": 6,
+      "changed_function_count": 42,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "include/sqlite3sym.h",
+        "src/shell.c",
+        "src/sqlite3.c",
+        "unittest/sqlite_binlog_test.cpp",
+        "unittest/sqlite_codec_rekey_test.cpp",
+        "unittest/sqlite_compress_test.cpp"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "output_hex_blob",
+          "file_path": "src/shell.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sqlite3VdbeExec",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "fts3IncrmergeWriter",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "rtreenode",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sessionChangeHash",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "sessionChangesetBufferTblhdr",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "fts5DlidxLvlNext",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "fts5WriteDlidxAppend",
+          "file_path": "src/sqlite3.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "UtPresetDb",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "BinlogReplayTest002",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "BinlogReplayTest003",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "BinlogInterfaceTest001",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "BinlogInterfaceTest002",
+          "file_path": "unittest/sqlite_binlog_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "UtSqliteLogPrint",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "LibSQLiteRekeyTest::SetUpTestCase",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "LibSQLiteRekeyTest::TearDownTestCase",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "LibSQLiteRekeyTest::SetUp",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "LibSQLiteRekeyTest::TearDown",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "CreateTable",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "InsertRecords",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "QueryIndexInfo",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "GetRecordCount",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "PrepareDataForDb",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "QueryData",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        },
+        {
+          "symbol": "EncryptDbConfig",
+          "file_path": "unittest/sqlite_codec_rekey_test.cpp",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!337 merge cherry-pick-mr-336-1770605223304-auto into OpenHarmony-6.1-Release",
+        "sync code to gitcode",
+        "!334 merge master into master",
+        "fix sqlite community issue of OOB read and infinite loop",
+        "!333 merge master into master",
+        "fix sqlite community issue of an integer overflow",
+        "!331 merge change_zstd into master",
+        "zstd redirect to libzstd.z.so",
+        "!330 merge master into master",
+        "add visibility path for plugins/data"
+      ]
+    }
+  ]
+}

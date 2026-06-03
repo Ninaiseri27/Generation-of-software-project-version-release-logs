@@ -1,0 +1,587 @@
+{
+  "audit_date": "2026-05-30",
+  "policy": "Second-pass strict cleanup removed generated notes that did not express the GT-level release-note semantics.",
+  "removed_match_count": 71,
+  "restored_match_count": 1,
+  "removed_matches": [
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-215",
+      "title": "Add fsck validation for symref target formatting",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-764",
+      "title": "Remove unused do_lstat function",
+      "reason": "Removal-only do_lstat note does not state the Windows symlink/stat behavior."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-087",
+      "title": "Add helper to push attribute states into a queue",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-331",
+      "title": "Fix memory leak in attribute state queue release",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-699",
+      "title": "Remove macroexpand_one function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-010",
+      "title": "Add attr_state_queue_pop function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-349",
+      "title": "Fix memory leak in worktree list display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-804",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-186",
+      "title": "Add show_worktree function for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-581",
+      "title": "Validate symref targets for missing newline and trailing content",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-556",
+      "title": "Remove unused do_lstat function on Windows",
+      "reason": "Removal-only do_lstat note does not state the Windows symlink/stat behavior."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-707",
+      "title": "Remove macroexpand_one function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-011",
+      "title": "Add attr_state_queue_push helper function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-341",
+      "title": "Fix memory leak in attribute state queue release",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-010",
+      "title": "Add attr_state_queue_pop helper function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-353",
+      "title": "Fix memory leak in worktree list command",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-833",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-180",
+      "title": "Add show_worktree helper for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G204",
+      "generated_id": "GEN-520",
+      "title": "Migrate archive-zip to odb_read_stream API",
+      "reason": "GT-G204 requires repo-info/repo-structure output; ODB/archive helper notes belong elsewhere."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-162",
+      "title": "Add fsck validation for symbolic ref targets",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-448",
+      "title": "Remove unused do_lstat function on Windows",
+      "reason": "Removal-only do_lstat note does not state the Windows symlink/stat behavior."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-613",
+      "title": "Remove unused files_fsck_refs function",
+      "reason": "GT-G208 is Windows symlink/stat/readlink support; refs fsck cleanup is a different concern."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-563",
+      "title": "Remove macroexpand_one function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-008",
+      "title": "Add attr_state_queue_pop helper function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-268",
+      "title": "Fix memory leak in attribute state queue release",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-278",
+      "title": "Fix memory leak in worktree list command",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-640",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-135",
+      "title": "Add show_worktree helper for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G204",
+      "generated_id": "GEN-405",
+      "title": "Migrate archive-zip to odb_read_stream API",
+      "reason": "GT-G204 requires repo-info/repo-structure output; ODB/archive helper notes belong elsewhere."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G204",
+      "generated_id": "GEN-062",
+      "title": "Add odb_source_loose_new helper function",
+      "reason": "GT-G204 requires repo-info/repo-structure output; ODB/archive helper notes belong elsewhere."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-131",
+      "title": "Add fsck validation for symbolic ref targets",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-345",
+      "title": "Remove unused do_lstat function on Windows",
+      "reason": "Removal-only do_lstat note does not state the Windows symlink/stat behavior."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-431",
+      "title": "Remove istream_source function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-044",
+      "title": "Add helper to push OID to commit stack",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-211",
+      "title": "Fix memory leak in attribute state queue release",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-218",
+      "title": "Fix memory leak in worktree list command",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-469",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-105",
+      "title": "Add show_worktree helper for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-575",
+      "title": "Validate symref target formatting in files backend",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-547",
+      "title": "Remove unused do_lstat function on Windows",
+      "reason": "Removal-only do_lstat note does not state the Windows symlink/stat behavior."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-823",
+      "title": "Remove unused macroexpand_one function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-068",
+      "title": "Add helper to push attribute states into a queue",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-012",
+      "title": "Add attr_state_queue_pop helper function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-343",
+      "title": "Fix memory leak in attribute state queue release",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-831",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-182",
+      "title": "Add show_worktree function for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-226",
+      "title": "Add fsck check for missing newline and trailing content in symref targets",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-657",
+      "title": "Remove macroexpand_one function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-015",
+      "title": "Add attr_state_queue_pop helper function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-016",
+      "title": "Add attr_state_queue_push helper function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-017",
+      "title": "Add attr_state_queue_release helper",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-793",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-189",
+      "title": "Add show_worktree helper for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G205",
+      "generated_id": "GEN-192",
+      "title": "Add fsck checks for symbolic ref targets",
+      "reason": "GT-G205 is incomplete-line whitespace reporting, not symref/fsck validation."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-281",
+      "title": "Fix fsck of symbolic link refs in files backend",
+      "reason": "GT-G208 is Windows symlink/stat/readlink support; refs fsck cleanup is a different concern."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-682",
+      "title": "Remove macroexpand_one function",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-066",
+      "title": "Add helper function to pop from attribute state queue",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-078",
+      "title": "Add helper to push attribute states into a queue",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G209",
+      "generated_id": "GEN-011",
+      "title": "Add attr_state_queue_release helper",
+      "reason": "GT-G209 requires macro-expansion behavior; helper/removal-only note is too implementation-only."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-798",
+      "title": "Remove unused measure_widths function",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G211",
+      "generated_id": "GEN-155",
+      "title": "Add show_worktree function for worktree display",
+      "reason": "GT-G211 requires display-width behavior; helper/memory-leak/removal-only note is not enough."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P206",
+      "generated_id": "GEN-043",
+      "title": "Add print_class function for character class debugging output",
+      "reason": "GT-P206 is runtime/compile behavior; print/debug-only notes are not valid semantic coverage."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P206",
+      "generated_id": "GEN-037",
+      "title": "Add print_class function for character class debugging",
+      "reason": "GT-P206 is runtime/compile behavior; print/debug-only notes are not valid semantic coverage."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P206",
+      "generated_id": "GEN-026",
+      "title": "Add print_map function for character class debugging",
+      "reason": "GT-P206 is runtime/compile behavior; print/debug-only notes are not valid semantic coverage."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-020",
+      "title": "Add print_map function for character class debugging",
+      "reason": "GT-P203 is runtime/compile behavior; print/debug-only notes are not valid semantic coverage."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P206",
+      "generated_id": "GEN-020",
+      "title": "Add print_map function for character class debugging",
+      "reason": "GT-P206 is runtime/compile behavior; print/debug-only notes are not valid semantic coverage."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-073",
+      "title": "Fix error message quoting and type cast in pcre2test",
+      "reason": "GT-P215 requires substitute case transformation; pcre2test formatting/cast note is unrelated."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-180",
+      "title": "Remove unused match_ref function to fix static regexp issues",
+      "reason": "GT-P207 requires caseless-restrict backreference behavior; removal-only match_ref note is not enough."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-126",
+      "title": "Fix locale error message quoting and type cast in pcre2test",
+      "reason": "GT-P215 requires substitute case transformation; pcre2test formatting/cast note is unrelated."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-157",
+      "title": "Improve error message formatting and fix type cast in pcre2test",
+      "reason": "GT-P215 requires substitute case transformation; pcre2test formatting/cast note is unrelated."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-043",
+      "title": "Add support for extended character classes (ECLASS) in pcre2_printint",
+      "reason": "GT-P203 is runtime/compile behavior; print/debug-only notes are not valid semantic coverage."
+    }
+  ],
+  "restored_matches": [
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G204",
+      "generated_id": "GEN-147",
+      "title": "Count object sizes in repo-info",
+      "reason": "GT-G204 lacks repo-info/repo-structure semantics.",
+      "restore_reason": "Second-pass manual check: repo-info object-size note directly supports GT-G204."
+    }
+  ]
+}

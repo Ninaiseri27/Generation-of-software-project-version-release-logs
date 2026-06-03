@@ -1,0 +1,85 @@
+{
+  "case_id": "mbedtls_v6_0_beta1_to_v6_0",
+  "repository": {
+    "name": "third_party_mbedtls",
+    "url": "https://github.com/openharmony/third_party_mbedtls.git",
+    "category": "security_crypto"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0-Beta1",
+    "tgt": "OpenHarmony-v6.0-Release"
+  },
+  "benchmark_role": "candidate",
+  "intended_role": "core_eval",
+  "pipeline_status": "verified_full_pipeline_mock",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 10,
+    "changed_cpp_files": 17,
+    "changed_functions": 23,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/third_party_mbedtls/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {
+    "cmg_output": "outputs/benchmark/third_party_mbedtls/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/cmg.json",
+    "prompt_input": "outputs/benchmark/third_party_mbedtls/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/prompt_input.json",
+    "prompt_bundle": "outputs/benchmark/third_party_mbedtls/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/prompt_bundle.json",
+    "release_note_mock_rule_family": "outputs/benchmark/third_party_mbedtls/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release/release_note_mock_rule_family.json"
+  },
+  "stage2": {
+    "status": "passed_with_fallback",
+    "matched_entries": 6,
+    "unmatched_entries": 17,
+    "unique_unmatched_symbols": 17,
+    "fallback_context_entries": 23,
+    "synthetic_entries": 17,
+    "diff_call_edges": 41,
+    "match_levels": {
+      "path+symbol": 2,
+      "symbol+overlap": 4,
+      "unmatched": 17
+    }
+  },
+  "stage3": {
+    "status": "passed_mock",
+    "prompt_entries": 23,
+    "mock_generated_entries": 23,
+    "mock_failed_entries": 0,
+    "aggregation_strategies_tested": {
+      "none": 23,
+      "exact": 22,
+      "rule_family": 22
+    }
+  },
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/third_party_mbedtls/mbedtls_v6_0_beta1_to_v6_0/ground_truth.md",
+    "evidence_path": "benchmark/cases/third_party_mbedtls/mbedtls_v6_0_beta1_to_v6_0/evidence.md",
+    "evidence_sources": [
+      "OpenHarmony v6.0 Beta1 and v6.0 platform release notes",
+      "commit_messages",
+      "function_level_diff",
+      "mbedtls ChangeLog or ChangeLog.d entries if they can be mapped"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": true,
+    "blocking_reason": null
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "strict_1hop_vs_adaptive_cmg",
+    "with_vs_without_fallback_context",
+    "with_vs_without_commit_messages",
+    "aggregation_none_exact_rule_family"
+  ],
+  "notes": [
+    "Medium security/crypto case selected from version-pair screening.",
+    "Useful for evaluating security-sensitive change summarization."
+  ]
+}

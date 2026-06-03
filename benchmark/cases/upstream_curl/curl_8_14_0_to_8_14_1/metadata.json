@@ -1,0 +1,58 @@
+{
+  "case_id": "curl_8_14_0_to_8_14_1",
+  "repository": {
+    "name": "upstream_curl",
+    "url": "https://github.com/curl/curl.git",
+    "category": "network"
+  },
+  "version_pair": {
+    "ref": "curl-8_14_0",
+    "tgt": "curl-8_14_1"
+  },
+  "benchmark_role": "candidate",
+  "intended_role": "extension_eval",
+  "pipeline_status": "verified_stage1",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 48,
+    "changed_cpp_files": 109,
+    "changed_functions": 121,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/upstream_curl/curl-8_14_0__curl-8_14_1/changed_functions.json",
+    "screening_output": "benchmark/screening/upstream_curl_recent12.json"
+  },
+  "pipeline_artifacts": {},
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/upstream_curl/curl_8_14_0_to_8_14_1/ground_truth.md",
+    "evidence_path": "benchmark/cases/upstream_curl/curl_8_14_0_to_8_14_1/evidence.md",
+    "evidence_sources": [
+      "official curl 8.14.1 RELEASE-NOTES",
+      "commit_messages",
+      "function_level_diff",
+      "changed_files",
+      "curl issue references in RELEASE-NOTES"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "Extension candidate. Ground truth is reviewed, but strict matches and comparable real-backend outputs are not complete yet."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "sampled_stress_protocol_if_needed",
+    "aggregation_none_rule_similarity",
+    "strict_semantic_matching"
+  ],
+  "notes": [
+    "Selected as an additional upstream official-release candidate to increase strict GT scale.",
+    "The pair has official curl release notes and a manageable large scale: 121 changed functions.",
+    "Reviewed GT should keep runtime/API/CLI behavior entries and exclude build-only, docs-only, and tests-only notes.",
+    "Keep as extension_eval unless Stage 2/3 and reviewed GT make it fully comparable with core cases."
+  ]
+}

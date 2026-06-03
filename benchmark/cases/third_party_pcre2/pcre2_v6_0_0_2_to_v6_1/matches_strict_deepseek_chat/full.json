@@ -1,0 +1,56 @@
+{
+  "source": {
+    "reviewer": "codex-semantic-review",
+    "match_mode": "strict_sampled_pcre2_v1"
+  },
+  "matches": [
+    {
+      "generated_id": "GEN-006",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Strong syntax match: extended classes, UTS#18 set operators, and scan-substring syntax."
+    },
+    {
+      "generated_id": "GEN-008",
+      "gt_id": "GT-S04",
+      "decision": "match",
+      "notes": "Strong API match: pcre2_set_optimize optimization control."
+    },
+    {
+      "generated_id": "GEN-011",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Extended character classes and scan-substring operations."
+    },
+    {
+      "generated_id": "GEN-012",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Script-run and extended-class optimizations."
+    },
+    {
+      "generated_id": "GEN-012",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Turkish/restricted caseless matching and Unicode property escapes."
+    },
+    {
+      "generated_id": "GEN-013",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Escape parsing validation covers the stricter Unicode/escape behavior portion."
+    },
+    {
+      "generated_id": "GEN-013",
+      "gt_id": "GT-S05",
+      "decision": "match",
+      "notes": "Substitution callout and replacement-operation handling."
+    },
+    {
+      "generated_id": "GEN-014",
+      "gt_id": "GT-S01",
+      "decision": "match",
+      "notes": "Weak release-level match: names the 10.46 update but omits explicit CVE/security wording."
+    }
+  ]
+}

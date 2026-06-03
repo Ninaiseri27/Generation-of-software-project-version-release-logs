@@ -1,0 +1,691 @@
+{
+  "summary": {
+    "date": "2026-05-31",
+    "scope": "curl strict-match correction",
+    "changed_match_files": 14,
+    "record_count": 35,
+    "removed_count": 30,
+    "moved_count": 5
+  },
+  "records": [
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\cmg_strict_1hop\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-035",
+      "gt_id": "GT-U014",
+      "title": "Fix buffer overflow check and interface binding logic in bindlocal",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "ablations\\cmg_strict_1hop\\baselines\\full",
+      "before_f1": 0.458,
+      "after_f1": 0.4039,
+      "before_precision": 0.297,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\cmg_strict_1hop\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-051",
+      "gt_id": "GT-U015",
+      "title": "Fix memory leak in MIME reader cleanup",
+      "source_symbols": [
+        "cr_mime_close"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "ablations\\cmg_strict_1hop\\baselines\\full",
+      "before_f1": 0.458,
+      "after_f1": 0.4039,
+      "before_precision": 0.297,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\cmg_strict_1hop\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-074",
+      "gt_id": "GT-U015",
+      "title": "Initialize temporary buffer in mime reader initialization",
+      "source_symbols": [
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "ablations\\cmg_strict_1hop\\baselines\\full",
+      "before_f1": 0.458,
+      "after_f1": 0.4039,
+      "before_precision": 0.297,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\cmg_strict_1hop\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-093",
+      "gt_id": "GT-U016",
+      "title": "Refactor option parsing into dedicated functions",
+      "source_symbols": [
+        "getparameter"
+      ],
+      "reason": "Generated note is parser refactoring only and does not state the --continue-at incompatibility behavior.",
+      "method_path": "ablations\\cmg_strict_1hop\\baselines\\full",
+      "before_f1": 0.458,
+      "after_f1": 0.4039,
+      "before_precision": 0.297,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\no_fallback\\baselines\\no_fallback\\matches_strict.json",
+      "generated_id": "GEN-027",
+      "gt_id": "GT-U014",
+      "title": "Fix interface length validation and binding logic in bindlocal",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "ablations\\no_fallback\\baselines\\no_fallback",
+      "before_f1": 0.4331,
+      "after_f1": 0.38,
+      "before_precision": 0.2816,
+      "after_precision": 0.2427,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\no_fallback\\baselines\\no_fallback\\matches_strict.json",
+      "generated_id": "GEN-059",
+      "gt_id": "GT-U015",
+      "title": "Fixed memory leak in MIME reader cleanup",
+      "source_symbols": [
+        "cr_mime_close"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "ablations\\no_fallback\\baselines\\no_fallback",
+      "before_f1": 0.4331,
+      "after_f1": 0.38,
+      "before_precision": 0.2816,
+      "after_precision": 0.2427,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\no_fallback\\baselines\\no_fallback\\matches_strict.json",
+      "generated_id": "GEN-061",
+      "gt_id": "GT-U015",
+      "title": "Fixed mime reader buffer initialization",
+      "source_symbols": [
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "ablations\\no_fallback\\baselines\\no_fallback",
+      "before_f1": 0.4331,
+      "after_f1": 0.38,
+      "before_precision": 0.2816,
+      "after_precision": 0.2427,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\ablations\\no_fallback\\baselines\\no_fallback\\matches_strict.json",
+      "generated_id": "GEN-076",
+      "gt_id": "GT-U016",
+      "title": "Refactor option parsing into dedicated functions",
+      "source_symbols": [
+        "getparameter"
+      ],
+      "reason": "Generated note is parser refactoring only and does not state the --continue-at incompatibility behavior.",
+      "method_path": "ablations\\no_fallback\\baselines\\no_fallback",
+      "before_f1": 0.4331,
+      "after_f1": 0.38,
+      "before_precision": 0.2816,
+      "after_precision": 0.2427,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\diff_only\\matches_strict.json",
+      "generated_id": "GEN-039",
+      "gt_id": "GT-U014",
+      "title": "Fix interface binding logic and add length validation",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "baselines\\diff_only",
+      "before_f1": 0.4531,
+      "after_f1": 0.4103,
+      "before_precision": 0.2929,
+      "after_precision": 0.2626,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\diff_only\\matches_strict.json",
+      "generated_id": "GEN-046",
+      "gt_id": "GT-U015",
+      "title": "Fix memory leak in MIME reader close",
+      "source_symbols": [
+        "cr_mime_close"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines\\diff_only",
+      "before_f1": 0.4531,
+      "after_f1": 0.4103,
+      "before_precision": 0.2929,
+      "after_precision": 0.2626,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\diff_only\\matches_strict.json",
+      "generated_id": "GEN-072",
+      "gt_id": "GT-U015",
+      "title": "Initialize temporary buffer in MIME reader",
+      "source_symbols": [
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines\\diff_only",
+      "before_f1": 0.4531,
+      "after_f1": 0.4103,
+      "before_precision": 0.2929,
+      "after_precision": 0.2626,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-041",
+      "gt_id": "GT-U014",
+      "title": "Fix interface length validation and binding logic in bindlocal",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "baselines\\full",
+      "before_f1": 0.4462,
+      "after_f1": 0.4039,
+      "before_precision": 0.2871,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-047",
+      "gt_id": "GT-U015",
+      "title": "Fix memory leak in MIME reader cleanup",
+      "source_symbols": [
+        "cr_mime_close"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines\\full",
+      "before_f1": 0.4462,
+      "after_f1": 0.4039,
+      "before_precision": 0.2871,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-072",
+      "gt_id": "GT-U015",
+      "title": "Initialize temporary buffer for MIME reader",
+      "source_symbols": [
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines\\full",
+      "before_f1": 0.4462,
+      "after_f1": 0.4039,
+      "before_precision": 0.2871,
+      "after_precision": 0.2574,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\no_graph\\matches_strict.json",
+      "generated_id": "GEN-041",
+      "gt_id": "GT-U014",
+      "title": "Fix interface binding logic and add length check",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "baselines\\no_graph",
+      "before_f1": 0.4308,
+      "after_f1": 0.3886,
+      "before_precision": 0.2745,
+      "after_precision": 0.2451,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\no_graph\\matches_strict.json",
+      "generated_id": "GEN-042",
+      "gt_id": "GT-U015",
+      "title": "Fix mime reader buffer initialization",
+      "source_symbols": [
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines\\no_graph",
+      "before_f1": 0.4308,
+      "after_f1": 0.3886,
+      "before_precision": 0.2745,
+      "after_precision": 0.2451,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines\\no_graph\\matches_strict.json",
+      "generated_id": "GEN-069",
+      "gt_id": "GT-U015",
+      "title": "Fixed memory leak in MIME reader cleanup",
+      "source_symbols": [
+        "cr_mime_close"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines\\no_graph",
+      "before_f1": 0.4308,
+      "after_f1": 0.3886,
+      "before_precision": 0.2745,
+      "after_precision": 0.2451,
+      "before_recall": 1.0,
+      "after_recall": 0.9375
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-039",
+      "gt_id": "GT-U014",
+      "title": "Fix interface length validation and binding logic in bindlocal",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "baselines_evidence_similarity\\full",
+      "before_f1": 0.4449,
+      "after_f1": 0.3889,
+      "before_precision": 0.2917,
+      "after_precision": 0.25,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-044",
+      "gt_id": "GT-U015",
+      "title": "Fix memory leak in MIME reader cleanup",
+      "source_symbols": [
+        "cr_mime_close"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines_evidence_similarity\\full",
+      "before_f1": 0.4449,
+      "after_f1": 0.3889,
+      "before_precision": 0.2917,
+      "after_precision": 0.25,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-069",
+      "gt_id": "GT-U015",
+      "title": "Initialize temporary buffer for MIME reader",
+      "source_symbols": [
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines_evidence_similarity\\full",
+      "before_f1": 0.4449,
+      "after_f1": 0.3889,
+      "before_precision": 0.2917,
+      "after_precision": 0.25,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-090",
+      "gt_id": "GT-U016",
+      "title": "Refactor option parsing into dedicated functions",
+      "source_symbols": [
+        "getparameter"
+      ],
+      "reason": "Generated note is parser refactoring only and does not state the --continue-at incompatibility behavior.",
+      "method_path": "baselines_evidence_similarity\\full",
+      "before_f1": 0.4449,
+      "after_f1": 0.3889,
+      "before_precision": 0.2917,
+      "after_precision": 0.25,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-036",
+      "gt_id": "GT-U014",
+      "title": "Fix interface length validation and binding logic in bindlocal",
+      "source_symbols": [
+        "bindlocal"
+      ],
+      "reason": "Generated note describes generic interface/SO_BINDTODEVICE handling, not the reviewed host!<ip> local-binding behavior.",
+      "method_path": "baselines_similarity\\full",
+      "before_f1": 0.4739,
+      "after_f1": 0.4248,
+      "before_precision": 0.3171,
+      "after_precision": 0.2805,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-041",
+      "gt_id": "GT-U015",
+      "title": "Fix memory leak in MIME reader cleanup",
+      "source_symbols": [
+        "cr_mime_close",
+        "cr_mime_init"
+      ],
+      "reason": "Generated note is MIME buffer cleanup/initialization support, not the small-read stall behavior.",
+      "method_path": "baselines_similarity\\full",
+      "before_f1": 0.4739,
+      "after_f1": 0.4248,
+      "before_precision": 0.3171,
+      "after_precision": 0.2805,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_11_0_to_8_11_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_11_0__curl-8_11_1\\baselines_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-078",
+      "gt_id": "GT-U016",
+      "title": "Refactor option parsing into dedicated functions",
+      "source_symbols": [
+        "getparameter"
+      ],
+      "reason": "Generated note is parser refactoring only and does not state the --continue-at incompatibility behavior.",
+      "method_path": "baselines_similarity\\full",
+      "before_f1": 0.4739,
+      "after_f1": 0.4248,
+      "before_precision": 0.3171,
+      "after_precision": 0.2805,
+      "before_recall": 0.9375,
+      "after_recall": 0.875
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_14_0__curl-8_14_1\\ablations\\cmg_strict_1hop\\baselines\\full\\matches_strict.json",
+      "generated_id": "GEN-097",
+      "gt_id": "GT-C010",
+      "title": "Add send_chunk helper for WebSocket test reliability",
+      "source_symbols": [
+        "send_chunk"
+      ],
+      "reason": "Generated note is WebSocket test helper coverage, not runtime WebSocket behavior or diagnostics.",
+      "method_path": "ablations\\cmg_strict_1hop\\baselines\\full",
+      "before_f1": 0.2466,
+      "after_f1": 0.234,
+      "before_precision": 0.1429,
+      "after_precision": 0.1345,
+      "before_recall": 0.9,
+      "after_recall": 0.9
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_14_0__curl-8_14_1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-015",
+      "gt_id": "GT-C005",
+      "title": "Enable automatic redirect following in hx-upload test client",
+      "source_symbols": [
+        "setup"
+      ],
+      "reason": "Generated note is test-client redirect setup, not the runtime HTTP redirect rewind failure behavior.",
+      "method_path": "baselines_evidence_similarity\\full",
+      "before_f1": 0.2857,
+      "after_f1": 0.2585,
+      "before_precision": 0.1698,
+      "after_precision": 0.1509,
+      "before_recall": 0.9,
+      "after_recall": 0.9
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_14_0__curl-8_14_1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-090",
+      "gt_id": "GT-C010",
+      "title": "Add recv_chunk helper for WebSocket test coverage",
+      "source_symbols": [
+        "recv_chunk",
+        "send_chunk"
+      ],
+      "reason": "Generated note is WebSocket test helper coverage, not runtime WebSocket behavior or diagnostics.",
+      "method_path": "baselines_evidence_similarity\\full",
+      "before_f1": 0.2857,
+      "after_f1": 0.2585,
+      "before_precision": 0.1698,
+      "after_precision": 0.1509,
+      "before_recall": 0.9,
+      "after_recall": 0.9
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_14_0__curl-8_14_1\\baselines_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-012",
+      "gt_id": "GT-C005",
+      "title": "Enable automatic redirect following in hx-upload test client",
+      "source_symbols": [
+        "setup"
+      ],
+      "reason": "Generated note is test-client redirect setup, not the runtime HTTP redirect rewind failure behavior.",
+      "method_path": "baselines_similarity\\full",
+      "before_f1": 0.3203,
+      "after_f1": 0.2843,
+      "before_precision": 0.1948,
+      "after_precision": 0.1688,
+      "before_recall": 0.9,
+      "after_recall": 0.9
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\upstream_curl\\curl-8_14_0__curl-8_14_1\\baselines_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-065",
+      "gt_id": "GT-C010",
+      "title": "Add recv_chunk helper for WebSocket test coverage",
+      "source_symbols": [
+        "recv_chunk",
+        "recv_frame",
+        "recv_header",
+        "send_chunk"
+      ],
+      "reason": "Generated note is WebSocket test helper coverage, not runtime WebSocket behavior or diagnostics.",
+      "method_path": "baselines_similarity\\full",
+      "before_f1": 0.3203,
+      "after_f1": 0.2843,
+      "before_precision": 0.1948,
+      "after_precision": 0.1688,
+      "before_recall": 0.9,
+      "after_recall": 0.9
+    },
+    {
+      "action": "remove",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release\\ablations\\no_fallback\\baselines_deepseek_chat\\no_fallback\\matches_strict.json",
+      "generated_id": "GEN-025",
+      "gt_id": "GT-002",
+      "title": "Fix CA certificate parsing and verification for HITLS",
+      "source_symbols": [
+        "ParseAndSetCACertificate"
+      ],
+      "reason": "Generated note attaches CVE wording to non-cookie OpenHiTLS/TLCP behavior.",
+      "method_path": "ablations\\no_fallback\\baselines_deepseek_chat\\no_fallback",
+      "before_f1": 0.6857,
+      "after_f1": 0.6667,
+      "before_precision": 0.5217,
+      "after_precision": 0.5,
+      "before_recall": 1.0,
+      "after_recall": 1.0
+    },
+    {
+      "action": "move",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release\\baselines_deepseek_v4_flash\\full\\matches_strict.json",
+      "generated_id": "GEN-007",
+      "from_gt_id": "GT-003",
+      "to_gt_id": "GT-002",
+      "title": "Add OpenHiTLS cleanup support in OpenSSL backend",
+      "source_symbols": [
+        "ossl_cleanup"
+      ],
+      "reason": "Generated note is backend TLCP/OpenHiTLS support evidence, not user-facing encrypted certificate/key option exposure.",
+      "method_path": "baselines_deepseek_v4_flash\\full",
+      "before_f1": 0.55,
+      "after_f1": 0.55,
+      "before_precision": 0.4681,
+      "after_precision": 0.4681,
+      "before_recall": 0.6667,
+      "after_recall": 0.6667
+    },
+    {
+      "action": "move",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release\\baselines_deepseek_v4_flash\\full\\matches_strict.json",
+      "generated_id": "GEN-010",
+      "from_gt_id": "GT-003",
+      "to_gt_id": "GT-002",
+      "title": "Add TLCP private key parsing and configuration support",
+      "source_symbols": [
+        "ParseAndSetPrivateKey"
+      ],
+      "reason": "Generated note is backend TLCP/OpenHiTLS support evidence, not user-facing encrypted certificate/key option exposure.",
+      "method_path": "baselines_deepseek_v4_flash\\full",
+      "before_f1": 0.55,
+      "after_f1": 0.55,
+      "before_precision": 0.4681,
+      "after_precision": 0.4681,
+      "before_recall": 0.6667,
+      "after_recall": 0.6667
+    },
+    {
+      "action": "move",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release\\baselines_deepseek_v4_flash\\full\\matches_strict.json",
+      "generated_id": "GEN-022",
+      "from_gt_id": "GT-003",
+      "to_gt_id": "GT-002",
+      "title": "Add support for parsing private keys with multiple formats",
+      "source_symbols": [
+        "ParseFilePriKey"
+      ],
+      "reason": "Generated note is backend TLCP/OpenHiTLS support evidence, not user-facing encrypted certificate/key option exposure.",
+      "method_path": "baselines_deepseek_v4_flash\\full",
+      "before_f1": 0.55,
+      "after_f1": 0.55,
+      "before_precision": 0.4681,
+      "after_precision": 0.4681,
+      "before_recall": 0.6667,
+      "after_recall": 0.6667
+    },
+    {
+      "action": "move",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release\\baselines_deepseek_v4_flash_evidence_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-007",
+      "from_gt_id": "GT-003",
+      "to_gt_id": "GT-002",
+      "title": "Add TLCP private key parsing and configuration support",
+      "source_symbols": [
+        "ParseAndSetPrivateKey",
+        "ParseAndSetCertificate"
+      ],
+      "reason": "Generated note is backend TLCP/OpenHiTLS support evidence, not user-facing encrypted certificate/key option exposure.",
+      "method_path": "baselines_deepseek_v4_flash_evidence_similarity\\full",
+      "before_f1": 0.7018,
+      "after_f1": 0.7018,
+      "before_precision": 0.5405,
+      "after_precision": 0.5405,
+      "before_recall": 1.0,
+      "after_recall": 1.0
+    },
+    {
+      "action": "move",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release\\baselines_deepseek_v4_flash_similarity\\full\\matches_strict.json",
+      "generated_id": "GEN-013",
+      "from_gt_id": "GT-003",
+      "to_gt_id": "GT-002",
+      "title": "Support TLCPv1.1 SSL version in OpenHiTLS",
+      "source_symbols": [
+        "ParseAndSetPrivateKey",
+        "hitls_connect_nonblocking_step1",
+        "ParseAndSetCertificate",
+        "ossl_close"
+      ],
+      "reason": "Generated note is backend TLCP/OpenHiTLS support evidence, not user-facing encrypted certificate/key option exposure.",
+      "method_path": "baselines_deepseek_v4_flash_similarity\\full",
+      "before_f1": 0.8095,
+      "after_f1": 0.8095,
+      "before_precision": 0.68,
+      "after_precision": 0.68,
+      "before_recall": 1.0,
+      "after_recall": 1.0
+    }
+  ]
+}

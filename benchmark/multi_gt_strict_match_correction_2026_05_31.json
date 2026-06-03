@@ -1,0 +1,209 @@
+{
+  "date": "2026-05-31",
+  "scope": "targeted_multi_gt_strict_match_audit",
+  "summary": {
+    "planned_removals": 21,
+    "removed": 16,
+    "already_absent": 5,
+    "missing_file": 0,
+    "changed_match_files": [
+      "cpp_release_note_mvp\\outputs\\benchmark\\third_party_pcre2\\OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release\\ablations\\cmg_strict_1hop\\sampled_baselines_deepseek_chat\\full\\matches_strict.json",
+      "cpp_release_note_mvp\\outputs\\benchmark\\third_party_pcre2\\OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release\\sampled_baselines_deepseek_chat_evidence_similarity\\full\\matches_strict.json",
+      "cpp_release_note_mvp\\outputs\\benchmark\\third_party_pcre2\\OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release\\sampled_baselines_deepseek_chat_similarity\\full\\matches_strict.json",
+      "cpp_release_note_mvp\\outputs\\benchmark\\upstream_git\\v2.51.0__v2.51.1\\ablations\\cmg_strict_1hop\\baselines\\full\\matches_strict.json",
+      "cpp_release_note_mvp\\outputs\\benchmark\\upstream_git\\v2.51.0__v2.51.1\\baselines_evidence_similarity\\full\\matches_strict.json",
+      "cpp_release_note_mvp\\outputs\\benchmark\\upstream_git\\v2.51.0__v2.51.1\\baselines_similarity\\full\\matches_strict.json"
+    ]
+  },
+  "records": [
+    {
+      "path": "outputs/benchmark/upstream_curl/curl-8_14_0__curl-8_14_1/baselines_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-025",
+      "gt_id": "GT-C003",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "no-buffer/NOPROGRESS setup-order note does not state upload-from-dot behavior.",
+      "status": "already_absent"
+    },
+    {
+      "path": "outputs/benchmark/upstream_curl/curl-8_14_0__curl-8_14_1/baselines_similarity/full/matches_strict.json",
+      "generated_id": "GEN-019",
+      "gt_id": "GT-C003",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "method": "full_similarity_family",
+      "reason": "no-buffer/NOPROGRESS setup-order note does not state upload-from-dot behavior.",
+      "status": "already_absent"
+    },
+    {
+      "path": "outputs/benchmark/upstream_curl/curl-8_14_0__curl-8_14_1/ablations/cmg_strict_1hop/baselines/full/matches_strict.json",
+      "generated_id": "GEN-062",
+      "gt_id": "GT-C003",
+      "case_id": "curl_8_14_0_to_8_14_1",
+      "method": "full_strict_1hop",
+      "reason": "no-buffer/NOPROGRESS setup-order note does not state upload-from-dot behavior.",
+      "status": "already_absent"
+    },
+    {
+      "path": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/baselines_deepseek_v4_flash_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-007",
+      "gt_id": "GT-003",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "backend-only TLCP/OpenHiTLS generated note does not state CLI/API encrypted cert/key option exposure.",
+      "status": "already_absent"
+    },
+    {
+      "path": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/baselines_deepseek_v4_flash_similarity/full/matches_strict.json",
+      "generated_id": "GEN-013",
+      "gt_id": "GT-003",
+      "case_id": "curl_v6_0_to_v6_0_0_1",
+      "method": "full_similarity_family",
+      "reason": "backend-only TLCP/OpenHiTLS generated note does not state CLI/API encrypted cert/key option exposure.",
+      "status": "already_absent"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/baselines_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-027",
+      "gt_id": "GT-G009",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "stash colored-output fix does not state diff --name-only ignore-options behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/baselines_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-027",
+      "gt_id": "GT-G014",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "stash colored-output fix does not state interactive add/patch color-config behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/baselines_similarity/full/matches_strict.json",
+      "generated_id": "GEN-024",
+      "gt_id": "GT-G009",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_similarity_family",
+      "reason": "stash colored-output fix does not state diff --name-only ignore-options behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/baselines_similarity/full/matches_strict.json",
+      "generated_id": "GEN-024",
+      "gt_id": "GT-G014",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_similarity_family",
+      "reason": "stash colored-output fix does not state interactive add/patch color-config behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/baselines_similarity/full/matches_strict.json",
+      "generated_id": "GEN-071",
+      "gt_id": "GT-G012",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_similarity_family",
+      "reason": "unused-function cleanup does not state MIDX crash behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/baselines_similarity/full/matches_strict.json",
+      "generated_id": "GEN-071",
+      "gt_id": "GT-G014",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_similarity_family",
+      "reason": "unused-function cleanup does not state interactive add/patch color-config behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/ablations/cmg_strict_1hop/baselines/full/matches_strict.json",
+      "generated_id": "GEN-023",
+      "gt_id": "GT-G009",
+      "case_id": "git_2_51_0_to_2_51_1",
+      "method": "full_strict_1hop",
+      "reason": "generated note can support interactive color behavior but not diff --name-only ignore-options behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-004",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "parser/syntax note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-008",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "scan-substring/extended-class note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat_evidence_similarity/full/matches_strict.json",
+      "generated_id": "GEN-009",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_evidence_similarity_family",
+      "reason": "Unicode/case/escape note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat_similarity/full/matches_strict.json",
+      "generated_id": "GEN-003",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_similarity_family",
+      "reason": "parser/syntax note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat_similarity/full/matches_strict.json",
+      "generated_id": "GEN-008",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_similarity_family",
+      "reason": "scan-substring/extended-class note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat_similarity/full/matches_strict.json",
+      "generated_id": "GEN-009",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_similarity_family",
+      "reason": "Unicode/case/escape note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/ablations/cmg_strict_1hop/sampled_baselines_deepseek_chat/full/matches_strict.json",
+      "generated_id": "GEN-010",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_strict_1hop",
+      "reason": "syntax/scan-substring note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/ablations/cmg_strict_1hop/sampled_baselines_deepseek_chat/full/matches_strict.json",
+      "generated_id": "GEN-011",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_strict_1hop",
+      "reason": "Unicode/case/escape note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    },
+    {
+      "path": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/ablations/cmg_strict_1hop/sampled_baselines_deepseek_chat/full/matches_strict.json",
+      "generated_id": "GEN-013",
+      "gt_id": "GT-S01",
+      "case_id": "pcre2_v6_0_0_2_to_v6_1",
+      "method": "full_strict_1hop",
+      "reason": "substitution/Unicode note does not state CVE-2025-58050 read-past-end behavior.",
+      "status": "removed"
+    }
+  ]
+}

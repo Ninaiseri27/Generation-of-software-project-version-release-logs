@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expanded 137-GT C/C++ Release Note Experiment Report</title>
+<style>
+:root {
+  --bg: #f7f1e6;
+  --ink: #211b15;
+  --muted: #6f6559;
+  --card: #fffaf0;
+  --line: #d9cdbb;
+  --accent: #0f6b5f;
+  --accent-2: #b65f2a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 0%, #fff6dc 0, transparent 36rem), var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+main { max-width: 1180px; margin: 0 auto; padding: 36px 28px 64px; }
+h1 { font-size: 34px; margin: 0 0 24px; letter-spacing: -0.02em; }
+h2 { font-size: 22px; margin: 32px 0 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.card, section {
+  background: rgba(255, 250, 240, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(63, 48, 31, 0.08);
+}
+.card { padding: 16px; }
+.label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
+.value { margin-top: 8px; font-size: 22px; font-weight: 700; }
+section { padding: 18px; margin-top: 18px; }
+.pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.step { border: 1px dashed var(--line); border-radius: 14px; padding: 12px; background: #fffdf7; }
+.bar-row { display: grid; grid-template-columns: minmax(180px, 260px) 1fr 90px; gap: 12px; align-items: center; margin: 10px 0; }
+.bar { height: 22px; border-radius: 999px; background: #eadfcd; overflow: hidden; }
+.fill { height: 100%; background: linear-gradient(90deg, var(--accent), #55a994); }
+.fill.warn { background: linear-gradient(90deg, var(--accent-2), #d79763); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+ul { margin: 0; padding-left: 20px; }
+li { margin: 7px 0; }
+.cmg-node { display: inline-block; margin: 4px; padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); background: #fffdf7; }
+.cmg-edge { color: var(--muted); font-family: Consolas, monospace; margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>Expanded 137-GT C/C++ Release Note Experiment Report</h1>
+<div class="grid"><div class="card"><div class="label">Best Macro F1</div><div class="value">full_similarity_family</div></div><div class="card"><div class="label">Best Micro F1</div><div class="value">full_similarity_family</div></div><div class="card"><div class="label">Strongest Compression</div><div class="value">full_similarity_family</div></div><div class="card"><div class="label">CMG Matched Entries</div><div class="value">n/a/n/a</div></div></div>
+<section><h2>Pipeline Overview</h2><div class="pipeline"><div class="step">1. Version-pair diff</div><div class="step">2. Function-level change localization</div><div class="step">3. ENRE graph normalization</div><div class="step">4. CMG and fallback context</div><div class="step">5. Structured prompt</div><div class="step">6. LLM generation</div><div class="step">7. Aggregation and evaluation</div></div></section>
+<section><h2>Macro F1</h2><div class="bar-row"><div>text_only</div><div class="bar"><div class="fill" style="width:24.61%"></div></div><div>0.2461</div></div><div class="bar-row"><div>diff_only</div><div class="bar"><div class="fill" style="width:57.08%"></div></div><div>0.5708</div></div><div class="bar-row"><div>no_graph</div><div class="bar"><div class="fill" style="width:55.89%"></div></div><div>0.5589</div></div><div class="bar-row"><div>full_adaptive_rule_family</div><div class="bar"><div class="fill" style="width:56.09%"></div></div><div>0.5609</div></div><div class="bar-row"><div>full_no_fallback</div><div class="bar"><div class="fill" style="width:54.46%"></div></div><div>0.5446</div></div><div class="bar-row"><div>full_strict_1hop</div><div class="bar"><div class="fill" style="width:57.81%"></div></div><div>0.5781</div></div><div class="bar-row"><div>full_similarity_family</div><div class="bar"><div class="fill" style="width:62.35%"></div></div><div>0.6235</div></div><div class="bar-row"><div>full_evidence_similarity_family</div><div class="bar"><div class="fill" style="width:57.95%"></div></div><div>0.5795</div></div></section>
+<section><h2>Extra Matches Per GT</h2><div class="bar-row"><div>text_only</div><div class="bar"><div class="fill warn" style="width:0.00%"></div></div><div>0.0000</div></div><div class="bar-row"><div>diff_only</div><div class="bar"><div class="fill warn" style="width:100.00%"></div></div><div>1.8905</div></div><div class="bar-row"><div>no_graph</div><div class="bar"><div class="fill warn" style="width:97.68%"></div></div><div>1.8467</div></div><div class="bar-row"><div>full_adaptive_rule_family</div><div class="bar"><div class="fill warn" style="width:99.23%"></div></div><div>1.8759</div></div><div class="bar-row"><div>full_no_fallback</div><div class="bar"><div class="fill warn" style="width:95.37%"></div></div><div>1.8029</div></div><div class="bar-row"><div>full_strict_1hop</div><div class="bar"><div class="fill warn" style="width:100.00%"></div></div><div>1.8905</div></div><div class="bar-row"><div>full_similarity_family</div><div class="bar"><div class="fill warn" style="width:70.27%"></div></div><div>1.3285</div></div><div class="bar-row"><div>full_evidence_similarity_family</div><div class="bar"><div class="fill warn" style="width:86.87%"></div></div><div>1.6423</div></div></section>
+<section><h2>Average Token Cost</h2><div class="bar-row"><div>text_only</div><div class="bar"><div class="fill warn" style="width:0.13%"></div></div><div>633.6923</div></div><div class="bar-row"><div>diff_only</div><div class="bar"><div class="fill warn" style="width:40.26%"></div></div><div>196155.3846</div></div><div class="bar-row"><div>no_graph</div><div class="bar"><div class="fill warn" style="width:58.27%"></div></div><div>283941.6923</div></div><div class="bar-row"><div>full_adaptive_rule_family</div><div class="bar"><div class="fill warn" style="width:100.00%"></div></div><div>487262.8462</div></div><div class="bar-row"><div>full_no_fallback</div><div class="bar"><div class="fill warn" style="width:61.75%"></div></div><div>300877.8462</div></div><div class="bar-row"><div>full_strict_1hop</div><div class="bar"><div class="fill warn" style="width:91.14%"></div></div><div>444067.6154</div></div><div class="bar-row"><div>full_similarity_family</div><div class="bar"><div class="fill warn" style="width:100.00%"></div></div><div>487262.8462</div></div><div class="bar-row"><div>full_evidence_similarity_family</div><div class="bar"><div class="fill warn" style="width:100.00%"></div></div><div>487262.8462</div></div></section>
+<section><h2>Main Result Matrix</h2><table><thead><tr><th>Method</th><th>P</th><th>R</th><th>Macro F1</th><th>Micro F1</th><th>Unsupported</th><th>Extra/GT</th><th>Reduction</th><th>Tokens</th></tr></thead><tbody><tr><td>text_only</td><td>0.5385</td><td>0.0511</td><td>0.2461</td><td>0.0933</td><td>0.4615</td><td>0.0000</td><td>0.0000</td><td>633.7</td></tr><tr><td>diff_only</td><td>0.1415</td><td>0.8613</td><td>0.5708</td><td>0.2431</td><td>0.8585</td><td>1.8905</td><td>0.0298</td><td>196155.4</td></tr><tr><td>no_graph</td><td>0.1391</td><td>0.8467</td><td>0.5589</td><td>0.2390</td><td>0.8609</td><td>1.8467</td><td>0.0321</td><td>283941.7</td></tr><tr><td>full_adaptive_rule_family</td><td>0.1374</td><td>0.8613</td><td>0.5609</td><td>0.2370</td><td>0.8626</td><td>1.8759</td><td>0.0143</td><td>487262.8</td></tr><tr><td>full_no_fallback</td><td>0.1339</td><td>0.8321</td><td>0.5446</td><td>0.2306</td><td>0.8661</td><td>1.8029</td><td>0.0223</td><td>300877.8</td></tr><tr><td>full_strict_1hop</td><td>0.1412</td><td>0.8686</td><td>0.5781</td><td>0.2429</td><td>0.8588</td><td>1.8905</td><td>0.0170</td><td>444067.6</td></tr><tr><td>full_similarity_family</td><td>0.2207</td><td>0.8613</td><td>0.6235</td><td>0.3513</td><td>0.7793</td><td>1.3285</td><td>0.5145</td><td>487262.8</td></tr><tr><td>full_evidence_similarity_family</td><td>0.1949</td><td>0.8540</td><td>0.5795</td><td>0.3173</td><td>0.8051</td><td>1.6423</td><td>0.3689</td><td>487262.8</td></tr></tbody></table></section>
+<section><h2>Expanded 137-GT Robustness Check</h2><p>The 137-GT view combines the controlled 82-GT matrix with the human-audited Git 2.53 and PCRE2 full-scope extension.</p><table><thead><tr><th>Method</th><th>82 Macro F1</th><th>55 Macro F1</th><th>137 Macro F1</th><th>82 Micro F1</th><th>55 Micro F1</th><th>137 Micro F1</th></tr></thead><tbody><tr><td>text_only</td><td>0.2909</td><td>0.0000</td><td>0.2461</td><td>0.1505</td><td>0.0000</td><td>0.0933</td></tr><tr><td>diff_only</td><td>0.6543</td><td>0.1115</td><td>0.5708</td><td>0.5677</td><td>0.1088</td><td>0.2431</td></tr><tr><td>no_graph</td><td>0.6397</td><td>0.1144</td><td>0.5589</td><td>0.5495</td><td>0.1116</td><td>0.2390</td></tr><tr><td>full_adaptive_rule_family</td><td>0.6419</td><td>0.1155</td><td>0.5609</td><td>0.5503</td><td>0.1126</td><td>0.2370</td></tr><tr><td>full_no_fallback</td><td>0.6228</td><td>0.1148</td><td>0.5446</td><td>0.5239</td><td>0.1120</td><td>0.2306</td></tr><tr><td>full_strict_1hop</td><td>0.6616</td><td>0.1183</td><td>0.5781</td><td>0.5585</td><td>0.1151</td><td>0.2429</td></tr><tr><td>full_similarity_family</td><td>0.7020</td><td>0.1913</td><td>0.6235</td><td>0.6046</td><td>0.1971</td><td>0.3513</td></tr><tr><td>full_evidence_similarity_family</td><td>0.6532</td><td>0.1739</td><td>0.5795</td><td>0.5555</td><td>0.1776</td><td>0.3173</td></tr></tbody></table></section>
+
+
+
+<section><h2>Thesis Interpretation</h2><ul><li>The expanded robustness view contains 137 semantic GT entries across 13 case-version pairs.</li><li>The 137-GT view combines the controlled 82-GT matrix with a 55-GT full-scope extension for Git 2.53 and PCRE2.</li><li>Similarity-family aggregation remains strongest by Macro/Micro F1, but absolute precision drops under large full-scope releases.</li><li>The extension should be used as scale/robustness evidence, not as a silent replacement for the controlled 82-GT main table.</li></ul></section>
+<section><h2>Validity Threats</h2><ul><li>The full-scope extension has much larger generated-output volume, so unsupported rate becomes central to interpretation.</li><li>Git 2.53 and PCRE2 full-scope matches were close-to-manual audited, but user sign-off is still recommended before final thesis labels.</li><li>The controlled 82-GT and expanded 137-GT tables answer different questions: controlled method comparison versus large-release robustness.</li><li>Do not overfit the conclusion to one large release; report ranking stability and absolute-score degradation together.</li></ul></section>
+</main>
+</body>
+</html>

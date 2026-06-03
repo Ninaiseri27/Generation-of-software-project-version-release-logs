@@ -1,0 +1,64 @@
+{
+  "source": {
+    "builder": "manual-cmg-coverage-summary-v1",
+    "scope": "core5",
+    "created_at": "2026-05-19",
+    "notes": [
+      "Derived from compact/adaptive CMG, rich matching CMG, and conservative projection CMG outputs.",
+      "This is a Stage 2 coverage summary, not a release-note quality evaluation."
+    ]
+  },
+  "rows": [
+    {
+      "case_id": "curl_v6_0_beta1_to_v6_0",
+      "entry_count": 12,
+      "compact_prompt_matches": 10,
+      "rich_prompt_matches": 10,
+      "projected_prompt_matches": 10,
+      "matching_graph_hits": 10,
+      "matching_only_after_projection": 0
+    },
+    {
+      "case_id": "sqlite_v6_0_0_2_to_v6_1",
+      "entry_count": 42,
+      "compact_prompt_matches": 18,
+      "rich_prompt_matches": 20,
+      "projected_prompt_matches": 24,
+      "matching_graph_hits": 34,
+      "matching_only_after_projection": 10
+    },
+    {
+      "case_id": "mbedtls_v6_0_beta1_to_v6_0",
+      "entry_count": 23,
+      "compact_prompt_matches": 6,
+      "rich_prompt_matches": 6,
+      "projected_prompt_matches": 6,
+      "matching_graph_hits": 7,
+      "matching_only_after_projection": 1
+    },
+    {
+      "case_id": "zlib_v6_0_0_1_to_v6_0_0_2",
+      "entry_count": 2,
+      "compact_prompt_matches": 2,
+      "rich_prompt_matches": 2,
+      "projected_prompt_matches": 2,
+      "matching_graph_hits": 2,
+      "matching_only_after_projection": 0
+    },
+    {
+      "case_id": "cjson_v6_0_beta1_to_v6_0",
+      "entry_count": 11,
+      "compact_prompt_matches": 11,
+      "rich_prompt_matches": 11,
+      "projected_prompt_matches": 11,
+      "matching_graph_hits": 11,
+      "matching_only_after_projection": 0
+    }
+  ],
+  "interpretation": [
+    "Compact prompt-side CMG matches 47/90 entries.",
+    "Rich matching improves prompt-node matches to 49/90 and exposes 64/90 rich-graph hits.",
+    "Conservative projection improves prompt-node matches to 53/90 without adding non-function entities to the prompt graph.",
+    "The gain is narrow and should be treated as a Stage 2 coverage optimization rather than a proven release-note quality improvement."
+  ]
+}

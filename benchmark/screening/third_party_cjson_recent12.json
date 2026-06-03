@@ -1,0 +1,695 @@
+{
+  "source": {
+    "tool": "version-pair-screener-v1",
+    "repository": "workspaces\\third_party_cJSON",
+    "tag_pattern": "OpenHarmony-v*",
+    "recent_pairs": 12
+  },
+  "summary": {
+    "screened_pair_count": 12,
+    "passed_pair_count": 12,
+    "failed_pair_count": 0,
+    "size_bucket_counts": {
+      "tiny": 3,
+      "medium": 4,
+      "empty_or_metadata": 4,
+      "patch_only": 1
+    }
+  },
+  "items": [
+    {
+      "ref": "OpenHarmony-v4.1.3-Release",
+      "tgt": "OpenHarmony-v4.1.4-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 1,
+      "changed_function_count": 1,
+      "patch_only": false,
+      "size_bucket": "tiny",
+      "changed_cpp_files": [
+        "cJSON.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "cJSON_SetValuestring",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!83 CVE-2024-31755漏洞修复挑单4.1release Merge pull request !83 from youbing54/OpenHarmony-4.1-Release",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IBPPMD describe: CVE-2024-31755漏洞修复挑单4.1release Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v4.1.4-Release",
+      "tgt": "OpenHarmony-v5.0-Beta1",
+      "status": "passed",
+      "commit_count": 17,
+      "changed_file_count": 3,
+      "changed_cpp_file_count": 1,
+      "changed_function_count": 2,
+      "patch_only": false,
+      "size_bucket": "tiny",
+      "changed_cpp_files": [
+        "cJSON.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "cJSON_SetValuestring",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "parse_object",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!59 cJSON编译整改验收 Merge pull request !59 from youbing54/master",
+        "Description: CJSON Compilation Rectification IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/I9JSGK Feature or Bugfix: Feature Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!58 cJSON_SetValuestring入参增加判空防止错误调用导致崩溃 Merge pull request !58 from 刘波/master",
+        "Description: cJSON_SetValuestring入参增加判空防止错误调用导致崩溃 IssueNo:https://gitee.com/openharmony/third_party_cJSON/issues/I9EP9J Feature or Bugfix: Bugfix Binary Source:No Signed-off-by: liubo419 <liubo419@huawei.com>",
+        "!57 第三方cjson部件独立编译整改 Merge pull request !57 from tongkai0808fh/master",
+        "部件加入innerAPI配置",
+        "!51 修复mini，small报错 Merge pull request !51 from 谢霆威/master",
+        "!54 fix undefined symbol on macos while link cJSON.dylib Merge pull request !54 from fupengfei/master",
+        "fix undefined symbol on macos while link cJSON.dylib",
+        "Merge branch 'master' of gitee.com:openharmony/third_party_cJSON into master"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0-Beta1",
+      "tgt": "OpenHarmony-v5.0.0-Release",
+      "status": "passed",
+      "commit_count": 14,
+      "changed_file_count": 17,
+      "changed_cpp_file_count": 9,
+      "changed_function_count": 39,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "cJSON.c",
+        "cJSON.h",
+        "cJSON_Utils.c",
+        "tests/cjson_add.c",
+        "tests/compare_tests.c",
+        "tests/misc_int64_tests.c",
+        "tests/misc_tests.c",
+        "tests/parse_number.c",
+        "tests/print_number.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "cJSON_GetInt64NumberValue",
+          "file_path": "cJSON.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cJSON_Delete",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "parse_number",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_SetInt64NumberValue",
+          "file_path": "cJSON.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cJSON_SetNumberHelper",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "print_number",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "parse_object",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_AddInt64NumberToObject",
+          "file_path": "cJSON.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cJSON_DetachItemViaPointer",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_CreateInt64Number",
+          "file_path": "cJSON.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cJSON_CreateNumber",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_IsInt64Number",
+          "file_path": "cJSON.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cJSON_Compare",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "compare_json",
+          "file_path": "cJSON_Utils.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_add_int64_number_should_add_int64_number",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_add_int64_number_should_fail_with_null_pointers",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_add_int64_number_should_fail_on_allocation_failure",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_compare_should_compare_int64_numbers",
+          "file_path": "tests/compare_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/compare_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "assert_is_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_get_object_item_should_get_object_items_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_get_object_item_case_sensitive_should_get_object_items_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_set_number_value_should_set_numbers_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "typecheck_functions_should_check_type_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!76 check for NULL in cJSON_DetachItemViaPointer 挑单5.0release Merge pull request !76 from youbing54/cherry-pick-1725331272",
+        "git commit --m ' IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IAOD7I describe: check for NULL in cJSON_DetachItemViaPointer 挑单5.0release Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>' （cherry picked commit from <gitee.com//openharmony/third_party_cJSON/commit/f9fcedd3b9df5260939c4d633ea5d99f6a30d3d9>",
+        "!74 cJson添加后向保护挑单5.0release Merge pull request !74 from youbing54/cherry-pick-1725068382",
+        "describe: cJson添加后向保护挑单5.0release IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IANSEG Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com> （cherry picked commit from <gitee.com//openharmony/third_party_cJSON/commit/eef2a51affd83e72b94b30db9abc00b940544930>",
+        "!72 jsoncpp添加后向保护 Merge pull request !72 from youbing54/cherry-pick-1724315129",
+        "IssueNo: https://gitee.com/openharmony/third_party_jsoncpp/issues/IALSSK decsribe: jsoncpp添加后向保护 Feature or Bugfix: Bugfix Binary Source: No Signed-off-by: youbing54<youbing3@huawei.com> （cherry picked commit from <gitee.com//openharmony/third_party_cJSON/commit/3701afe2a9c9afbfe7984c573cd81b0a937f5c12>",
+        "!69 代码同步 Merge pull request !69 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IAEKV4 describe: Code synchronization Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!68 cJSON升级1.7.7版本 Merge pull request !68 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IAA61F describe: Upgrade cJSON to version 1.7.7 Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0.0-Release",
+      "tgt": "OpenHarmony-v5.0.1-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v5.0.1-Release",
+      "tgt": "OpenHarmony-v5.0.2-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v5.0.2-Release",
+      "tgt": "OpenHarmony-v5.0.3-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v5.0.3-Release",
+      "tgt": "OpenHarmony-v5.1.0-Release",
+      "status": "passed",
+      "commit_count": 8,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!78 修改license Merge pull request !78 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IBHVHB describe: 修改license Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!75 漏洞修复：check for NULL in cJSON_DetachItemViaPointer Merge pull request !75 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IANUKP describe: check for NULL in cJSON_DetachItemViaPointer Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!73 cJson添加后向保护 Merge pull request !73 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IANAZ1 describe: cjson添加后向保护 Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!71 jsoncpp添加后向保护 Merge pull request !71 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_jsoncpp/issues/IAL5A7 describe: jsoncpp添加后向保护 Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.1.0-Release",
+      "tgt": "OpenHarmony-v6.0-Beta1",
+      "status": "passed",
+      "commit_count": 10,
+      "changed_file_count": 12,
+      "changed_cpp_file_count": 9,
+      "changed_function_count": 31,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "cJSON.c",
+        "cJSON.h",
+        "cJSON_Utils.c",
+        "tests/cjson_add.c",
+        "tests/compare_tests.c",
+        "tests/misc_int64_tests.c",
+        "tests/misc_tests.c",
+        "tests/parse_number.c",
+        "tests/print_number.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "cJSON_GetInt64NumberValue",
+          "file_path": "cJSON.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "parse_number",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_SetInt64NumberValue",
+          "file_path": "cJSON.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cJSON_AddInt64NumberToObject",
+          "file_path": "cJSON.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cJSON_CreateInt64Number",
+          "file_path": "cJSON.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cJSON_IsInt64Number",
+          "file_path": "cJSON.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "compare_json",
+          "file_path": "cJSON_Utils.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_add_int64_number_should_add_int64_number",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_add_int64_number_should_fail_with_null_pointers",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_add_int64_number_should_fail_on_allocation_failure",
+          "file_path": "tests/cjson_add.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_compare_should_compare_int64_numbers",
+          "file_path": "tests/compare_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "assert_is_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_get_object_item_should_get_object_items_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_get_object_item_case_sensitive_should_get_object_items_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_set_number_value_should_set_numbers_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "typecheck_functions_should_check_type_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_functions_should_not_crash_with_null_pointers_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_get_number_value_should_get_a_number_with_int64",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/misc_int64_tests.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "cjson_set_number_value_should_set_numbers",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_set_bool_value_must_not_break_objects",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "assert_parse_number",
+          "file_path": "tests/parse_number.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "assert_is_int64",
+          "file_path": "tests/parse_number.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "assert_parse_big_number",
+          "file_path": "tests/parse_number.c",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!92 cjson组件1.7.15版本bugfix Merge pull request !92 from liuyuxiu/master",
+        "bugfix",
+        "!88 CVE-2023-26819 漏洞修复 Merge pull request !88 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IC750Q describe: CVE-2023-26819 漏洞修复 Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!87 回退64位修改 Merge pull request !87 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IC7ESI describe: 回退64位修改 Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!85 Revert \"fix 【漏洞修复】 CVE-2023-26819\" Merge pull request !85 from youbing54/master",
+        "IssueNo: https://gitee.com/openharmony/third_party_cJSON/issues/IC740N describe: CVE-2023-26819 代码回退 Feature or Bugfix: Bugfix Binary Source:Yes Signed-off-by: youbing54<youbing3@huawei.com>",
+        "!84 fix 【漏洞修复】 CVE-2023-26819 Merge pull request !84 from 蒋码云/master",
+        "fix 【漏洞修复】 CVE-2023-26819"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Beta1",
+      "tgt": "OpenHarmony-v6.0-Release",
+      "status": "passed",
+      "commit_count": 14,
+      "changed_file_count": 6,
+      "changed_cpp_file_count": 5,
+      "changed_function_count": 11,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "cJSON.c",
+        "cJSON.h",
+        "tests/misc_tests.c",
+        "tests/parse_examples.c",
+        "tests/parse_number.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "parse_number",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_Duplicate",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_Duplicate_rec",
+          "file_path": "cJSON.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_should_not_follow_too_deep_circular_references",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_set_bool_value_must_not_break_objects",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_parse_big_numbers_should_not_report_error",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "test15_should_not_heap_buffer_overflow",
+          "file_path": "tests/parse_examples.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/parse_examples.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "a",
+          "file_path": "tests/parse_number.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "parse_number_should_parse_big_numbers",
+          "file_path": "tests/parse_number.c",
+          "change_type": "added"
+        }
+      ],
+      "commit_messages": [
+        "!104 Added max recusrion depth for cJSONDuplicate to prevent stack exhausti… Merge pull request !104 from liukaii/gitee0619",
+        "Added max recusrion depth for cJSONDuplicate to prevent stack exhaustion in case of circular reference",
+        "!103 cjson gn文件整改 Merge pull request !103 from liukaii/gitee0617",
+        "cJSON GN文件整改",
+        "!100 tdd add Merge pull request !100 from liuyuxiu/master",
+        "tdd add",
+        "!99 add tdd Merge pull request !99 from liuyuxiu/master",
+        "add tdd",
+        "!98 bug fix  53154 Merge pull request !98 from liuyuxiu/master",
+        "update tests/parse_examples.c."
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Release",
+      "tgt": "OpenHarmony-v6.0.0.1-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 1,
+      "changed_function_count": 1,
+      "patch_only": false,
+      "size_bucket": "tiny",
+      "changed_cpp_files": [
+        "cJSON_Utils.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "decode_array_index_from_pointer",
+          "file_path": "cJSON_Utils.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!107 修复cJSON_Utils.c文件decode_array_index_from_pointer函数 Merge pull request !107 from 刘永凯/DTS_fixCJSON_6_0",
+        "修复cJSON_Utils.c文件decode_array_index_from_pointer函数"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.1-Release",
+      "tgt": "OpenHarmony-v6.0.0.2-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.2-Release",
+      "tgt": "OpenHarmony-v6.1-Release",
+      "status": "passed",
+      "commit_count": 8,
+      "changed_file_count": 17,
+      "changed_cpp_file_count": 6,
+      "changed_function_count": 11,
+      "patch_only": false,
+      "size_bucket": "medium",
+      "changed_cpp_files": [
+        "cJSON.c",
+        "cJSON.h",
+        "tests/cjson_add.c",
+        "tests/misc_tests.c",
+        "tests/print_object.c",
+        "tests/unity/src/unity.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "cJSON_SetValuestring",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "print_number",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "parse_string",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "print",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_PrintBuffered",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cJSON_free",
+          "file_path": "cJSON.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_detach_item_via_pointer_should_return_null_if_item_prev_is_null",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "cjson_functions_should_not_crash_with_null_pointers",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "cjson_set_valuestring_should_return_null_if_strings_overlap",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "main",
+          "file_path": "tests/misc_tests.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "assert_print_object",
+          "file_path": "tests/print_object.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!113 merge master into master",
+        "update: 更新文件 bundle.json",
+        "增加 bundle.json head用于发布chipsdk_sp Revert \"补临时蓝区提交\"",
+        "补临时蓝区提交",
+        "!111 merge master into master",
+        "从社区合入版本1.7.19",
+        "!106 修复cJSON_Utils.c文件decode_array_index_from_pointer函数 Merge pull request !106 from 刘永凯/DTS_fixCJSON",
+        "修复cJSON_Utils.c文件decode_array_index_from_pointer函数"
+      ]
+    }
+  ]
+}

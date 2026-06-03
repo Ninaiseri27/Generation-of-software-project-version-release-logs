@@ -1,0 +1,44 @@
+{
+  "source": {
+    "reviewer": "codex-semantic-review",
+    "match_mode": "strict_sampled_pcre2_v1"
+  },
+  "matches": [
+    {
+      "generated_id": "GEN-006",
+      "gt_id": "GT-S04",
+      "decision": "match",
+      "notes": "Strong API match: pcre2_set_optimize optimization control."
+    },
+    {
+      "generated_id": "GEN-008",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Strong syntax match: Perl extended classes and UTS#18 set operations."
+    },
+    {
+      "generated_id": "GEN-010",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Scan-substring/script-run syntax support."
+    },
+    {
+      "generated_id": "GEN-010",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Turkish casing and caseless restriction flags are part of the Unicode/case-handling GT."
+    },
+    {
+      "generated_id": "GEN-022",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Escape parsing and UTF encoding covers the stricter escape/Unicode behavior portion."
+    },
+    {
+      "generated_id": "GEN-022",
+      "gt_id": "GT-S05",
+      "decision": "match",
+      "notes": "Replacement case callout handling is substitution-related evidence."
+    }
+  ]
+}

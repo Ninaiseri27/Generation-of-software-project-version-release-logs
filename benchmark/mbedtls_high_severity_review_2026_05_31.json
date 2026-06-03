@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "date": "2026-05-31",
+    "scope": "mbedtls high-severity strict-match review",
+    "reviewed_rows": 7,
+    "kept_matches": 7,
+    "removed_matches": 0,
+    "metric_refresh_required": false
+  },
+  "records": [
+    {
+      "method": "diff_only",
+      "generated_id": "GEN-010",
+      "gt_id": "GT-002",
+      "decision": "keep",
+      "reason": "Describes cert_req SAN memory leak/use-after-free, within GT-002 certificate/CSR memory-management scope."
+    },
+    {
+      "method": "full_adaptive_rule_family",
+      "generated_id": "GEN-004",
+      "gt_id": "GT-001",
+      "decision": "keep",
+      "reason": "Explicitly describes no-hostname certificate verification failure and security-bypass prevention."
+    },
+    {
+      "method": "full_adaptive_rule_family",
+      "generated_id": "GEN-014",
+      "gt_id": "GT-002",
+      "decision": "keep",
+      "reason": "Describes cert_write directory-name SAN memory leak/use-after-free, within GT-002 scope."
+    },
+    {
+      "method": "full_adaptive_rule_family",
+      "generated_id": "GEN-015",
+      "gt_id": "GT-002",
+      "decision": "keep",
+      "reason": "Describes cert_req directory-name SAN memory leak/use-after-free, within GT-002 scope."
+    },
+    {
+      "method": "full_no_fallback",
+      "generated_id": "GEN-016",
+      "gt_id": "GT-002",
+      "decision": "keep",
+      "reason": "Describes certificate-request directory-name memory leak/use-after-free, within GT-002 scope."
+    },
+    {
+      "method": "full_strict_1hop",
+      "generated_id": "GEN-011",
+      "gt_id": "GT-002",
+      "decision": "keep",
+      "reason": "Describes cert_write SAN memory leak/use-after-free, within GT-002 scope."
+    },
+    {
+      "method": "no_graph",
+      "generated_id": "GEN-017",
+      "gt_id": "GT-002",
+      "decision": "keep",
+      "reason": "Describes certificate request SAN memory leak/use-after-free, within GT-002 scope."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "sqlite_v5_0_1_to_v5_0_2",
+  "repository": {
+    "name": "third_party_sqlite",
+    "url": "https://github.com/openharmony/third_party_sqlite.git",
+    "category": "database"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v5.0.1-Release",
+    "tgt": "OpenHarmony-v5.0.2-Release"
+  },
+  "benchmark_role": "candidate",
+  "intended_role": "core_eval",
+  "pipeline_status": "verified_stage1",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 4,
+    "changed_cpp_files": 1,
+    "changed_functions": 20,
+    "patch_only": false,
+    "stage1_output": "outputs/third_party_sqlite/OpenHarmony-v5.0.1-Release__OpenHarmony-v5.0.2-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {},
+  "ground_truth": {
+    "status": "draft_required",
+    "path": "benchmark/cases/third_party_sqlite/sqlite_v5_0_1_to_v5_0_2/ground_truth.md",
+    "evidence_sources": [
+      "commit_messages",
+      "function_level_diff",
+      "OpenHarmony release notes if available"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "Stage 2/3 and reviewed ground truth are not complete."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "strict_1hop_vs_adaptive_cmg",
+    "with_vs_without_commit_messages",
+    "aggregation_none_exact_rule_family"
+  ],
+  "notes": [
+    "Useful medium-small database case with 20 changed functions in one large source file."
+  ]
+}

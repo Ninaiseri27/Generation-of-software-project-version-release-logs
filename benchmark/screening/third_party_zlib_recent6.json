@@ -1,0 +1,154 @@
+{
+  "source": {
+    "tool": "version-pair-screener-v1",
+    "repository": "workspaces\\third_party_zlib",
+    "tag_pattern": "OpenHarmony-v*",
+    "recent_pairs": 6
+  },
+  "summary": {
+    "screened_pair_count": 6,
+    "passed_pair_count": 6,
+    "failed_pair_count": 0,
+    "size_bucket_counts": {
+      "empty_or_metadata": 2,
+      "patch_only": 2,
+      "tiny": 2
+    }
+  },
+  "items": [
+    {
+      "ref": "OpenHarmony-v5.0.3-Release",
+      "tgt": "OpenHarmony-v5.1.0-Release",
+      "status": "passed",
+      "commit_count": 4,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!89 三方软件的可信专项整改 Merge pull request !89 from sunjiakun/zlib_NOTICE_add",
+        "zlib库新增NOTICE文件",
+        "!86 [包管理] [zlib] 开启branch_protector_ret 为 pac_ret Merge pull request !86 from chthollystar/master",
+        "Issue:#IAPA8J Description: add pac_ret in zlib Sig: SIG_ApplicaitonFramework Feature or Bugfix: Bugfix Binary Source: No Signed-off-by: renjie84  renjie84@huawei.com"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.1.0-Release",
+      "tgt": "OpenHarmony-v6.0-Beta1",
+      "status": "passed",
+      "commit_count": 4,
+      "changed_file_count": 2,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!94 dependencies Merge pull request !94 from lanhaoyu/dependence",
+        "dependencies",
+        "!93 fix_version Merge pull request !93 from lanhaoyu/zlib_version_fix",
+        "fix_version"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Beta1",
+      "tgt": "OpenHarmony-v6.0-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!95 chipsetsdk_sp Merge pull request !95 from zhrenqiang/master",
+        "chipsetsdk_sp"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Release",
+      "tgt": "OpenHarmony-v6.0.0.1-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.1-Release",
+      "tgt": "OpenHarmony-v6.0.0.2-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 2,
+      "changed_cpp_file_count": 2,
+      "changed_function_count": 2,
+      "patch_only": false,
+      "size_bucket": "tiny",
+      "changed_cpp_files": [
+        "crc32.c",
+        "zlib.h"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "crc32_combine64",
+          "file_path": "crc32.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "crc32_combine_gen64",
+          "file_path": "crc32.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!103 merge r6 into OpenHarmony-6.0-Release",
+        "fix cve-2026-27171"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.2-Release",
+      "tgt": "OpenHarmony-v6.1-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 2,
+      "changed_cpp_file_count": 2,
+      "changed_function_count": 2,
+      "patch_only": false,
+      "size_bucket": "tiny",
+      "changed_cpp_files": [
+        "crc32.c",
+        "zlib.h"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "crc32_combine64",
+          "file_path": "crc32.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "crc32_combine_gen64",
+          "file_path": "crc32.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": []
+    }
+  ]
+}

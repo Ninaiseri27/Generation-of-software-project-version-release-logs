@@ -1,0 +1,47 @@
+{
+  "case_id": "libxml2_v6_0_0_1_to_v6_0_0_2",
+  "repository": {
+    "name": "third_party_libxml2",
+    "url": "https://github.com/openharmony/third_party_libxml2.git",
+    "category": "xml_parser"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0.0.1-Release",
+    "tgt": "OpenHarmony-v6.0.0.2-Release"
+  },
+  "benchmark_role": "patch_challenge",
+  "intended_role": "patch_challenge",
+  "pipeline_status": "verified_stage1_patch_only",
+  "screening": {
+    "stage1_status": "patch_only",
+    "commit_count": 10,
+    "changed_cpp_files": 0,
+    "changed_functions": 0,
+    "patch_only": true,
+    "stage1_output": "outputs/benchmark/third_party_libxml2/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {},
+  "ground_truth": {
+    "status": "not_started",
+    "path": "benchmark/cases/third_party_libxml2/libxml2_v6_0_0_1_to_v6_0_0_2/ground_truth.md",
+    "evidence_sources": [
+      "patch files",
+      "commit_messages",
+      "CVE or security advisory text if available",
+      "OpenHarmony release notes if available"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "Patch-aware extraction is required before fair evaluation."
+  },
+  "baseline_plan": [
+    "patch_text_only",
+    "patch_diff_only"
+  ],
+  "ablation_plan": [],
+  "notes": [
+    "Patch-only candidate with non-trivial commit count.",
+    "Useful as a future challenge case for OpenHarmony-specific third-party patch workflows."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "case_id": "zlib_v6_0_0_1_to_v6_0_0_2",
+  "repository": {
+    "name": "third_party_zlib",
+    "url": "https://github.com/openharmony/third_party_zlib.git",
+    "category": "compression"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0.0.1-Release",
+    "tgt": "OpenHarmony-v6.0.0.2-Release"
+  },
+  "benchmark_role": "core_eval",
+  "intended_role": "core_eval",
+  "pipeline_status": "verified_full_pipeline_mock",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 2,
+    "changed_cpp_files": 2,
+    "changed_functions": 2,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {
+    "cmg_output": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/cmg.json",
+    "prompt_input": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/prompt_input.json",
+    "prompt_bundle": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/prompt_bundle.json",
+    "release_note_mock_none": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/release_note_mock_none.json",
+    "release_note_mock_exact": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/release_note_mock_exact.json",
+    "release_note_mock_rule_family": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/release_note_mock_rule_family.json",
+    "deepseek_v4_flash_baselines": "outputs/benchmark/third_party_zlib/OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release/baselines_deepseek_v4_flash"
+  },
+  "stage2": {
+    "status": "passed",
+    "matched_entries": 2,
+    "unmatched_entries": 0,
+    "fallback_context_entries": 2,
+    "synthetic_entries": 0,
+    "diff_call_edges": 0
+  },
+  "stage3": {
+    "status": "passed_mock",
+    "prompt_entries": 2,
+    "mock_generated_entries": 2,
+    "mock_failed_entries": 0,
+    "aggregation_strategies_tested": [
+      "none",
+      "exact",
+      "rule_family"
+    ]
+  },
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/third_party_zlib/zlib_v6_0_0_1_to_v6_0_0_2/ground_truth.md",
+    "evidence_path": "benchmark/cases/third_party_zlib/zlib_v6_0_0_1_to_v6_0_0_2/evidence.md",
+    "evidence_sources": [
+      "commit_messages",
+      "function_level_diff",
+      "CVE or security advisory text if available",
+      "OpenHarmony release notes if available"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": true,
+    "admission_note": "Compact reviewed compression/security-fix case; useful for repository coverage, but low statistical weight."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "with_vs_without_commit_messages",
+    "aggregation_none_exact_rule_family"
+  ],
+  "notes": [
+    "Compact security/CVE-style sample.",
+    "Useful for checking whether the system can produce concise notes for small but important fixes."
+  ]
+}

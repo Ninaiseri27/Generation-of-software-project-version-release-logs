@@ -1,0 +1,57 @@
+{
+  "case_id": "git_2_51_0_to_2_51_1",
+  "repository": {
+    "name": "upstream_git",
+    "url": "https://github.com/git/git.git",
+    "category": "version_control"
+  },
+  "version_pair": {
+    "ref": "v2.51.0",
+    "tgt": "v2.51.1"
+  },
+  "benchmark_role": "candidate",
+  "intended_role": "extension_eval",
+  "pipeline_status": "verified_stage1",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 134,
+    "changed_cpp_files": 42,
+    "changed_functions": 102,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/upstream_git/v2.51.0__v2.51.1/changed_functions.json",
+    "screening_output": "benchmark/screening/upstream_git_recent12.json"
+  },
+  "pipeline_artifacts": {},
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/upstream_git/git_2_51_0_to_2_51_1/ground_truth.md",
+    "evidence_path": "benchmark/cases/upstream_git/git_2_51_0_to_2_51_1/evidence.md",
+    "evidence_sources": [
+      "official Git 2.51.1 release notes",
+      "commit_messages",
+      "function_level_diff",
+      "changed_files"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "Extension candidate. Ground truth is reviewed, but strict matches and comparable real-backend outputs are not complete yet."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "sampled_stress_protocol_if_needed",
+    "aggregation_none_rule_similarity",
+    "strict_semantic_matching"
+  ],
+  "notes": [
+    "Selected as the second upstream official-release candidate after GT scale correction.",
+    "The pair has official Git release notes and a manageable large scale: 102 changed functions.",
+    "Reviewed GT keeps source-backed release-note facts and excludes documentation-only entries.",
+    "Keep as extension_eval unless Stage 2/3 and strict matches make it fully comparable with core cases."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "curl_8_11_0_to_8_11_1",
+  "repository": {
+    "name": "upstream_curl",
+    "url": "https://github.com/curl/curl.git",
+    "category": "network"
+  },
+  "version_pair": {
+    "ref": "curl-8_11_0",
+    "tgt": "curl-8_11_1"
+  },
+  "benchmark_role": "candidate",
+  "intended_role": "extension_eval",
+  "pipeline_status": "verified_stage1",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 117,
+    "changed_cpp_files": 67,
+    "changed_functions": 103,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/upstream_curl/curl-8_11_0__curl-8_11_1/changed_functions.json",
+    "screening_output": "benchmark/screening/upstream_curl_recent12.json"
+  },
+  "pipeline_artifacts": {},
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/upstream_curl/curl_8_11_0_to_8_11_1/ground_truth.md",
+    "evidence_path": "benchmark/cases/upstream_curl/curl_8_11_0_to_8_11_1/evidence.md",
+    "evidence_sources": [
+      "official curl 8.11.1 RELEASE-NOTES",
+      "commit_messages",
+      "function_level_diff",
+      "changed_files",
+      "curl issue references in RELEASE-NOTES"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "Extension candidate. Ground truth is reviewed, but strict matches and comparable real-backend outputs are not complete yet."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "sampled_stress_protocol_if_needed",
+    "aggregation_none_rule_similarity",
+    "strict_semantic_matching"
+  ],
+  "notes": [
+    "Selected as the first upstream official-release candidate after GT scale correction.",
+    "The pair has rich official release notes and a manageable large scale: 103 changed functions.",
+    "Reviewed GT keeps 16 strict semantic entries and excludes two weak implementation/refactor drafts.",
+    "Keep as extension_eval unless Stage 2/3 and reviewed GT make it fully comparable with core cases."
+  ]
+}

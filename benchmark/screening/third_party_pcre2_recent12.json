@@ -1,0 +1,672 @@
+{
+  "source": {
+    "tool": "version-pair-screener-v1",
+    "repository": "workspaces\\third_party_pcre2",
+    "tag_pattern": "OpenHarmony-v*",
+    "recent_pairs": 12
+  },
+  "summary": {
+    "screened_pair_count": 12,
+    "passed_pair_count": 12,
+    "failed_pair_count": 0,
+    "size_bucket_counts": {
+      "empty_or_metadata": 5,
+      "patch_only": 5,
+      "large": 2
+    }
+  },
+  "items": [
+    {
+      "ref": "OpenHarmony-v4.1.3-Release",
+      "tgt": "OpenHarmony-v4.1.4-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v4.1.4-Release",
+      "tgt": "OpenHarmony-v5.0-Beta1",
+      "status": "passed",
+      "commit_count": 13,
+      "changed_file_count": 2,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!54 回退不兼容mac下的cp Merge pull request !54 from Jasonye/master",
+        "回退不兼容mac版本的编译",
+        "!53 删除header_files Merge pull request !53 from Jasonye/master",
+        "使用flock 防止并发cp",
+        "!52 cf添加-f，防止文件已存在 Merge pull request !52 from Jasonye/master",
+        "cf添加-f，防止文件已存在",
+        "!48 拷贝pcre2头文件时强制cp，防止头文件已存在报错 Merge pull request !48 from Jasonye/master",
+        "gn force cp",
+        "!47 pcre2部件化整改 Merge pull request !47 from xingyuanfeng/master",
+        "修整gn文件格式"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0-Beta1",
+      "tgt": "OpenHarmony-v5.0.0-Release",
+      "status": "passed",
+      "commit_count": 10,
+      "changed_file_count": 2,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!65 Remove pcre2-16 Merge pull request !65 from kirillparshukov/open5.0",
+        "remove pcre2-16",
+        "!61 support pac Merge pull request !61 from Jasonye/cherry-pick-1725959820",
+        "support pac （cherry picked commit from <gitee.com//openharmony/third_party_pcre2/commit/b31194c5c105cb5d5202ab7c8ba58ed6fe5b1d7b>",
+        "!59 Make pcre2-16 target Merge pull request !59 from kirillparshukov/pcre2",
+        "Add pcre2-16 target",
+        "!55 增加pcre静态库 Merge pull request !55 from 蓝色大魔王/master",
+        "Signed-off-by:hanqiaosheng <hanqiaosheng@huawei.com>",
+        "Signed-off-by:hanqiaosheng <hanqiaosheng@huawei.com>",
+        "Signed-off-by:hanqiaosheng <hanqiaosheng@huawei.com>"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0.0-Release",
+      "tgt": "OpenHarmony-v5.0.1-Release",
+      "status": "passed",
+      "commit_count": 6,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!70 README.OpenSource中License 字段填写内容不准确，同步至5.0.1release Merge pull request !70 from zhenghui/cherry-pick-1730950653",
+        "cherry pick f8f5a60 from https://gitee.com/zhenghui25/third_party_pcre2/pulls/68 README.OpenSource中License 字段修正",
+        "!67 support pac Merge pull request !67 from Jasonye/cherry-pick-1727342633",
+        "support pac （cherry picked commit from <gitee.com//openharmony/third_party_pcre2/commit/512e1a4500a37d58e2971e66a7ec4231d15a56d8> Signed-off-by: zhenghui <zhenghui25@huawei.com>",
+        "!66 Remove pcre2-16 Merge pull request !66 from kirillparshukov/open5.0.1",
+        "remove pcre2-16"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0.1-Release",
+      "tgt": "OpenHarmony-v5.0.2-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v5.0.2-Release",
+      "tgt": "OpenHarmony-v5.0.3-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v5.0.3-Release",
+      "tgt": "OpenHarmony-v5.1.0-Release",
+      "status": "passed",
+      "commit_count": 10,
+      "changed_file_count": 256,
+      "changed_cpp_file_count": 70,
+      "changed_function_count": 981,
+      "patch_only": false,
+      "size_bucket": "large",
+      "changed_cpp_files": [
+        "pcre2/maint/ucptest.c",
+        "pcre2/src/pcre2_auto_possess.c",
+        "pcre2/src/pcre2_chkdint.c",
+        "pcre2/src/pcre2_compile.c",
+        "pcre2/src/pcre2_context.c",
+        "pcre2/src/pcre2_convert.c",
+        "pcre2/src/pcre2_dfa_match.c",
+        "pcre2/src/pcre2_dftables.c",
+        "pcre2/src/pcre2_error.c",
+        "pcre2/src/pcre2_extuni.c",
+        "pcre2/src/pcre2_find_bracket.c",
+        "pcre2/src/pcre2_fuzzsupport.c",
+        "pcre2/src/pcre2_internal.h",
+        "pcre2/src/pcre2_intmodedep.h",
+        "pcre2/src/pcre2_jit_compile.c",
+        "pcre2/src/pcre2_jit_match.c",
+        "pcre2/src/pcre2_jit_misc.c",
+        "pcre2/src/pcre2_jit_neon_inc.h",
+        "pcre2/src/pcre2_jit_simd_inc.h",
+        "pcre2/src/pcre2_jit_test.c",
+        "pcre2/src/pcre2_maketables.c",
+        "pcre2/src/pcre2_match.c",
+        "pcre2/src/pcre2_match_data.c",
+        "pcre2/src/pcre2_printint.c",
+        "pcre2/src/pcre2_study.c",
+        "pcre2/src/pcre2_substring.c",
+        "pcre2/src/pcre2_tables.c",
+        "pcre2/src/pcre2_ucd.c",
+        "pcre2/src/pcre2_ucp.h",
+        "pcre2/src/pcre2_ucptables.c",
+        "pcre2/src/pcre2_valid_utf.c",
+        "pcre2/src/pcre2_xclass.c",
+        "pcre2/src/pcre2grep.c",
+        "pcre2/src/pcre2posix.c",
+        "pcre2/src/pcre2posix.h",
+        "pcre2/src/pcre2posix_test.c",
+        "pcre2/src/pcre2test.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorApple.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorCore.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorFreeBSD.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorPosix.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorWindows.c",
+        "pcre2/src/sljit/allocator_src/sljitProtExecAllocatorNetBSD.c",
+        "pcre2/src/sljit/allocator_src/sljitProtExecAllocatorPosix.c",
+        "pcre2/src/sljit/allocator_src/sljitWXExecAllocatorPosix.c",
+        "pcre2/src/sljit/allocator_src/sljitWXExecAllocatorWindows.c",
+        "pcre2/src/sljit/sljitConfig.h",
+        "pcre2/src/sljit/sljitConfigCPU.h",
+        "pcre2/src/sljit/sljitConfigInternal.h",
+        "pcre2/src/sljit/sljitLir.c",
+        "pcre2/src/sljit/sljitLir.h",
+        "pcre2/src/sljit/sljitNativeARM_32.c",
+        "pcre2/src/sljit/sljitNativeARM_64.c",
+        "pcre2/src/sljit/sljitNativeARM_T2_32.c",
+        "pcre2/src/sljit/sljitNativeLOONGARCH_64.c",
+        "pcre2/src/sljit/sljitNativeMIPS_32.c",
+        "pcre2/src/sljit/sljitNativeMIPS_64.c",
+        "pcre2/src/sljit/sljitNativeMIPS_common.c",
+        "pcre2/src/sljit/sljitNativePPC_32.c",
+        "pcre2/src/sljit/sljitNativePPC_64.c",
+        "pcre2/src/sljit/sljitNativePPC_common.c",
+        "pcre2/src/sljit/sljitNativeRISCV_32.c",
+        "pcre2/src/sljit/sljitNativeRISCV_64.c",
+        "pcre2/src/sljit/sljitNativeRISCV_common.c",
+        "pcre2/src/sljit/sljitNativeS390X.c",
+        "pcre2/src/sljit/sljitNativeX86_32.c",
+        "pcre2/src/sljit/sljitNativeX86_64.c",
+        "pcre2/src/sljit/sljitNativeX86_common.c",
+        "pcre2/src/sljit/sljitSerialize.c",
+        "pcre2/vms/stdint.h"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "ord2utf8",
+          "file_path": "pcre2/maint/ucptest.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "print_prop",
+          "file_path": "pcre2/maint/ucptest.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "find_chars",
+          "file_path": "pcre2/maint/ucptest.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "process_command_line",
+          "file_path": "pcre2/maint/ucptest.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "main",
+          "file_path": "pcre2/maint/ucptest.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "compare_opcodes",
+          "file_path": "pcre2/src/pcre2_auto_possess.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_chkdint.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "show_parsed",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "read_repeat_counts",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "get_ucp",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "read_name",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "handle_escdsw",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "parse_regex",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "get_othercase_range",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_to_class_internal",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "first_significant_code",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "get_othercase_range",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "add_list_to_class_internal",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_to_class",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_list_to_class",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_to_class_internal",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "add_not_list_to_class",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "compile_branch",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        }
+      ],
+      "commit_messages": [
+        "!75 readme.opensource pcre2 10.42->10.44,同步release5.1 Merge pull request !75 from zhenghui/OpenHarmony-5.1.0-Release",
+        "readme.opensource pcre2 10.42->10.44,同步release5.1",
+        "!71 pcre2 update Merge pull request !71 from zhenghui/master",
+        "pcre2 update",
+        "!68 【合规】README.OpenSource中License 字段填写内容不准确 Merge pull request !68 from zhenghui/master",
+        "README.OpenSource中License 字段修正",
+        "!62 Remove pcre2-16 Merge pull request !62 from kirillparshukov/open",
+        "remove pcre2-16",
+        "!60 [pcre2]support pac Merge pull request !60 from Jasonye/master",
+        "support pac"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.1.0-Release",
+      "tgt": "OpenHarmony-v6.0-Beta1",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!73 readme.opensource pcre2 10.42->10.44 Merge pull request !73 from zhenghui/master",
+        "readme.opensource pcre2 10.42->10.44"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Beta1",
+      "tgt": "OpenHarmony-v6.0-Release",
+      "status": "passed",
+      "commit_count": 8,
+      "changed_file_count": 3,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!81 treble解耦 Merge pull request !81 from zhenghui/master",
+        "treble解耦",
+        "!80 add libpcre2_static_16 inner_kits for runtime_core Merge pull request !80 from lijunru/0616",
+        "add libpcre2_static_16 inner_kits for runtime_core",
+        "!79 解决源码归档到镜像的问题 Merge pull request !79 from Mr.zhao/master",
+        "解决源码归档到镜像的问题",
+        "!77 取消构建过程中修改源码，源码整改生成在out目录下 Merge pull request !77 from 周才杰/master",
+        "取消构建过程中修改源码，源码整改生成在out目录下"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Release",
+      "tgt": "OpenHarmony-v6.0.0.1-Release",
+      "status": "passed",
+      "commit_count": 7,
+      "changed_file_count": 5,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!89 merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "oat告警修复，同步6.0",
+        "oat告警修复，同步6.0",
+        "!88 merge cherry-pick-mr-87-1762398363694-auto into OpenHarmony-6.0-Release",
+        "oat告警清理",
+        "!84 merge OpenHarmony-6.0-Release into OpenHarmony-6.0-Release",
+        "头文件问题修复"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.1-Release",
+      "tgt": "OpenHarmony-v6.0.0.2-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.2-Release",
+      "tgt": "OpenHarmony-v6.1-Release",
+      "status": "passed",
+      "commit_count": 12,
+      "changed_file_count": 360,
+      "changed_cpp_file_count": 77,
+      "changed_function_count": 1123,
+      "patch_only": false,
+      "size_bucket": "large",
+      "changed_cpp_files": [
+        "pcre2/maint/utf8.c",
+        "pcre2/src/pcre2_auto_possess.c",
+        "pcre2/src/pcre2_chartables.c",
+        "pcre2/src/pcre2_chkdint.c",
+        "pcre2/src/pcre2_compile.c",
+        "pcre2/src/pcre2_compile.h",
+        "pcre2/src/pcre2_compile_class.c",
+        "pcre2/src/pcre2_config.c",
+        "pcre2/src/pcre2_context.c",
+        "pcre2/src/pcre2_convert.c",
+        "pcre2/src/pcre2_dfa_match.c",
+        "pcre2/src/pcre2_error.c",
+        "pcre2/src/pcre2_extuni.c",
+        "pcre2/src/pcre2_find_bracket.c",
+        "pcre2/src/pcre2_fuzzsupport.c",
+        "pcre2/src/pcre2_internal.h",
+        "pcre2/src/pcre2_intmodedep.h",
+        "pcre2/src/pcre2_jit_char_inc.h",
+        "pcre2/src/pcre2_jit_compile.c",
+        "pcre2/src/pcre2_jit_match.c",
+        "pcre2/src/pcre2_jit_neon_inc.h",
+        "pcre2/src/pcre2_jit_simd_inc.h",
+        "pcre2/src/pcre2_jit_test.c",
+        "pcre2/src/pcre2_maketables.c",
+        "pcre2/src/pcre2_match.c",
+        "pcre2/src/pcre2_match_data.c",
+        "pcre2/src/pcre2_ord2utf.c",
+        "pcre2/src/pcre2_pattern_info.c",
+        "pcre2/src/pcre2_printint.c",
+        "pcre2/src/pcre2_serialize.c",
+        "pcre2/src/pcre2_study.c",
+        "pcre2/src/pcre2_substitute.c",
+        "pcre2/src/pcre2_substring.c",
+        "pcre2/src/pcre2_ucd.c",
+        "pcre2/src/pcre2_ucp.h",
+        "pcre2/src/pcre2_ucptables.c",
+        "pcre2/src/pcre2_util.h",
+        "pcre2/src/pcre2_xclass.c",
+        "pcre2/src/pcre2grep.c",
+        "pcre2/src/pcre2posix.c",
+        "pcre2/src/pcre2test.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorApple.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorCore.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorFreeBSD.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorPosix.c",
+        "pcre2/src/sljit/allocator_src/sljitExecAllocatorWindows.c",
+        "pcre2/src/sljit/allocator_src/sljitProtExecAllocatorNetBSD.c",
+        "pcre2/src/sljit/allocator_src/sljitProtExecAllocatorPosix.c",
+        "pcre2/src/sljit/allocator_src/sljitWXExecAllocatorPosix.c",
+        "pcre2/src/sljit/allocator_src/sljitWXExecAllocatorWindows.c",
+        "pcre2/src/sljit/sljitConfig.h",
+        "pcre2/src/sljit/sljitConfigCPU.h",
+        "pcre2/src/sljit/sljitConfigInternal.h",
+        "pcre2/src/sljit/sljitExecAllocator.c",
+        "pcre2/src/sljit/sljitLir.c",
+        "pcre2/src/sljit/sljitLir.h",
+        "pcre2/src/sljit/sljitNativeARM_32.c",
+        "pcre2/src/sljit/sljitNativeARM_64.c",
+        "pcre2/src/sljit/sljitNativeARM_T2_32.c",
+        "pcre2/src/sljit/sljitNativeLOONGARCH_64.c",
+        "pcre2/src/sljit/sljitNativeMIPS_32.c",
+        "pcre2/src/sljit/sljitNativeMIPS_64.c",
+        "pcre2/src/sljit/sljitNativeMIPS_common.c",
+        "pcre2/src/sljit/sljitNativePPC_32.c",
+        "pcre2/src/sljit/sljitNativePPC_64.c",
+        "pcre2/src/sljit/sljitNativePPC_common.c",
+        "pcre2/src/sljit/sljitNativeRISCV_32.c",
+        "pcre2/src/sljit/sljitNativeRISCV_64.c",
+        "pcre2/src/sljit/sljitNativeRISCV_common.c",
+        "pcre2/src/sljit/sljitNativeS390X.c",
+        "pcre2/src/sljit/sljitNativeX86_32.c",
+        "pcre2/src/sljit/sljitNativeX86_64.c",
+        "pcre2/src/sljit/sljitNativeX86_common.c",
+        "pcre2/src/sljit/sljitProtExecAllocator.c",
+        "pcre2/src/sljit/sljitSerialize.c",
+        "pcre2/src/sljit/sljitUtils.c",
+        "pcre2/src/sljit/sljitWXExecAllocator.c"
+      ],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [
+        {
+          "symbol": "main",
+          "file_path": "pcre2/maint/utf8.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "check_char_prop",
+          "file_path": "pcre2/src/pcre2_auto_possess.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "get_chr_property_list",
+          "file_path": "pcre2/src/pcre2_auto_possess.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "compare_opcodes",
+          "file_path": "pcre2/src/pcre2_auto_possess.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_auto_possess.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_chkdint.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "show_parsed",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "pcre2_code_copy",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "read_number",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "read_repeat_counts",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "PRIV",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "get_ucp",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "read_name",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "parse_regex",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "max_parsed_pattern",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "parse_regex",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "added"
+        },
+        {
+          "symbol": "get_othercase_range",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_to_class_internal",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_list_to_class_internal",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_to_class",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_list_to_class",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "add_not_list_to_class",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "deleted"
+        },
+        {
+          "symbol": "first_significant_code",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        },
+        {
+          "symbol": "find_dupname_details",
+          "file_path": "pcre2/src/pcre2_compile.c",
+          "change_type": "modified"
+        }
+      ],
+      "commit_messages": [
+        "!92 merge fixRegexp into master",
+        "fix static regexp",
+        "!93 merge wls260114 into master",
+        "OAT告警处理20260114",
+        "!91 merge master into master",
+        "feat: update pcre2 to version of 10.46",
+        "!87 merge master into master",
+        "oat告警清理",
+        "!83 merge master into master",
+        "头文件问题修复"
+      ]
+    }
+  ]
+}

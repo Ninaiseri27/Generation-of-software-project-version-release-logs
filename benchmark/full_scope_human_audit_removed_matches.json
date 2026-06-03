@@ -1,0 +1,1211 @@
+{
+  "audit_date": "2026-05-30",
+  "source": "matches_strict_rule_aided.json after second-pass cleanup",
+  "removed_match_count": 149,
+  "removed_matches": [
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G206",
+      "generated_id": "GEN-537",
+      "title": "Improve error handling for signed tags in fast-import",
+      "reason": "Signed-tag handling alone does not support signed-commits import GT."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-375",
+      "title": "Fix missing tree result in merge-ort non-recursive path",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-463",
+      "title": "Fix rename detection in merge-ort to handle renamed files",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-225",
+      "title": "Disable rename detection and find copies harder in diff setup",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-197",
+      "title": "Add write_item_strbuf helper for credential output",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-428",
+      "title": "Fix potential crash when writing OS X Keychain credential items",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-559",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-698",
+      "title": "Remove local xmalloc wrapper in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G228",
+      "generated_id": "GEN-594",
+      "title": "Update error message to reflect current option names",
+      "reason": "Missing config set multi-value error/hint semantics."
+    },
+    {
+      "case": "git",
+      "variant": "diff_only",
+      "gt_id": "GT-G229",
+      "generated_id": "GEN-542",
+      "title": "Include gpgsig-sha256 in commit signature exclusion list",
+      "reason": "Missing replay/create-commit gpgsig-sha256 omission semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G206",
+      "generated_id": "GEN-505",
+      "title": "Improve error handling for signed tags in fast-import",
+      "reason": "Signed-tag handling alone does not support signed-commits import GT."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-452",
+      "title": "Fix strbuf_readlink buffer size for symlink targets",
+      "reason": "Missing Windows symlink/filesystem operation semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-552",
+      "title": "Skip irrelevant cached renames during merge",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-343",
+      "title": "Fix merge-ort crash when tree parsing fails",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-432",
+      "title": "Fix rename detection for copied files in merge-ort",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-252",
+      "title": "Fix crash when merge base tree cannot be parsed",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-205",
+      "title": "Disable rename detection when diff setup fails",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-259",
+      "title": "Fix credential state encoding for OS X Keychain",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-080",
+      "title": "Add helper to write credential items to strbuf",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-257",
+      "title": "Fix credential helper crash on macOS when reading numeric attributes",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-258",
+      "title": "Fix credential helper crash on macOS when retrieving empty attributes",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-256",
+      "title": "Fix credential helper crash on empty or missing data",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-680",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G228",
+      "generated_id": "GEN-557",
+      "title": "Update error message for git config to reflect new option names",
+      "reason": "Missing config set multi-value error/hint semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_graph",
+      "gt_id": "GT-G230",
+      "generated_id": "GEN-189",
+      "title": "Add assertion to catch missing submodule in update strategy",
+      "reason": "Missing submodule .gitmodules missing-path crash semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G206",
+      "generated_id": "GEN-473",
+      "title": "Handle invalid signed-tags modes in fast-import",
+      "reason": "Missing fast-import strip-if-invalid commit-signature semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G208",
+      "generated_id": "GEN-436",
+      "title": "Fix strbuf_readlink buffer overflow when reading symlink of exact hint size",
+      "reason": "Missing Windows symlink/filesystem operation semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-245",
+      "title": "Disable rename detection and find copies harder when following pathspec",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-205",
+      "title": "Add write_item_strbuf_cfstring helper for OS X Keychain credential",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-087",
+      "title": "Add helper to write credential items to strbuf",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-204",
+      "title": "Add write_item_strbuf_cfdata helper for OS X Keychain credential",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-250",
+      "title": "Fix OS X Keychain credential helper number handling",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-654",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G230",
+      "generated_id": "GEN-277",
+      "title": "Fix crash when adding submodule with existing path",
+      "reason": "Missing submodule .gitmodules missing-path crash semantics."
+    },
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G230",
+      "generated_id": "GEN-223",
+      "title": "Add assertion for submodule existence in update strategy",
+      "reason": "Missing submodule .gitmodules missing-path crash semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G206",
+      "generated_id": "GEN-529",
+      "title": "Handle signed tags and invalid strip-if-invalid mode in fast-import",
+      "reason": "Signed-tag handling alone does not support signed-commits import GT."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-571",
+      "title": "Skip irrelevant cached renames in merge-ort",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-461",
+      "title": "Fix rename detection in merge-ort for copied files",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-238",
+      "title": "Disable rename detection and copy detection when following pathspecs",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-195",
+      "title": "Add write_item_strbuf helper for OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-076",
+      "title": "Add helper to write CFStringRef to strbuf in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-189",
+      "title": "Add support for writing CFNumber values in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-552",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-705",
+      "title": "Remove local xmalloc wrapper in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G206",
+      "generated_id": "GEN-522",
+      "title": "Handle signed tags in fast-import with proper error messages",
+      "reason": "Signed-tag handling alone does not support signed-commits import GT."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-565",
+      "title": "Skip irrelevant cached renames during merge",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-358",
+      "title": "Fix merge-ort result tree not set when merge base is null",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-456",
+      "title": "Fix rename detection in merge-ort for copied files",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-274",
+      "title": "Fix crash when merging trees that cannot be parsed",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G217",
+      "generated_id": "GEN-070",
+      "title": "Add helper to shorten remote ref names for similar ref suggestions",
+      "reason": "Missing branch help-suggestion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-236",
+      "title": "Disable rename detection and copy detection when following pathspecs",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-198",
+      "title": "Add write_item_strbuf helper for OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-199",
+      "title": "Add write_item_strbuf_cfdata helper for OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-702",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-703",
+      "title": "Remove local xmalloc wrapper in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G231",
+      "generated_id": "GEN-064",
+      "title": "Add helper to collect object IDs during fetch",
+      "reason": "Missing fetch tag overwrite/non-atomic transaction semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-G234",
+      "generated_id": "GEN-563",
+      "title": "Skip fsck of reflog entries with future timestamps",
+      "reason": "Missing fsck consistent refs semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G206",
+      "generated_id": "GEN-189",
+      "title": "Fix handling of signed commits in fast-export",
+      "reason": "Title states fast-export rather than fast-import."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-356",
+      "title": "Skip irrelevant cached renames in merge-ort",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-285",
+      "title": "Fix rename detection in merge-ort for copied files",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-144",
+      "title": "Disable rename detection and copy detection when following pathspecs",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-112",
+      "title": "Add write_item_strbuf helper for OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-341",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-432",
+      "title": "Remove local xmalloc wrapper in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-G230",
+      "generated_id": "GEN-453",
+      "title": "Remove unused append_matching_ref function",
+      "reason": "Missing submodule .gitmodules missing-path crash semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-463",
+      "title": "Skip irrelevant cached renames in merge-ort",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G212",
+      "generated_id": "GEN-368",
+      "title": "Fix rename detection in merge-ort for copied files",
+      "reason": "Missing ort criss-cross rename-conflict assertion semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G218",
+      "generated_id": "GEN-179",
+      "title": "Disable rename detection and copy detection when following pathspecs",
+      "reason": "Missing diff --quiet rename/copy skip semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-143",
+      "title": "Add write_item_strbuf helper for OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-444",
+      "title": "Remove local die function from OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G225",
+      "generated_id": "GEN-561",
+      "title": "Remove local xmalloc wrapper in OS X Keychain credential helper",
+      "reason": "Missing macOS keychain credential storing semantics."
+    },
+    {
+      "case": "git",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-G230",
+      "generated_id": "GEN-596",
+      "title": "Remove unused append_commit helper",
+      "reason": "Missing submodule .gitmodules missing-path crash semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-038",
+      "title": "Add parse_regex function for PCRE2 compilation",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-016",
+      "title": "Add compile_class_binary_tight function for tight binary class compilation",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-018",
+      "title": "Add compile_class_not_nested function for character class compilation",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-050",
+      "title": "Add support for OP_ECLASS and OP_ASSERT_SCS opcodes and improve robustness",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-105",
+      "title": "Fix local variable offset for case-insensitive backreference iteration in JIT",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-106",
+      "title": "Fix local variable size calculation for case-insensitive backreferences with Unicode",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P208",
+      "generated_id": "GEN-216",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-025",
+      "title": "Add display of new PCRE2 extra compile options in test output",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-216",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-025",
+      "title": "Add display of new PCRE2 extra compile options in test output",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "diff_only",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-216",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-048",
+      "title": "Add support for script run and Turkish casing in PCRE2",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-012",
+      "title": "Add compile_class_binary_tight function for tight binary class compilation",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-013",
+      "title": "Add compile_class_not_nested function for character class compilation",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-069",
+      "title": "Fix JIT compilation for Turkish case-insensitive backreferences",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-026",
+      "title": "Add new PCRE2 extra compile options for lookaround, callout, BS0, octal, and casing",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-054",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-026",
+      "title": "Add new PCRE2 extra compile options for lookaround, callout, BS0, octal, and casing",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-054",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_graph",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-069",
+      "title": "Fix JIT compilation for Turkish case-insensitive backreferences",
+      "reason": "Missing substitute case transformation semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-032",
+      "title": "Add parse_regex function for extended class and substring scanning support",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-055",
+      "title": "Add tight binary class compilation for enhanced character class handling",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-091",
+      "title": "Fix Turkish I case-insensitive matching for backreferences in JIT",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-076",
+      "title": "Fix JIT compilation for case-insensitive backreferences in UTF/Unicode mode",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-019",
+      "title": "Add display of new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-065",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-019",
+      "title": "Add display of new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-201",
+      "title": "{\"section\":\"Bug Fixes\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "no_fallback",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-065",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-048",
+      "title": "Add support for Perl extended character classes and scan_substring syntax",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-058",
+      "title": "Add tight binary class compilation for character classes",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-012",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-080",
+      "title": "Fix JIT stack corruption for case-insensitive backreferences in Unicode mode",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P208",
+      "generated_id": "GEN-064",
+      "title": "Enhanced escape sequence handling and substitution callout support in pcre2test",
+      "reason": "Missing stricter malformed \\x escape behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-055",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-066",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-060",
+      "title": "Add utf_caseless_extend function for caseless UTF class compilation",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-055",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-012",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-066",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-074",
+      "title": "Fix JIT backreference matching for Turkish I and caseless restrict flags",
+      "reason": "Missing substitute case transformation semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_adaptive_rule_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-083",
+      "title": "Fix Unicode property name parsing for loose matching rules",
+      "reason": "Missing substitute case transformation semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-033",
+      "title": "Add new parse_regex function for extended character class support",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-016",
+      "title": "Add compile_class_binary_tight function for tight binary class compilation",
+      "reason": "Missing UTS#18 extended character-class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-010",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-023",
+      "title": "Add display of new compile extra options in pcre2test",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-071",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-011",
+      "title": "Add UTF caseless extension for character classes",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-023",
+      "title": "Add display of new compile extra options in pcre2test",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-010",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-071",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_strict_1hop",
+      "gt_id": "GT-P216",
+      "generated_id": "GEN-123",
+      "title": "Fix hyphen separator logic for context lines across files",
+      "reason": "Missing user-facing pcre2grep/pcre2test tooling semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-029",
+      "title": "Add support for Perl extended character classes and scan_substring syntax",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-032",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only compile-option output does not support UTS#18 extended class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-007",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-050",
+      "title": "Fix JIT stack corruption for case-insensitive backreferences in Unicode mode",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P208",
+      "generated_id": "GEN-018",
+      "title": "Add pcre2_set_substitute_case_callout function",
+      "reason": "Missing stricter malformed \\x escape behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-032",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-038",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-032",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-007",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-038",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-045",
+      "title": "Fix JIT backreference matching for Turkish I and caseless restrict flags",
+      "reason": "Missing substitute case transformation semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_similarity_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-053",
+      "title": "Fix Unicode property name parsing for loose matching rules",
+      "reason": "Missing substitute case transformation semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P202",
+      "generated_id": "GEN-035",
+      "title": "Add support for Perl extended character classes and scan_substring syntax",
+      "reason": "Missing scan-substring assertion semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P203",
+      "generated_id": "GEN-040",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only compile-option output does not support UTS#18 extended class semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-009",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P207",
+      "generated_id": "GEN-062",
+      "title": "Fix JIT stack corruption for case-insensitive backreferences in Unicode mode",
+      "reason": "Missing caseless-restrict backreference behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P208",
+      "generated_id": "GEN-047",
+      "title": "Enhanced escape sequence handling and substitution callout support in pcre2test",
+      "reason": "Missing stricter malformed \\x escape behavior."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-040",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options belongs to tooling GT, not API/options GT."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P210",
+      "generated_id": "GEN-049",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-045",
+      "title": "Add utf_caseless_extend function for caseless UTF class compilation",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-040",
+      "title": "Add support for new PCRE2 extra compile options",
+      "reason": "Display-only reporting of extra options does not support Turkish casing controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P211",
+      "generated_id": "GEN-009",
+      "title": "Add Turkish case-insensitive matching support",
+      "reason": "Missing Turkish casing/caseless restrict controls."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P214",
+      "generated_id": "GEN-049",
+      "title": "{ \"section\": \"Features\"",
+      "reason": "Malformed structured output; title/summary is raw JSON text."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-056",
+      "title": "Fix JIT backreference matching for Turkish I and caseless restrict flags",
+      "reason": "Missing substitute case transformation semantics."
+    },
+    {
+      "case": "pcre2",
+      "variant": "full_evidence_similarity_family",
+      "gt_id": "GT-P215",
+      "generated_id": "GEN-065",
+      "title": "Fix Unicode property name parsing for loose matching rules",
+      "reason": "Missing substitute case transformation semantics."
+    }
+  ],
+  "restored_matches": [
+    {
+      "case": "git",
+      "variant": "no_fallback",
+      "gt_id": "GT-G220",
+      "generated_id": "GEN-350",
+      "title": "Fix missing copy detection for unchanged files with find-copies-harder",
+      "reason": "Missing diff-files find-copies-harder index-source semantics.",
+      "restore_reason": "Restored after synonym review: unchanged files + find-copies-harder copy detection supports GT-G220."
+    }
+  ],
+  "restored_match_count": 1
+}

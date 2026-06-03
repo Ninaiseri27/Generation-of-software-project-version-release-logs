@@ -1,0 +1,143 @@
+{
+  "source": {
+    "builder": "evaluation-summary-builder-v3",
+    "variants": [
+      "no_fallback"
+    ]
+  },
+  "metadata_paths": [
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_curl\\curl_v6_0_beta1_to_v6_0\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_mbedtls\\mbedtls_v6_0_beta1_to_v6_0\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_sqlite\\sqlite_v6_0_0_2_to_v6_1\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_zlib\\zlib_v6_0_0_1_to_v6_0_0_2\\metadata.json",
+    "cpp_release_note_mvp\\benchmark\\cases\\third_party_cjson\\cjson_v6_0_beta1_to_v6_0\\metadata.json"
+  ],
+  "rows": [
+    {
+      "case_id": "curl_v6_0_beta1_to_v6_0",
+      "variant": "no_fallback",
+      "status": "evaluated",
+      "ground_truth_count": 4,
+      "generated_count": 12,
+      "valid_match_count": 13,
+      "matched_generated_count": 12,
+      "matched_ground_truth_count": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "redundancy_count": 9,
+      "redundancy_per_gt": 2.25,
+      "avg_matches_per_gt": 3.25,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_curl\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\evaluation_strict.json"
+    },
+    {
+      "case_id": "mbedtls_v6_0_beta1_to_v6_0",
+      "variant": "no_fallback",
+      "status": "evaluated",
+      "ground_truth_count": 6,
+      "generated_count": 22,
+      "valid_match_count": 8,
+      "matched_generated_count": 8,
+      "matched_ground_truth_count": 4,
+      "precision": 0.3636,
+      "recall": 0.6667,
+      "f1": 0.4706,
+      "unsupported_claim_rate": 0.6364,
+      "redundancy_count": 4,
+      "redundancy_per_gt": 0.6667,
+      "avg_matches_per_gt": 1.3333,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_mbedtls\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\evaluation_strict.json"
+    },
+    {
+      "case_id": "sqlite_v6_0_0_2_to_v6_1",
+      "variant": "no_fallback",
+      "status": "evaluated",
+      "ground_truth_count": 4,
+      "generated_count": 38,
+      "valid_match_count": 28,
+      "matched_generated_count": 28,
+      "matched_ground_truth_count": 4,
+      "precision": 0.7368,
+      "recall": 1.0,
+      "f1": 0.8485,
+      "unsupported_claim_rate": 0.2632,
+      "redundancy_count": 24,
+      "redundancy_per_gt": 6.0,
+      "avg_matches_per_gt": 7.0,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_sqlite\\OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\evaluation_strict.json"
+    },
+    {
+      "case_id": "zlib_v6_0_0_1_to_v6_0_0_2",
+      "variant": "no_fallback",
+      "status": "evaluated",
+      "ground_truth_count": 1,
+      "generated_count": 2,
+      "valid_match_count": 2,
+      "matched_generated_count": 2,
+      "matched_ground_truth_count": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "redundancy_count": 1,
+      "redundancy_per_gt": 1.0,
+      "avg_matches_per_gt": 2.0,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_zlib\\OpenHarmony-v6.0.0.1-Release__OpenHarmony-v6.0.0.2-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\evaluation_strict.json"
+    },
+    {
+      "case_id": "cjson_v6_0_beta1_to_v6_0",
+      "variant": "no_fallback",
+      "status": "evaluated",
+      "ground_truth_count": 2,
+      "generated_count": 11,
+      "valid_match_count": 6,
+      "matched_generated_count": 6,
+      "matched_ground_truth_count": 2,
+      "precision": 0.5455,
+      "recall": 1.0,
+      "f1": 0.7059,
+      "unsupported_claim_rate": 0.4545,
+      "redundancy_count": 4,
+      "redundancy_per_gt": 2.0,
+      "avg_matches_per_gt": 3.0,
+      "structural_valid_rate": 1.0,
+      "evaluation_path": "outputs\\benchmark\\third_party_cJSON\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\evaluation_strict.json"
+    }
+  ],
+  "macro_averages": [
+    {
+      "variant": "no_fallback",
+      "evaluated_cases": 5,
+      "precision": 0.7292,
+      "recall": 0.9333,
+      "f1": 0.805,
+      "unsupported_claim_rate": 0.2708,
+      "avg_redundancy_count": 8.4,
+      "avg_redundancy_per_gt": 2.3833,
+      "avg_matches_per_gt": 3.3167,
+      "structural_valid_rate": 1.0
+    }
+  ],
+  "micro_averages": [
+    {
+      "variant": "no_fallback",
+      "evaluated_cases": 5,
+      "generated_count": 85.0,
+      "ground_truth_count": 17.0,
+      "matched_generated_count": 56.0,
+      "matched_ground_truth_count": 15.0,
+      "valid_match_count": 57.0,
+      "redundancy_count": 42.0,
+      "precision": 0.6588,
+      "recall": 0.8824,
+      "f1": 0.7544,
+      "matches_per_gt": 3.3529,
+      "redundancy_per_gt": 2.4706
+    }
+  ]
+}

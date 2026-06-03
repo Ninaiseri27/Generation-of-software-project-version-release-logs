@@ -1,0 +1,14 @@
+{
+  "source": {
+    "reviewer": "codex-semantic-review",
+    "match_mode": "strict_sampled_pcre2_v1"
+  },
+  "matches": [
+    {
+      "generated_id": "GEN-001",
+      "gt_id": "GT-S01",
+      "decision": "match",
+      "notes": "Weak release-level match: names the 10.46 update but omits the CVE/security detail."
+    }
+  ]
+}

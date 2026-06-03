@@ -1,0 +1,65 @@
+{
+  "git_executable": "git",
+  "version_pair": {
+    "repo_path": "workspaces/third_party_jsoncpp",
+    "ref_version": "OpenHarmony-v6.0-Beta1",
+    "tgt_version": "OpenHarmony-v6.0-Release"
+  },
+  "include_extensions": [
+    ".c",
+    ".cc",
+    ".cpp",
+    ".cxx",
+    ".h",
+    ".hh",
+    ".hpp",
+    ".hxx"
+  ],
+  "diff_context_lines": 0,
+  "output_dir": "outputs/third_party_jsoncpp/OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release",
+  "project": {
+    "name": "third_party_jsoncpp",
+    "description": "OpenHarmony third-party JsonCpp component."
+  },
+  "cmg": {
+    "strategy": "adaptive",
+    "matching_view": "strict",
+    "context_hops": 1,
+    "matched_hops": 1,
+    "sparse_matched_hops": 2,
+    "unmatched_expand_hops": 1,
+    "unmatched_source_window_lines": 80,
+    "unmatched_expand_from_diff_calls": true,
+    "min_edges_for_sparse": 1,
+    "include_parent_context": true,
+    "include_diff_calls": true,
+    "max_nodes": 30,
+    "max_edges": 60
+  },
+  "generation": {
+    "backend": "mock",
+    "model_name": "mock-rule-based-v1",
+    "base_url": "https://api.deepseek.com",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "extra_body": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "temperature": 0.2,
+    "max_tokens": 1024,
+    "timeout_sec": 60,
+    "max_retries": 2,
+    "retry_backoff_sec": 1.5
+  },
+  "enre": {
+    "java_executable": "java",
+    "enre_jar_path": "tools/ENRE-CPP.jar",
+    "max_heap": "8g",
+    "snapshot_root": "workspaces/version_snapshots",
+    "project_name": "third_party_jsoncpp",
+    "extra_dirs": [],
+    "program_environments": [],
+    "raw_output_root": "outputs/enre_raw"
+  }
+}

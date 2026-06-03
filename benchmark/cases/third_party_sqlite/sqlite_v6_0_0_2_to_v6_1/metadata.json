@@ -1,0 +1,89 @@
+{
+  "case_id": "sqlite_v6_0_0_2_to_v6_1",
+  "repository": {
+    "name": "third_party_sqlite",
+    "url": "https://github.com/openharmony/third_party_sqlite.git",
+    "category": "database"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0.0.2-Release",
+    "tgt": "OpenHarmony-v6.1-Release"
+  },
+  "benchmark_role": "candidate",
+  "intended_role": "core_eval",
+  "pipeline_status": "verified_full_pipeline_mock",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 60,
+    "changed_cpp_files": 6,
+    "changed_functions": 42,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/third_party_sqlite/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {
+    "cmg_output": "outputs/benchmark/third_party_sqlite/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/cmg.json",
+    "prompt_input": "outputs/benchmark/third_party_sqlite/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/prompt_input.json",
+    "prompt_bundle": "outputs/benchmark/third_party_sqlite/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/prompt_bundle.json",
+    "release_note_mock_rule_family": "outputs/benchmark/third_party_sqlite/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/release_note_mock_rule_family.json"
+  },
+  "stage2": {
+    "status": "passed_with_fallback",
+    "matched_entries": 18,
+    "unmatched_entries": 24,
+    "unique_unmatched_symbols": 24,
+    "fallback_context_entries": 42,
+    "synthetic_entries": 24,
+    "diff_call_edges": 239,
+    "match_levels": {
+      "path+symbol": 17,
+      "symbol+overlap": 1,
+      "unmatched": 24
+    }
+  },
+  "stage3": {
+    "status": "passed_mock",
+    "prompt_entries": 42,
+    "mock_generated_entries": 42,
+    "mock_failed_entries": 0,
+    "aggregation_strategies_tested": {
+      "none": 42,
+      "exact": 42,
+      "rule_family": 42
+    }
+  },
+  "ground_truth": {
+    "status": "reviewed",
+    "path": "benchmark/cases/third_party_sqlite/sqlite_v6_0_0_2_to_v6_1/ground_truth.md",
+    "evidence_path": "benchmark/cases/third_party_sqlite/sqlite_v6_0_0_2_to_v6_1/evidence.md",
+    "evidence_sources": [
+      "OpenHarmony v6.0 and v6.1 platform release notes if available",
+      "commit_messages",
+      "function_level_diff",
+      "SQLite upstream changelog if matching changes are identifiable"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": true,
+    "blocking_reason": null,
+    "excluded_from_core_eval": [
+      "GT-005 zstd dependency redirection",
+      "GT-006 plugin/data visibility and DFX/logging/debug improvements"
+    ]
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "strict_1hop_vs_adaptive_cmg",
+    "with_vs_without_fallback_context",
+    "with_vs_without_commit_messages",
+    "aggregation_none_exact_rule_family"
+  ],
+  "notes": [
+    "Medium database case selected from version-pair screening.",
+    "Includes enough changed functions to support baseline and ablation comparisons."
+  ]
+}

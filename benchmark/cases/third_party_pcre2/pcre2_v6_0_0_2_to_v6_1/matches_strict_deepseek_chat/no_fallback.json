@@ -1,0 +1,50 @@
+{
+  "source": {
+    "reviewer": "codex-semantic-review",
+    "match_mode": "strict_sampled_pcre2_v1"
+  },
+  "matches": [
+    {
+      "generated_id": "GEN-006",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Strong syntax match: extended class and scan_substring support."
+    },
+    {
+      "generated_id": "GEN-008",
+      "gt_id": "GT-S04",
+      "decision": "match",
+      "notes": "Strong API match: pcre2_set_optimize optimization control."
+    },
+    {
+      "generated_id": "GEN-010",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Extended class and scan-substring opcode support."
+    },
+    {
+      "generated_id": "GEN-012",
+      "gt_id": "GT-S02",
+      "decision": "match",
+      "notes": "Script-run and extended-class support."
+    },
+    {
+      "generated_id": "GEN-012",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Turkish casing and locale-aware Unicode behavior."
+    },
+    {
+      "generated_id": "GEN-026",
+      "gt_id": "GT-S03",
+      "decision": "match",
+      "notes": "Unicode escape and UTF validation behavior."
+    },
+    {
+      "generated_id": "GEN-026",
+      "gt_id": "GT-S05",
+      "decision": "match",
+      "notes": "Replacement-data handling and octal/hex replacement parsing evidence."
+    }
+  ]
+}

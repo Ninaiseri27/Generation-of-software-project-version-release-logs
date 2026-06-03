@@ -1,0 +1,125 @@
+{
+  "case_id": "pcre2_v6_0_0_2_to_v6_1",
+  "repository": {
+    "name": "third_party_pcre2",
+    "url": "https://github.com/openharmony/third_party_pcre2.git",
+    "category": "regex_engine"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0.0.2-Release",
+    "tgt": "OpenHarmony-v6.1-Release"
+  },
+  "benchmark_role": "stress_test",
+  "intended_role": "stress_test",
+  "pipeline_status": "sampled_stage3_deepseek_strict_evaluated",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 12,
+    "changed_files": 360,
+    "changed_cpp_files": 77,
+    "changed_functions": 1123,
+    "patch_only": false,
+    "size_bucket": "large",
+    "screening_report": "outputs/screening/third_party_pcre2_recent8.json",
+    "stage1_output": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_changed_functions.json",
+    "full_stage1_output": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/changed_functions.json",
+    "sample_summary": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_changed_functions_summary.md",
+    "sampled_functions": 80,
+    "sampled_files": 62
+  },
+  "stage2": {
+    "status": "passed_sampled",
+    "ref_normalized_function_entities": 958,
+    "ref_normalized_call_relations": 201,
+    "tgt_normalized_function_entities": 243,
+    "tgt_normalized_call_relations": 204,
+    "sampled_entry_count": 80,
+    "matched_entries": 49,
+    "unmatched_entries": 31,
+    "fallback_context_entries": 80,
+    "matched_entry_count": 49,
+    "unmatched_entry_count": 31,
+    "fallback_context_entry_count": 80,
+    "synthetic_entry_count": 31,
+    "diff_call_edges": 764,
+    "diff_call_edge_count": 764
+  },
+  "stage3": {
+    "status": "passed_with_mock_and_deepseek_backend",
+    "prompt_entries": 80,
+    "mock_generated_entries": 80,
+    "prompt_entry_count": 80,
+    "mock_generated_entry_count": 80,
+    "mock_failed_entry_count": 0,
+    "mock_rule_family_final_notes": 58,
+    "deepseek_model": "deepseek-chat",
+    "deepseek_baseline_root": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat",
+    "deepseek_failed_entry_count": 0,
+    "deepseek_rule_family_final_notes": {
+      "text_only": 1,
+      "diff_only": 78,
+      "no_graph": 79,
+      "no_fallback": 79,
+      "full": 79
+    },
+    "baseline_variants_smoke_tested": {
+      "text_only": 1,
+      "diff_only": 80,
+      "no_fallback": 80,
+      "no_graph": 80,
+      "full": 80
+    }
+  },
+  "ground_truth": {
+    "status": "reviewed_sampled_strict",
+    "path": "benchmark/cases/third_party_pcre2/pcre2_v6_0_0_2_to_v6_1/ground_truth.md",
+    "strict_path": "benchmark/cases/third_party_pcre2/pcre2_v6_0_0_2_to_v6_1/ground_truth_strict.md",
+    "full_scope_candidate_path": "benchmark/cases/third_party_pcre2/pcre2_v6_0_0_2_to_v6_1/ground_truth_full_candidate.md",
+    "full_scope_candidate_status": "draft_reviewed_not_evaluated",
+    "full_scope_candidate_gt_count": 16,
+    "evidence_path": "benchmark/cases/third_party_pcre2/pcre2_v6_0_0_2_to_v6_1/evidence.md",
+    "admission_policy": "Do not admit to core_eval without a sampled/stress ground-truth protocol and strict matches.",
+    "evidence_sources": [
+      "sampled changed_functions.json",
+      "commit messages",
+      "function-level diffs",
+      "PCRE2 upstream changelog or release notes if matching version evidence is identifiable",
+      "OpenHarmony tag and component metadata"
+    ],
+    "reviewed_sampled_gt_ids": ["GT-S01", "GT-S02", "GT-S03", "GT-S04", "GT-S05"],
+    "optional_sampled_gt_ids": ["GT-S06", "GT-S07"]
+  },
+  "pipeline_artifacts": {
+    "output_dir": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release",
+    "sampled_evidence": "benchmark/cases/third_party_pcre2/pcre2_v6_0_0_2_to_v6_1/evidence.md",
+    "sampled_cmg": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_cmg.json",
+    "sampled_prompt_bundle": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_prompt_bundle.json",
+    "sampled_mock_release_note": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_release_note_mock.json",
+    "sampled_mock_baseline_summary": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_mock/baseline_summary.json",
+    "sampled_deepseek_baseline_summary": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat/baseline_summary.json",
+    "sampled_deepseek_evaluation_summary": "outputs/benchmark/third_party_pcre2/OpenHarmony-v6.0.0.2-Release__OpenHarmony-v6.1-Release/sampled_baselines_deepseek_chat/evaluation_summary_strict.json"
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "This is a large direct-source stress candidate and remains outside core_eval; report it as sampled stress evidence only.",
+    "sampled_strict_status": "evaluated_with_deepseek_chat",
+    "sampled_strict_gt_count": 5,
+    "sampled_strict_metrics": {
+      "text_only": {"precision": 1.0, "recall": 0.2, "f1": 0.3333},
+      "diff_only": {"precision": 0.0513, "recall": 0.8, "f1": 0.0964},
+      "no_graph": {"precision": 0.0633, "recall": 0.6, "f1": 0.1145},
+      "no_fallback": {"precision": 0.0633, "recall": 0.8, "f1": 0.1173},
+      "full": {"precision": 0.0759, "recall": 1.0, "f1": 0.1412}
+    }
+  },
+  "recommended_next_step": [
+    "Use this case only for scalability or sampled stress experiments.",
+    "Define a fixed sampling protocol before running ENRE or real LLM generation.",
+    "Keep jsoncpp and libjpeg-turbo as patch_challenge cases under the current direct-source method."
+  ],
+  "notes": [
+    "Recent8 screening shows this is the only newly screened candidate among pcre2/jsoncpp/libjpeg-turbo with large direct C/C++ function changes.",
+    "A full-scope GT candidate file now expands the sampled 5 strict entries to 16 candidate semantic entries, but it is not admitted until full-scope generation outputs, strict matches, and evaluations are completed.",
+    "The current thesis main matrix should remain core5 unless this stress case receives reviewed sampled GT and strict matches."
+  ]
+}

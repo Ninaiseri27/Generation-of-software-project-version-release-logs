@@ -1,0 +1,135 @@
+{
+  "case_id": "curl_v6_0_to_v6_0_0_1",
+  "repository": {
+    "name": "third_party_curl",
+    "url": "https://github.com/openharmony/third_party_curl.git",
+    "category": "network"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0-Release",
+    "tgt": "OpenHarmony-v6.0.0.1-Release"
+  },
+  "benchmark_role": "extension_eval",
+  "intended_role": "extension_eval",
+  "pipeline_status": "full_all_variant_deepseek_evaluated",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 7,
+    "changed_cpp_files": 17,
+    "changed_functions": 47,
+    "patch_only": false,
+    "stage1_output": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/changed_functions.json"
+  },
+  "stage2": {
+    "status": "passed",
+    "matched_entry_count": 27,
+    "unmatched_entry_count": 20,
+    "fallback_context_entry_count": 47,
+    "synthetic_entry_count": 20,
+    "diff_call_edge_count": 103,
+    "match_levels": {
+      "path+symbol": 27,
+      "unmatched": 20
+    }
+  },
+  "stage3": {
+    "status": "passed_with_mock_backend",
+    "prompt_entry_count": 47,
+    "mock_generated_entry_count": 47,
+    "mock_failed_entry_count": 0,
+    "aggregation_strategies_smoke_tested": {
+      "none": 47,
+      "exact": 47,
+      "rule_family": 47
+    }
+  },
+  "pipeline_artifacts": {
+    "cmg": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/cmg.json",
+    "prompt_input": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/prompt_input.json",
+    "prompt_bundle": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/prompt_bundle.json",
+    "mock_release_note": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/release_note.json"
+  },
+  "ground_truth": {
+    "status": "reviewed_extension",
+    "path": "benchmark/cases/third_party_curl/curl_v6_0_to_v6_0_0_1/ground_truth.md",
+    "evidence_path": "benchmark/cases/third_party_curl/curl_v6_0_to_v6_0_0_1/evidence.md",
+    "evidence_sources": [
+      "commit_messages",
+      "function_level_diff",
+      "curl CVE-2025-9086 advisory",
+      "curl upstream changelog if matching changes are identifiable",
+      "OpenHarmony release notes if available"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "This case is retained as a reviewed extension case rather than core_eval because it is dominated by one OpenHiTLS/TLCP feature cluster and has only three GT entries.",
+    "controlled_real_backend": {
+      "backend": "deepseek-v4-flash",
+      "status": "evaluated",
+      "ground_truth_count": 3,
+      "summary_path": "outputs/benchmark/third_party_curl/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/evaluation_deepseek_v4_flash_table.json",
+      "variant_results": {
+        "text_only": {
+          "generated_count": 1,
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "covered_gt": [
+            "GT-001"
+          ]
+        },
+        "diff_only": {
+          "generated_count": 47,
+          "precision": 0.6596,
+          "recall": 0.6667,
+          "f1": 0.6631,
+          "covered_gt": [
+            "GT-002",
+            "GT-003"
+          ]
+        },
+        "no_graph": {
+          "generated_count": 45,
+          "precision": 0.6222,
+          "recall": 0.6667,
+          "f1": 0.6437,
+          "covered_gt": [
+            "GT-002",
+            "GT-003"
+          ]
+        },
+        "full": {
+          "generated_count": 47,
+          "precision": 0.4681,
+          "recall": 0.6667,
+          "f1": 0.55,
+          "covered_gt": [
+            "GT-002",
+            "GT-003"
+          ]
+        }
+      }
+    }
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "strict_1hop_vs_adaptive_cmg",
+    "with_vs_without_fallback_context",
+    "with_vs_without_commit_messages",
+    "aggregation_none_exact_rule_family"
+  ],
+  "notes": [
+    "Highest-priority next full-pipeline case.",
+    "Changed-function volume is large enough for meaningful baseline and ablation comparisons.",
+    "Full pipeline is now smoke-tested with the mock backend; this validates artifacts and controls, not final release-note quality.",
+    "Current ENRE match coverage is 27/47, while adaptive fallback context covers 47/47 entries.",
+    "Ground truth is reviewed as an extension case with three semantic entries: CVE-2025-9086 cookie handling, OpenHiTLS/TLCP backend support, and TLCP encrypted certificate/key options.",
+    "GT source audit is recorded in ground_truth.md. GT-001 has strong official-advisory evidence; GT-002 and GT-003 are accepted extension entries based on commit and diff evidence."
+  ]
+}

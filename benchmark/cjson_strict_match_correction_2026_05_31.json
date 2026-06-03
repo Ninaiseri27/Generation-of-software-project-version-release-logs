@@ -1,0 +1,241 @@
+{
+  "source": "manual-strict-cjson-test-helper-audit-v1",
+  "case_id": "cjson_v6_0_beta1_to_v6_0",
+  "policy": "Remove test-only matches to runtime GT-001 and excluded parse_number cleanup matches to GT-002; keep GT-002 parser-regression test coverage matches because GT-002 is explicitly a testing/regression entry.",
+  "changes": [
+    {
+      "method": "diff_only",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash\\diff_only\\matches_strict.json",
+      "evaluation_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash\\diff_only\\evaluation_strict.json",
+      "removed_match_count": 2,
+      "removed": [
+        {
+          "generated_id": "GEN-003",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers circular/deep duplicate regression behavior tied to stack-exhaustion protection."
+        },
+        {
+          "generated_id": "GEN-006",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers the deep circular-reference test supporting the recursion-depth fix."
+        }
+      ],
+      "reason": "test-only circular-reference notes do not state the runtime cJSON_Duplicate fix strongly enough for GT-001",
+      "new_summary": {
+        "evaluation_status": "evaluated",
+        "ground_truth_count": 2,
+        "generated_count": 11,
+        "valid_match_count": 5,
+        "invalid_match_count": 0,
+        "matched_generated_count": 5,
+        "matched_ground_truth_count": 2,
+        "precision": 0.4545,
+        "recall": 1.0,
+        "f1": 0.625,
+        "unsupported_claim_count": 6,
+        "unsupported_claim_rate": 0.5455,
+        "redundancy_count": 3,
+        "redundancy_per_gt": 1.5,
+        "avg_matches_per_gt": 2.5,
+        "structural_valid_count": 11,
+        "structural_valid_rate": 1.0
+      }
+    },
+    {
+      "method": "full_adaptive_rule_family",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash\\full\\matches_strict.json",
+      "evaluation_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash\\full\\evaluation_strict.json",
+      "removed_match_count": 2,
+      "removed": [
+        {
+          "generated_id": "GEN-001",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers the deep circular-reference test supporting stack-exhaustion prevention."
+        },
+        {
+          "generated_id": "GEN-007",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers circular-reference regression behavior tied to stack-exhaustion prevention."
+        }
+      ],
+      "reason": "test-only circular-reference notes do not state the runtime cJSON_Duplicate fix strongly enough for GT-001",
+      "new_summary": {
+        "evaluation_status": "evaluated",
+        "ground_truth_count": 2,
+        "generated_count": 11,
+        "valid_match_count": 6,
+        "invalid_match_count": 0,
+        "matched_generated_count": 6,
+        "matched_ground_truth_count": 2,
+        "precision": 0.5455,
+        "recall": 1.0,
+        "f1": 0.7059,
+        "unsupported_claim_count": 5,
+        "unsupported_claim_rate": 0.4545,
+        "redundancy_count": 4,
+        "redundancy_per_gt": 2.0,
+        "avg_matches_per_gt": 3.0,
+        "structural_valid_count": 11,
+        "structural_valid_rate": 1.0
+      }
+    },
+    {
+      "method": "full_no_fallback",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\matches_strict.json",
+      "evaluation_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\no_fallback\\baselines_deepseek_v4_flash\\no_fallback\\evaluation_strict.json",
+      "removed_match_count": 2,
+      "removed": [
+        {
+          "generated_id": "GEN-003",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers circular-reference duplicate regression behavior tied to stack-exhaustion prevention."
+        },
+        {
+          "generated_id": "GEN-008",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers the circular-reference depth-limit test supporting GT-001."
+        }
+      ],
+      "reason": "test-only circular-reference notes do not state the runtime cJSON_Duplicate fix strongly enough for GT-001",
+      "new_summary": {
+        "evaluation_status": "evaluated",
+        "ground_truth_count": 2,
+        "generated_count": 11,
+        "valid_match_count": 6,
+        "invalid_match_count": 0,
+        "matched_generated_count": 6,
+        "matched_ground_truth_count": 2,
+        "precision": 0.5455,
+        "recall": 1.0,
+        "f1": 0.7059,
+        "unsupported_claim_count": 5,
+        "unsupported_claim_rate": 0.4545,
+        "redundancy_count": 4,
+        "redundancy_per_gt": 2.0,
+        "avg_matches_per_gt": 3.0,
+        "structural_valid_count": 11,
+        "structural_valid_rate": 1.0
+      }
+    },
+    {
+      "method": "full_strict_1hop",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\cmg_strict_1hop\\baselines_deepseek_v4_flash\\full\\matches_strict.json",
+      "evaluation_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\ablations\\cmg_strict_1hop\\baselines_deepseek_v4_flash\\full\\evaluation_strict.json",
+      "removed_match_count": 2,
+      "removed": [
+        {
+          "generated_id": "GEN-001",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers circular-reference depth-limit test supporting stack-exhaustion prevention."
+        },
+        {
+          "generated_id": "GEN-005",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Covers circular-reference duplicate regression behavior tied to stack-exhaustion prevention."
+        }
+      ],
+      "reason": "test-only circular-reference notes do not state the runtime cJSON_Duplicate fix strongly enough for GT-001",
+      "new_summary": {
+        "evaluation_status": "evaluated",
+        "ground_truth_count": 2,
+        "generated_count": 11,
+        "valid_match_count": 6,
+        "invalid_match_count": 0,
+        "matched_generated_count": 6,
+        "matched_ground_truth_count": 2,
+        "precision": 0.5455,
+        "recall": 1.0,
+        "f1": 0.7059,
+        "unsupported_claim_count": 5,
+        "unsupported_claim_rate": 0.4545,
+        "redundancy_count": 4,
+        "redundancy_per_gt": 2.0,
+        "avg_matches_per_gt": 3.0,
+        "structural_valid_count": 11,
+        "structural_valid_rate": 1.0
+      }
+    },
+    {
+      "method": "full_similarity_family",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_similarity\\full\\matches_strict.json",
+      "evaluation_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_similarity\\full\\evaluation_strict.json",
+      "removed_match_count": 1,
+      "removed": [
+        {
+          "generated_id": "GEN-003",
+          "gt_id": "GT-002",
+          "decision": "match",
+          "notes": "Covers parse_number robustness that belongs to the number-parsing regression group."
+        }
+      ],
+      "reason": "parse_number null-termination cleanup is explicitly excluded as a standalone GT-002 fact",
+      "new_summary": {
+        "evaluation_status": "evaluated",
+        "ground_truth_count": 2,
+        "generated_count": 7,
+        "valid_match_count": 4,
+        "invalid_match_count": 0,
+        "matched_generated_count": 4,
+        "matched_ground_truth_count": 2,
+        "precision": 0.5714,
+        "recall": 1.0,
+        "f1": 0.7273,
+        "unsupported_claim_count": 3,
+        "unsupported_claim_rate": 0.4286,
+        "redundancy_count": 2,
+        "redundancy_per_gt": 1.0,
+        "avg_matches_per_gt": 2.0,
+        "structural_valid_count": 7,
+        "structural_valid_rate": 1.0
+      }
+    },
+    {
+      "method": "full_evidence_similarity_family",
+      "matches_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_evidence_similarity\\full\\matches_strict.json",
+      "evaluation_path": "cpp_release_note_mvp\\outputs\\benchmark\\third_party_cjson\\OpenHarmony-v6.0-Beta1__OpenHarmony-v6.0-Release\\baselines_deepseek_v4_flash_evidence_similarity\\full\\evaluation_strict.json",
+      "removed_match_count": 2,
+      "removed": [
+        {
+          "generated_id": "GEN-001",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Derived from reviewed full/rule_family source-entry matches; check cross-GT groups manually."
+        },
+        {
+          "generated_id": "GEN-006",
+          "gt_id": "GT-001",
+          "decision": "match",
+          "notes": "Derived from reviewed full/rule_family source-entry matches; check cross-GT groups manually."
+        }
+      ],
+      "reason": "test-only circular-reference notes do not state the runtime cJSON_Duplicate fix strongly enough for GT-001",
+      "new_summary": {
+        "evaluation_status": "evaluated",
+        "ground_truth_count": 2,
+        "generated_count": 10,
+        "valid_match_count": 5,
+        "invalid_match_count": 0,
+        "matched_generated_count": 5,
+        "matched_ground_truth_count": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "unsupported_claim_count": 5,
+        "unsupported_claim_rate": 0.5,
+        "redundancy_count": 3,
+        "redundancy_per_gt": 1.5,
+        "avg_matches_per_gt": 2.5,
+        "structural_valid_count": 10,
+        "structural_valid_rate": 1.0
+      }
+    }
+  ]
+}

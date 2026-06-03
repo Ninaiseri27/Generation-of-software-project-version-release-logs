@@ -1,0 +1,261 @@
+{
+  "source": {
+    "tool": "version-pair-screener-v1",
+    "repository": "workspaces\\third_party_libjpeg-turbo",
+    "tag_pattern": "OpenHarmony-v*",
+    "recent_pairs": 12
+  },
+  "summary": {
+    "screened_pair_count": 12,
+    "passed_pair_count": 12,
+    "failed_pair_count": 0,
+    "size_bucket_counts": {
+      "empty_or_metadata": 4,
+      "patch_only": 8
+    }
+  },
+  "items": [
+    {
+      "ref": "OpenHarmony-v4.1.3-Release",
+      "tgt": "OpenHarmony-v4.1.4-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v4.1.4-Release",
+      "tgt": "OpenHarmony-v5.0-Beta1",
+      "status": "passed",
+      "commit_count": 4,
+      "changed_file_count": 3,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!33 libturbojpeg.z.so增加platformsdk tag Merge pull request !33 from 钟柠/appspawn",
+        "add platformsdk innerapi_tags",
+        "!32 增加libjpeg-turbo的innerAPI声明 Merge pull request !32 from yangfan/add_subComponent",
+        "增加libjpeg-turbo的innerAPI声明"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0-Beta1",
+      "tgt": "OpenHarmony-v5.0.0-Release",
+      "status": "passed",
+      "commit_count": 10,
+      "changed_file_count": 5,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!40 jpeg解码性能优化 Merge pull request !40 from rainbow/master",
+        "update patch",
+        "optimize jpeg decode",
+        "!39 更新OAT.xml Merge pull request !39 from lixinpeng/cherry-pick-1718851499",
+        "update OAT.xml.",
+        "fixed 179c992 from https://gitee.com/lixinpeng1114/third_party_libjpeg-turbo/pulls/38 fixed 5b86429 from https://gitee.com/lixinpeng1114/third_party_libjpeg-turbo/pulls/37 OAT.xml update",
+        "!35 opensource Merge pull request !35 from hanlu/master",
+        "opensource",
+        "!34 第三方libjpeg-turbo部件编译整改消除告警 Merge pull request !34 from tongkai0808fh/master",
+        "修改bundle.json文件，增加turbojpeg_static接口"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0.0-Release",
+      "tgt": "OpenHarmony-v5.0.1-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!47 README.OpenSource文件内容冗余空格导致SBOM输出文件信息不准确 Merge pull request !47 from 冯楠/OpenHarmony-5.0.1-Release",
+        "README.OpenSource文件内容冗余空格"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0.1-Release",
+      "tgt": "OpenHarmony-v5.0.2-Release",
+      "status": "passed",
+      "commit_count": 2,
+      "changed_file_count": 1,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!53 屏蔽源码压缩包扫描 Merge pull request !53 from 冯楠/cherry-pick-1734336758",
+        "屏蔽源码压缩包扫描"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.0.2-Release",
+      "tgt": "OpenHarmony-v5.0.3-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v5.0.3-Release",
+      "tgt": "OpenHarmony-v5.1.0-Release",
+      "status": "passed",
+      "commit_count": 14,
+      "changed_file_count": 4,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!55 License字段校验失败修复 Merge pull request !55 from 冯楠/master",
+        "License字段校验失败修复;",
+        "Merge branch 'master' of gitee.com:MineBits/third_party_libjpeg-turbo",
+        "!49 屏蔽源码压缩包扫描 Merge pull request !49 from 冯楠/master",
+        "Merge branch 'OpenHarmony-5.0.1-Release' of gitee.com:MineBits/third_party_libjpeg-turbo",
+        "屏蔽源码压缩包扫描",
+        "!44 libjpeg隐藏内部符号，避免交叉调用 Merge pull request !44 from rainbow/master",
+        "hide internal symbols",
+        "!43 libjpeg隐藏内部符号，避免交叉调用 Merge pull request !43 from rainbow/master",
+        "hide internal symbols"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v5.1.0-Release",
+      "tgt": "OpenHarmony-v6.0-Beta1",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Beta1",
+      "tgt": "OpenHarmony-v6.0-Release",
+      "status": "passed",
+      "commit_count": 11,
+      "changed_file_count": 10,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!68 update README.OpenSource. Merge pull request !68 from 郭梦玉1/master",
+        "update README.OpenSource.",
+        "update README.OpenSource.",
+        "!67 update README.OpenSource.Fixes https://gitee.com/openharmony/third_party_libpng/issues/ICKVQP?from=project-issue Merge pull request !67 from 郭梦玉1/master",
+        "update README.OpenSource. readme.opensource 文件里面的软件名和版本与ostms上的不匹配，构建结果树无法自动确认",
+        "!66 Disable Optimization to Avoid Runtime Error Merge pull request !66 from MrLop/master",
+        "Disable Optimization to Avoid Runtime Error",
+        "!63 update BUILD.gn. Merge pull request !63 from 郭梦玉1/master",
+        "update BUILD.gn.",
+        "!60 libjpeg-turbo三方库升级到3.1.0 Merge pull request !60 from 郭梦玉1/master"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0-Release",
+      "tgt": "OpenHarmony-v6.0.0.1-Release",
+      "status": "passed",
+      "commit_count": 6,
+      "changed_file_count": 2,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!73 merge master into OpenHarmony-6.0-Release",
+        "update: 更新文件 BUILD.gn",
+        "merge master into master",
+        "initialize values in huffman decode table for ac",
+        "!70 initialize values in huffman decoding table Merge pull request !70 from rainbow/master",
+        "intialize values in huffman decode table"
+      ]
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.1-Release",
+      "tgt": "OpenHarmony-v6.0.0.2-Release",
+      "status": "passed",
+      "commit_count": 0,
+      "changed_file_count": 0,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": false,
+      "size_bucket": "empty_or_metadata",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": []
+    },
+    {
+      "ref": "OpenHarmony-v6.0.0.2-Release",
+      "tgt": "OpenHarmony-v6.1-Release",
+      "status": "passed",
+      "commit_count": 17,
+      "changed_file_count": 3,
+      "changed_cpp_file_count": 0,
+      "changed_function_count": 0,
+      "patch_only": true,
+      "size_bucket": "patch_only",
+      "changed_cpp_files": [],
+      "changed_symbol_sample_limit": 25,
+      "changed_symbols": [],
+      "commit_messages": [
+        "!82 merge master into master",
+        "update: 更新文件 BUILD.gn 因hisi侧依赖，添加visibility管控",
+        "!81 merge master into master",
+        "update: libjpeg-turbo更新文件 BUILD.gn 因hisi侧依赖，libjpeg-turbo补充添加visibility管控",
+        "!79 merge master into master",
+        "update: 更新文件 BUILD.gn 因hisi侧依赖，添加visibility管控",
+        "update: 更新文件 BUILD.gn 因hisi侧依赖，添加visibility管控",
+        "update: 更新文件 BUILD.gn",
+        "update: libjpeg-turbo更新文件 BUILD.gn 因hisi侧依赖，添加visibility管控",
+        "update: libjpeg-turbo更新文件 BUILD.gn libjpeg-turbo添加visibility管控"
+      ]
+    }
+  ]
+}

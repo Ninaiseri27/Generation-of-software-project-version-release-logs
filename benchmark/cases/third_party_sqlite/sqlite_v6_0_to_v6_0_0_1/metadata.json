@@ -1,0 +1,58 @@
+{
+  "case_id": "sqlite_v6_0_to_v6_0_0_1",
+  "repository": {
+    "name": "third_party_sqlite",
+    "url": "https://github.com/openharmony/third_party_sqlite.git",
+    "category": "database"
+  },
+  "version_pair": {
+    "ref": "OpenHarmony-v6.0-Release",
+    "tgt": "OpenHarmony-v6.0.0.1-Release"
+  },
+  "benchmark_role": "dev_demo",
+  "intended_role": "core_eval",
+  "pipeline_status": "verified_full_pipeline",
+  "screening": {
+    "stage1_status": "passed",
+    "commit_count": 10,
+    "changed_cpp_files": 4,
+    "changed_functions": 4,
+    "patch_only": false,
+    "stage1_output": "outputs/third_party_sqlite/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/changed_functions.json"
+  },
+  "pipeline_artifacts": {
+    "cmg": "outputs/third_party_sqlite/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/cmg.json",
+    "prompt_bundle": "outputs/third_party_sqlite/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/prompt_bundle.json",
+    "release_note": "outputs/third_party_sqlite/OpenHarmony-v6.0-Release__OpenHarmony-v6.0.0.1-Release/release_note.json"
+  },
+  "ground_truth": {
+    "status": "draft_required",
+    "path": "benchmark/cases/third_party_sqlite/sqlite_v6_0_to_v6_0_0_1/ground_truth.md",
+    "evidence_sources": [
+      "commit_messages",
+      "function_level_diff",
+      "cmg_context",
+      "OpenHarmony release notes if available"
+    ]
+  },
+  "evaluation": {
+    "eligible_for_core_eval": false,
+    "blocking_reason": "Ground truth has not been curated and reviewed."
+  },
+  "baseline_plan": [
+    "text_only",
+    "diff_only",
+    "no_graph",
+    "full"
+  ],
+  "ablation_plan": [
+    "strict_1hop_vs_adaptive_cmg",
+    "with_vs_without_fallback_context",
+    "with_vs_without_commit_messages",
+    "aggregation_none_exact_rule_family"
+  ],
+  "notes": [
+    "Best current end-to-end demo case.",
+    "Small changed-function count makes it useful for debugging, but not sufficient alone for final evaluation."
+  ]
+}

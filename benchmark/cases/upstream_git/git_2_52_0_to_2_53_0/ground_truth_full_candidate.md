@@ -1,0 +1,87 @@
+# Full-Scope Ground Truth Candidate: upstream Git v2.52.0 -> v2.53.0
+
+Status: `full_scope_candidate_not_evaluated`
+
+This file expands the earlier sampled Git 2.53 ground truth into a full-scope candidate set. It follows the same semantic GT protocol as the final benchmark: each admitted entry must describe a user/developer-visible release-note fact and must be supported by official release notes plus local source-level evidence.
+
+This candidate file does not replace `ground_truth.md` yet. It should be used only after full-scope generation outputs and `matches_strict.json` are prepared.
+
+## Scope And Evidence
+
+- Official release-note source: `git show v2.53.0:Documentation/RelNotes/2.53.0.adoc`.
+- Full Stage 1 output: `outputs/benchmark/upstream_git/v2.52.0__v2.53.0/changed_functions.json`.
+- Full Stage 2 CMG output: `outputs/benchmark/upstream_git/v2.52.0__v2.53.0/full_coverage/cmg.json`.
+- Full prompt bundles: `outputs/benchmark/upstream_git/v2.52.0__v2.53.0/full_coverage/prompt_bundle_full.json` and `prompt_bundle_diff_only.json`.
+- Full scale: `905` changed functions across `183` changed C/C++ files.
+- Full CMG trial: `900` prompt-node matches and `4` unique unmatched symbols.
+
+## Admission Rules
+
+- Keep command behavior, diagnostics, compatibility, robustness, security, performance, and developer-facing API/maintenance facts.
+- Exclude documentation-only, localization-only, build-only, CI-only, test-only, mailmap-only, and cleanup-only items from P/R/F1.
+- Treat broad internal rewrites as GT only when the official release note states a stable effect such as performance, robustness, compatibility, or diagnosability.
+- Do not create one GT per changed function. The unit remains one semantic release-note fact.
+
+## Full-Scope Candidate Entries
+
+| GT ID | Section | Release-Note Entry | Supporting Evidence | Notes |
+| --- | --- | --- | --- | --- |
+| GT-G201 | Feature | Add `git maintenance is-needed` so callers can ask whether configured maintenance tasks should run. | Official RelNotes: `git maintenance` learned `is-needed`; changed functions `maintenance_is_needed`, `cmd_maintenance`, and `pack_refs_condition` in `builtin/gc.c`. | Carried over from sampled GT. |
+| GT-G202 | Feature | Make experimental `git replay` perform transactional ref updates by default instead of only printing desired ref updates. | Official RelNotes: `git replay` learned to perform ref updates itself; changed functions `handle_ref_update`, `get_ref_action_mode`, `set_up_replay_mode`, `create_commit`, and `cmd_replay` in `builtin/replay.c`. | Carried over from sampled GT. |
+| GT-G203 | Feature | Add `git blame --diff-algorithm=<algo>` to control the diff algorithm used by blame. | Official RelNotes: `git blame` learned `--diff-algorithm`; changed functions `blame_diff_algorithm_minimal`, `blame_diff_algorithm_callback`, `git_blame_config`, and `cmd_blame` in `builtin/blame.c`. | Carried over from sampled GT. |
+| GT-G204 | Feature | Extend `git repo info` and `git repo structure` output with `--all`, nul-format support, and additional object-database information. | Official RelNotes: `git repo info --all`, `git repo struct -z`, and additional object database information; changed functions `print_all_fields`, `cmd_repo_info`, `stats_table_setup_structure`, `stats_table_print_structure`, `structure_keyvalue_print`, and `cmd_repo_structure` in `builtin/repo.c`. | Carried over from sampled GT. |
+| GT-G205 | Feature | Teach `git apply` and `git diff` to detect and report the new whitespace error class `incomplete-line`. | Official RelNotes: `git apply` and `git diff` learned `incomplete-line`; changed functions `record_ws_error`, `adjust_incomplete`, `parse_fragment`, `check_preimage`, `emit_incomplete_line_marker`, and `checkdiff_consume` in `apply.c` and `diff.c`. | Carried over from sampled GT. |
+| GT-G206 | Feature | Add `git fast-import --signed-commits=strip-if-invalid` to drop invalid commit signatures during import. | Official RelNotes: `git fast-import` learned `--signed-commits=strip-if-invalid`; changed functions `handle_strip_if_invalid`, `finalize_commit_buffer`, `add_gpgsig_to_commit`, and `parse_new_commit` in `builtin/fast-import.c`. | Carried over from sampled GT. |
+| GT-G207 | Compatibility | Work around the macOS iconv bug for stateful ISO/IEC 2022 encoded strings. | Official RelNotes: macOS iconv workaround; changed function `reencode_string_iconv` in `utf8.c`. | Carried over from sampled GT. |
+| GT-G208 | Compatibility | Add upstream Windows symbolic-link support, including symlink creation, readlink handling, stat/lstat behavior, and symlink-aware filesystem operations. | Official RelNotes: upstream symbolic link support on Windows; changed functions `symlink`, `readlink`, `mingw_lstat`, `mingw_stat`, `mingw_unlink`, `mingw_rename`, `mingw_getcwd`, and related helpers in `compat/mingw.c`. | Carried over from sampled GT. |
+| GT-G209 | Reliability | Rewrite attribute macro expansion to avoid recursive expansion and uncontrolled stack exhaustion. | Official RelNotes: attribute macro expansion rewritten to avoid recursion; changed functions `attr_state_queue_push`, `attr_state_queue_pop`, `attr_state_queue_release`, `fill_one`, and removed recursive `macroexpand_one` in `attr.c`. | Carried over from sampled GT. |
+| GT-G210 | Fix | Reject `git submodule add` when the submodule uses a different object hash function. | Official RelNotes: submodule add now prevents adding repositories with a different hash function; changed functions `module_add` and `handle_submodule_head_ref` in `builtin/submodule--helper.c`. | Carried over from sampled GT. |
+| GT-G211 | Fix | Correct display-width accounting for non-ASCII worktree paths in `git worktree list`. | Official RelNotes: `git worktree list` miscounted display columns for non-ASCII paths; changed functions `show_worktree`, `measure_widths`, and `list` in `builtin/worktree.c`. | Carried over from sampled GT. |
+| GT-G212 | Fix | Fix an `ort` merge assertion failure for criss-cross histories involving directory and non-directory rename conflicts. | Official RelNotes: `ort` merge assertion failure corrected; changed functions `resolve_trivial_directory_merge`, `process_renames`, `collect_renames`, and `merge_ort_nonrecursive_internal` in `merge-ort.c`. | Carried over from sampled GT. |
+| GT-G213 | Fix | Diagnose invalid bundle URI configuration that lacks a URI entry instead of crashing. | Official RelNotes: invalid bundle-URI without URI entry is diagnosed instead of crashing; changed functions `bundle_uri_parse_config_format`, `summarize_bundle`, and `fetch_bundle_uri_internal` in `bundle-uri.c`. | Carried over from sampled GT. |
+| GT-G214 | Fix | Prevent `git config get --path` from segfaulting on optional path values that do not exist. | Official RelNotes: `git config get --path` segfault with `:(optional)path` corrected; changed functions `git_config_pathname`, `git_configset_get_pathname`, and config get paths in `builtin/config.c` and `config.c`. | Carried over from sampled GT. |
+| GT-G215 | Fix | Fix `git last-modified` corner cases, including uninitialized memory use and handling of `--` pathspec separators. | Official RelNotes: `last-modified` uninitialized memory and `--` pathspec handling corrected; changed functions `process_parent` and `cmd_last_modified` in `builtin/last-modified.c`. | Carried over from sampled GT. |
+| GT-G216 | Diagnostics | Improve the error message when a bad argument is passed to the `--onto` option of `git replay`. | Official RelNotes: bad `--onto` argument message improved; changed functions `cmd_replay`, `set_up_replay_mode`, `parse_ref_action_mode`, and `get_ref_action_mode` in `builtin/replay.c`. | New full-scope candidate. |
+| GT-G217 | Diagnostics | Update a `git branch` help suggestion to point users to `git help` instead of `man`. | Official RelNotes: branch help message now mentions `git help`; changed function `copy_or_rename_branch` in `builtin/branch.c`. | Minor but user-facing diagnostic text. |
+| GT-G218 | Performance | Make `git diff --quiet` skip rename and copy detection because it only needs to know whether any change exists. | Official RelNotes: rename/copy detection disabled for `git diff --quiet`; changed functions `diff_setup_done`, `diffcore_skip_stat_unmatch`, and `diff_same` in `diff.c`. | Performance-oriented user-visible behavior. |
+| GT-G219 | Performance | Reduce memory use for artificial filepairs created by `git diff --find-copies-harder`, improving that operation's speed. | Official RelNotes: artificial filepair memory halved; changed functions `spanhash_rehash` and `hash_chars` in `diffcore-delta.c`, plus diff pipeline changes in `diff.c`. | Keep as performance GT if generated output states memory/speed effect. |
+| GT-G220 | Fix | Fix `git diff-files -R --find-copies-harder` so it uses potential copy sources from the index correctly. | Official RelNotes: index copy-source handling corrected; changed diff pipeline functions in `diff.c` and tree diff handling in `tree-diff.c`. | Related to diff copy detection but distinct from GT-G219. |
+| GT-G221 | Internal API | Revamp the `git_istream` abstraction to better support pluggable object-database designs. | Official RelNotes: `git_istream` abstraction revamped for pluggable ODB; changed functions in `streaming.c`, `odb/streaming.c`, `object-file.c`, and `packfile.c`. | Developer-facing internal architecture; keep only if evaluating development-support notes. |
+| GT-G222 | Security | Remove use of insecure `mktemp()` paths to avoid time-of-check/time-of-use race risk. | Official RelNotes: insecure `mktemp()` usage rewritten; changed functions `mingw_mktemp` in `compat/mingw.c` and `cmd__mktemp` in `t/helper/test-mktemp.c`. | Security/robustness claim is release-note-visible. |
+| GT-G223 | Performance | Optimize promisor object enumeration by avoiding unnecessary parsing of blob objects. | Official RelNotes: promisor enumeration optimized to skip pointless blob parsing; changed functions include `add_promisor_object` in `packfile.c`, `final` in `builtin/index-pack.c`, and promisor repack helpers. | Keep if generated output names promisor object enumeration or lazy object handling. |
+| GT-G224 | Diagnostics | Include gettext feature information in `git bugreport` and `git version --build-options` to help diagnose localization problems. | Official RelNotes: bugreport and version build options learned gettext reporting; changed function `get_version_info` in `help.c`. | Developer-facing diagnostic support. |
+| GT-G225 | Fix | Correct the macOS keychain credential helper so it can store credential material supplied by other helper backends. | Official RelNotes: overeager credential-material rejection fixed; changed functions `find_internet_password`, `add_internet_password`, `read_credential`, and related helpers in `contrib/credential/osxkeychain/git-credential-osxkeychain.c`. | Platform credential behavior. |
+| GT-G226 | Fix | Fix Windows credential helper under-allocation when retrieving credentials. | Official RelNotes: under-allocation fix; changed function `get_credential` in `contrib/credential/wincred/git-credential-wincred.c`. | Windows credential robustness. |
+| GT-G227 | Diagnostics | Correct `git config unset -h` option help so `--all` is described for unsetting variables rather than replacing values. | Official RelNotes: config unset help corrected; changed function `cmd_config_unset` in `builtin/config.c`. | User-facing CLI help fix. |
+| GT-G228 | Diagnostics | Correct `git config set` multi-value error messages and hints to use the modern syntax and correct option. | Official RelNotes: config set multi-value error message corrected; changed function `cmd_config_set` in `builtin/config.c` and config value retrieval helpers. | User-facing diagnostic fix. |
+| GT-G229 | Fix | Make `git replay` omit `gpgsig-sha256` extended headers just as it already omits `gpgsig`. | Official RelNotes: replay omission of `gpgsig-sha256` fixed; changed function `create_commit` in `builtin/replay.c`. | Repository object correctness. |
+| GT-G230 | Fix | Prevent `git submodule add` from segfaulting when `.gitmodules` contains a submodule section without a path. | Official RelNotes: submodule add segfault corrected; changed functions `module_add` and related submodule helper paths in `builtin/submodule--helper.c`. | Separate from hash-function rejection in GT-G210. |
+| GT-G231 | Fix | Correct `git fetch` tag overwrite handling so other tags are still fetched when one fetched tag must overwrite an existing tag. | Official RelNotes: tag backfill with batched ref updates fixed; changed functions `add_one_refname`, `add_oid`, `commit_ref_transaction`, and `do_fetch` in `builtin/fetch.c`. | User-visible fetch correctness. |
+| GT-G232 | Performance | Avoid rewriting the MIDX file during `git repack` when no packfile changes require bitmap recomputation. | Official RelNotes: no-op MIDX rewrite avoided; changed functions `cmd_repack` in `builtin/repack.c` and `midx_needs_update`/`write_midx_internal` in `midx-write.c`. | Performance/build-artifact churn reduction. |
+| GT-G233 | Fix | Fix a use-after-free when `git diff --name-only` runs with options that avoid blob-content inspection while lazily fetching promisor objects. | Official RelNotes: diff name-only/promisor UAF corrected; changed functions `diff_queued_diff_prefetch`, `diff_setup_done`, and related diff helpers in `diff.c`. | Robustness with partial clone/promisor objects. |
+| GT-G234 | Fix | Make `git fsck` use a consistent set of refs when reporting warnings. | Official RelNotes: inconsistent fsck ref warning corrected; changed functions `snapshot_refs`, `process_refs`, `fsck_handle_ref`, and ref-backend fsck helpers in `builtin/fsck.c`, `refs/files-backend.c`, and `refs/reftable-backend.c`. | Repository diagnostic correctness. |
+| GT-G235 | Diagnostics | Add missing terminating newlines to selected HTTP transport error messages. | Official RelNotes: HTTP transport error messages lacked newline; changed functions `not_found`, `forbidden`, `show_text_ref`, and `show_head_ref` in `http-backend.c`, plus HTTP helper changes. | Low-level but user-visible error formatting. |
+| GT-G236 | Fix | Correct `git repack --geometric` behavior when promisor packs are involved. | Official RelNotes: `git repack --geometric` did not work with promisor packs; changed functions `finish_repacking_promisor_objects`, `repack_promisor_objects`, and `pack_geometry_repack_promisors` in `repack-promisor.c`. | Partial-clone maintenance correctness. |
+| GT-G237 | Fix | Fix MIDX reuse logic so MIDX files with wrong checksums are not reused incorrectly. | Official RelNotes: wrong-checksum MIDX reuse logic fixed; changed functions `get_multi_pack_index`, `prepare_multi_pack_index_one`, `clear_midx_file`, `midx_needs_update`, and `write_midx_internal` in `midx.c` and `midx-write.c`. | Repository maintenance correctness. |
+| GT-G238 | Performance | Fix a performance regression in `git cat-file`. | Official RelNotes: cat-file performance regression fixed; changed functions `stream_blob`, `batch_object_write`, `batch_each_object`, and object-info helpers in `builtin/cat-file.c`, `object-file.c`, and `packfile.c`. | Keep only when generated output states cat-file performance. |
+| GT-G239 | Performance | Optimize patience diff's longest-common-subsequence search. | Official RelNotes: patience diff LCS optimized; changed functions `insert_record`, `find_longest_common_sequence`, `match`, and `xdl_do_patience_diff` in `xdiff/xpatience.c`. | Algorithmic performance improvement. |
+
+## Excluded Official-Release-Note Items
+
+| Exclusion Class | Examples | Reason |
+| --- | --- | --- |
+| Documentation-only | data model manual, replay terminology clarification, rev-list FAQ/doc updates, config documentation fixes | Outside the function-level source behavior target. |
+| Localization-only | Git 2.53 translation updates and l10n merge commits | Does not represent C/C++ behavior under this benchmark. |
+| Build/CI/test-only | GitHub Actions details, leak-check task changes, test artifact retention, test framework import, test-only shell compatibility updates | Useful to maintainers but not part of release-note semantic evaluation unless a separate maintainer-log task is defined. |
+| Mailmap-only | mailmap updates | Metadata-only and not source behavior. |
+| Pure cleanup/refactor without stable external claim | broad object-database refactors, ref backend streamlining, emulation cleanup, warning-suppression rewrites, comment updates | Excluded unless the official note states performance, robustness, compatibility, or diagnosability impact. |
+| Build-system-only | `make strip` scalar support, CMake/libgit alignment, flexible array support requirement | Excluded from this GT unless final thesis explicitly evaluates build-system release notes. |
+
+## Expected Use
+
+This file provides `39` candidate semantic GT entries. Before replacing the sampled Git 2.53 GT in the final matrix:
+
+1. Run real LLM generation for full-scope `diff_only`, `full_strict_1hop`, and `full_similarity_family`.
+2. Create `matches_strict.json` files against this full-scope GT.
+3. Compute strict evaluation metrics separately from the current 82-GT matrix.
+4. Admit the full-scope case only if the added GT materially improves benchmark credibility without allowing one large Git release to dominate all aggregate metrics.
